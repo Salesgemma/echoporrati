@@ -21,30 +21,24 @@ const {
     cat4Name = "Earring"
 } = Astro.props;
 
-// Map category names to collection paths
-const getCategoryPath = (categoryName: string, currentPath: string) => {
-    // Determine if we're on an English or Italian page
-    const isEnglish = currentPath.startsWith('/en/') || currentPath === '/en';
-    
-    // Map category names to collection paths for each language
-    if (isEnglish) {
-        switch (categoryName) {
-            case cat1Name: return '/en/collections/pendants';
-            case cat2Name: return '/en/collections/rings';
-            case cat3Name: return '/en/collections/bracelets';
-            case cat4Name: return '/en/collections/earrings';
-            default: return '#';
-        }
-    } else {
-        // Italian mappings
-        switch (categoryName) {
-            case cat1Name: return '/it/collezioni/pendenti';
-            case cat2Name: return '/it/collezioni/anelli';
-            case cat3Name: return '/it/collezioni/bracciali';
-            case cat4Name: return '/it/collezioni/orecchini';
-            default: return '#';
-        }
-    }
+// Route config per language
+type Lang = 'en' | 'it' | 'es' | 'de' | 'ar';
+const collRoutes: Record<Lang, string> = { en: 'collections', it: 'collezioni', es: 'colecciones', de: 'kollektionen', ar: 'collections' };
+const catSlugs: Record<Lang, [string, string, string, string]> = {
+    en: ['pendants', 'rings', 'bracelets', 'earrings'],
+    it: ['pendenti', 'anelli', 'bracciali', 'orecchini'],
+    es: ['colgantes', 'anillos', 'pulseras', 'pendientes'],
+    de: ['anhaenger', 'ringe', 'armbaender', 'ohrringe'],
+    ar: ['pendants', 'rings', 'bracelets', 'earrings'],
+};
+
+const currentLang = (Astro.url.pathname.split('/')[1] || 'en') as Lang;
+const lang = (['en','it','es','de','ar'].includes(currentLang) ? currentLang : 'en') as Lang;
+
+const getCategoryPath = (categoryName: string) => {
+    const idx = [cat1Name, cat2Name, cat3Name, cat4Name].indexOf(categoryName);
+    if (idx === -1) return '#';
+    return `/${lang}/${collRoutes[lang]}/${catSlugs[lang][idx]}`;
 };
 
 const categories = [
@@ -69,7 +63,7 @@ const categories = [
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {categories.map(category => (
-                <a href={getCategoryPath(category.name, Astro.url.pathname)} class="jewelry-item group relative block">
+                <a href={getCategoryPath(category.name)} class="jewelry-item group relative block">
                     <div class="jewelry-glow-container h-full relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-grigio-blu-notte to-nero-assoluto p-8">
                         <div class={`absolute inset-0 bg-gradient-radial from-${category.glowColor}-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
                         
