@@ -6,7 +6,8 @@ const isItalian = currentPath.startsWith('/it');
 // Detect current language from path
 type Lang = 'en' | 'it' | 'es' | 'de' | 'ar';
 const supportedLangs: Lang[] = ['en', 'it', 'es', 'de', 'ar'];
-const currentLang: Lang = (currentPath.split('/')[1] as Lang) || 'en';
+const detectedLang = currentPath.split('/')[1] || 'en';
+const currentLang: Lang = (supportedLangs as string[]).includes(detectedLang) ? detectedLang as Lang : 'en';
 
 // Route segment maps per language
 const routeMap: Record<Lang, Record<string, string>> = {
