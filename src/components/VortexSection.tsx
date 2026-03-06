@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Vortex } from "./ui/vortex";
 
 interface VortexSectionProps {
-  lang: 'en' | 'it';
+  lang: 'en' | 'it' | 'es' | 'de' | 'ar';
 }
 
 function VortexSection({ lang }: VortexSectionProps) {
@@ -53,9 +53,86 @@ function VortexSection({ lang }: VortexSectionProps) {
         facebook: "Facebook",
         pinterest: "Pinterest"
       }
+    },
+    es: {
+      company: "Gemma Europa B.V.",
+      rights: "Todos los derechos reservados",
+      address: "Schupstraat 18-20, 2018 Amberes, Bélgica",
+      companyNo: "N.º de empresa (KBO): BE 0656.953.680",
+      email: "sales@gemmaeuropa.com",
+      showroom: {
+        address: "Via Borgonuovo, 10, 20121 Milano MI, Italia",
+        phone: "+39 02 2318 5211"
+      },
+      links: {
+        home: "Inicio",
+        collections: "Colecciones",
+        about: "Nosotros",
+        showroom: "Showroom Milán",
+        faq: "FAQ"
+      },
+      social: {
+        instagram: "Instagram",
+        facebook: "Facebook",
+        pinterest: "Pinterest"
+      }
+    },
+    de: {
+      company: "Gemma Europa B.V.",
+      rights: "Alle Rechte vorbehalten",
+      address: "Schupstraat 18-20, 2018 Antwerpen, Belgien",
+      companyNo: "Unternehmensnr. (KBO): BE 0656.953.680",
+      email: "sales@gemmaeuropa.com",
+      showroom: {
+        address: "Via Borgonuovo, 10, 20121 Milano MI, Italien",
+        phone: "+39 02 2318 5211"
+      },
+      links: {
+        home: "Startseite",
+        collections: "Kollektionen",
+        about: "Über uns",
+        showroom: "Showroom Mailand",
+        faq: "FAQ"
+      },
+      social: {
+        instagram: "Instagram",
+        facebook: "Facebook",
+        pinterest: "Pinterest"
+      }
+    },
+    ar: {
+      company: "Gemma Europa B.V.",
+      rights: "جميع الحقوق محفوظة",
+      address: "Schupstraat 18-20, 2018 Antwerpen, Belgium",
+      companyNo: "رقم الشركة (KBO): BE 0656.953.680",
+      email: "sales@gemmaeuropa.com",
+      showroom: {
+        address: "Via Borgonuovo, 10, 20121 Milano MI, Italia",
+        phone: "+39 02 2318 5211"
+      },
+      links: {
+        home: "الرئيسية",
+        collections: "المجموعات",
+        about: "عن الشركة",
+        showroom: "صالة عرض ميلانو",
+        faq: "FAQ"
+      },
+      social: {
+        instagram: "Instagram",
+        facebook: "Facebook",
+        pinterest: "Pinterest"
+      }
     }
   };
   const data = footerData[lang];
+
+  const navPaths = {
+    en: { collections: '/en/collections', showroom: '/en/showroom-milan', faq: '/en/faq' },
+    it: { collections: '/it/collezioni', showroom: '/it/showroom-milano', faq: '/it/faq' },
+    es: { collections: '/es/colecciones', showroom: '/es/showroom-milan', faq: '/es/faq' },
+    de: { collections: '/de/kollektionen', showroom: '/de/showroom-mailand', faq: '/de/faq' },
+    ar: { collections: '/ar/collections', showroom: '/ar/showroom-milan', faq: '/ar/faq' },
+  }[lang];
 
   return (
     // MODIFICA 1: Altezza diventa flessibile su mobile, fissa su desktop
@@ -89,19 +166,18 @@ function VortexSection({ lang }: VortexSectionProps) {
 
             {/* Blocco 2: Navigazione */}
             <div className="sm:col-span-1">
-              <h3 className="font-bodoni text-lg font-bold text-white mb-3">Navigation</h3>
+              <h3 className="font-bodoni text-lg font-bold text-white mb-3">{lang === 'de' ? 'Navigation' : lang === 'ar' ? 'التنقل' : lang === 'es' ? 'Navegación' : 'Navigation'}</h3>
               <ul className="space-y-2">
-                <li><a href={lang === 'en' ? '/en/collections' : '/it/collezioni'} className="text-gray-300 hover:text-white transition-colors text-sm">{data.links.collections}</a></li>
-                <li><a href={lang === 'en' ? '/en/#about' : '/it/#chi-siamo'} className="text-gray-300 hover:text-white transition-colors text-sm">{data.links.about}</a></li>
-                <li><a href={lang === 'en' ? '/en/showroom-milan' : '/it/showroom-milano'} className="text-gray-300 hover:text-white transition-colors text-sm">{data.links.showroom}</a></li>
-                <li><a href={lang === 'en' ? '/en/faq' : '/it/faq'} className="text-gray-300 hover:text-white transition-colors text-sm">{data.links.faq}</a></li>
+                <li><a href={navPaths.collections} className="text-gray-300 hover:text-white transition-colors text-sm">{data.links.collections}</a></li>
+                <li><a href={navPaths.showroom} className="text-gray-300 hover:text-white transition-colors text-sm">{data.links.showroom}</a></li>
+                <li><a href={navPaths.faq} className="text-gray-300 hover:text-white transition-colors text-sm">{data.links.faq}</a></li>
               </ul>
             </div>
 
             {/* Blocco 3: Social */}
             <div className="sm:col-span-1">
               <h3 className="font-bodoni text-lg font-bold text-white mb-3">
-                {lang === 'en' ? "Follow Us" : "Seguici"}
+                {lang === 'ar' ? 'تابعنا' : lang === 'de' ? 'Folgen Sie uns' : lang === 'es' ? 'Síguenos' : lang === 'it' ? 'Seguici' : 'Follow Us'}
               </h3>
               <div className="flex justify-center sm:justify-start space-x-4">
                 <a href="https://www.instagram.com/porratigioielli/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
@@ -137,12 +213,10 @@ function VortexSection({ lang }: VortexSectionProps) {
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
             <div className="bg-nero-assoluto rounded-2xl p-6 max-w-sm w-full mx-4 shadow-xl border border-grigio-antracite/40">
               <h3 className="font-bodoni text-xl text-bianco-sporco mb-3">
-                {lang === 'en' ? 'Showroom Milan' : 'Showroom Milano'}
+                {data.links.showroom}
               </h3>
               <p className="text-greige-chiaro text-sm mb-4">
-                {lang === 'en'
-                  ? 'Choose how you want to open the showroom location.'
-                  : 'Scegli come aprire la posizione dello showroom.'}
+                {lang === 'de' ? 'Wählen Sie, wie Sie den Showroom öffnen möchten.' : lang === 'es' ? 'Elige cómo abrir la ubicación del showroom.' : lang === 'ar' ? 'اختر كيف تريد فتح موقع صالة العرض.' : lang === 'it' ? 'Scegli come aprire la posizione dello showroom.' : 'Choose how you want to open the showroom location.'}
               </p>
               <div className="space-y-3">
                 <a
@@ -151,13 +225,13 @@ function VortexSection({ lang }: VortexSectionProps) {
                   rel="noopener noreferrer"
                   className="block w-full text-center px-4 py-2 rounded-full bg-bianco-sporco text-nero-assoluto text-sm font-medium hover:bg-white transition-colors"
                 >
-                  {lang === 'en' ? 'Open in Google Maps' : 'Apri in Google Maps'}
+                  {lang === 'de' ? 'In Google Maps öffnen' : lang === 'es' ? 'Abrir en Google Maps' : lang === 'ar' ? 'فتح في خرائط جوجل' : lang === 'it' ? 'Apri in Google Maps' : 'Open in Google Maps'}
                 </a>
                 <a
-                  href={lang === 'en' ? '/en/showroom-milan' : '/it/showroom-milano'}
+                  href={navPaths.showroom}
                   className="block w-full text-center px-4 py-2 rounded-full border border-bianco-sporco text-bianco-sporco text-sm font-medium hover:bg-bianco-sporco hover:text-nero-assoluto transition-colors"
                 >
-                  {lang === 'en' ? 'Open showroom page' : 'Apri pagina showroom'}
+                  {lang === 'de' ? 'Showroom-Seite öffnen' : lang === 'es' ? 'Abrir página del showroom' : lang === 'ar' ? 'فتح صفحة صالة العرض' : lang === 'it' ? 'Apri pagina showroom' : 'Open showroom page'}
                 </a>
               </div>
               <button
@@ -165,7 +239,7 @@ function VortexSection({ lang }: VortexSectionProps) {
                 onClick={() => setIsShowroomModalOpen(false)}
                 className="mt-4 w-full text-center text-xs text-gray-400 hover:text-gray-200"
               >
-                {lang === 'en' ? 'Close' : 'Chiudi'}
+                {lang === 'de' ? 'Schließen' : lang === 'es' ? 'Cerrar' : lang === 'ar' ? 'إغلاق' : lang === 'it' ? 'Chiudi' : 'Close'}
               </button>
             </div>
           </div>
