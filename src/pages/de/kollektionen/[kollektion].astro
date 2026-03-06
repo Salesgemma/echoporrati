@@ -1,0 +1,55 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import allProducts from '../../../data/products.json';
+const collectionNames = { 'anhaenger': 'Anhänger', 'ringe': 'Ringe', 'armbaender': 'Armbänder', 'ohrringe': 'Ohrringe' };
+const categoryMap = { 'anhaenger': 'pendants', 'ringe': 'rings', 'armbaender': 'bracelets', 'ohrringe': 'earrings' };
+const productsData = allProducts['de'] || allProducts.en;
+
+export function getStaticPaths() {
+	return [
+		{ params: { kollektion: 'anhaenger' } },
+		{ params: { kollektion: 'ringe' } },
+		{ params: { kollektion: 'armbaender' } },
+		{ params: { kollektion: 'ohrringe' } }
+	];
+}
+
+const { kollektion } = Astro.params;
+if (!collectionNames[kollektion]) { return new Response(null, { status: 404 }); }
+const products = Object.entries(productsData).filter(([id, data]) => data.category === categoryMap[kollektion]).map(([id, data]) => ({ id, ...data }));
+const collectionName = collectionNames[kollektion];
+---
+<Layout title={`PORRATI | ${collectionName}`} lang="de">
+	<main class="py-32 md:py-40 bg-nero-assoluto">
+		<div class="max-w-7xl mx-auto px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h1 class="font-bodoni text-5xl text-bianco-sporco">{collectionName}</h1>
+				<p class="mt-4 text-lg text-greige-chiaro">Entdecken Sie unsere exklusive Kollektion von {collectionName.toLowerCase()}.</p>
+			</div>
+			{products.length > 0 ? (
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+					{products.map(product => (
+						<a href={`/de/produkte/${product.id}`} class="group block">
+							<div class="aspect-square bg-grigio-blu-notte/30 rounded-lg overflow-hidden">
+								<video src={product.video.replace('/videos/', '/videos-optimized/')} poster={product.poster || undefined} class="video-card w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" autoplay loop muted playsinline preload="none"></video>
+							</div>
+							<h3 class="font-serif text-xl text-center mt-4 text-bianco-sporco">{product.title}</h3>
+						</a>
+					))}
+				</div>
+			) : (
+				<div class="text-center py-20"><p class="text-greige-chiaro text-xl">Derzeit sind keine Produkte für diese Kollektion verfügbar.</p></div>
+			)}
+		</div>
+	</main>
+</Layout>
+<script>
+	document.addEventListener('astro:page-load', () => {
+		const videos = document.querySelectorAll('.video-card');
+		const playVideo = (video) => { if (video.paused) { video.play()?.catch(() => {}); } };
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => { const v = entry.target; entry.isIntersecting ? playVideo(v) : v.pause(); });
+		}, { threshold: 0.1 });
+		videos.forEach(v => { observer.observe(v); });
+	});
+</script>

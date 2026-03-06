@@ -1,0 +1,25 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import allProducts from '../../../data/products.json';
+const productsData = allProducts['de'] || allProducts.en;
+const products = Object.entries(productsData).map(([id, data]) => ({ id, ...data }));
+---
+<Layout title="PORRATI | Produkte" lang="de">
+	<main class="py-32 md:py-40 bg-nero-assoluto">
+		<div class="max-w-7xl mx-auto px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h1 class="font-bodoni text-5xl text-bianco-sporco">Produkte</h1>
+			</div>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+				{products.map(product => (
+					<a href={`/de/produkte/${product.id}`} class="group block">
+						<div class="aspect-square bg-grigio-blu-notte/30 rounded-lg overflow-hidden">
+							<video src={product.video.replace('/videos/', '/videos-optimized/')} poster={product.poster || undefined} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" autoplay loop muted playsinline preload="none"></video>
+						</div>
+						<h3 class="font-serif text-xl text-center mt-4 text-bianco-sporco">{product.title}</h3>
+					</a>
+				))}
+			</div>
+		</div>
+	</main>
+</Layout>

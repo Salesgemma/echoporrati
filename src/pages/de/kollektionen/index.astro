@@ -1,0 +1,21 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const collectionNames = { 'anhaenger': 'Anhänger', 'ringe': 'Ringe', 'armbaender': 'Armbänder', 'ohrringe': 'Ohrringe' };
+---
+<Layout title="PORRATI | Kollektionen" lang="de">
+	<main class="py-32 md:py-40 bg-nero-assoluto">
+		<div class="max-w-7xl mx-auto px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h1 class="font-bodoni text-5xl text-bianco-sporco">Kollektionen</h1>
+				<p class="mt-4 text-lg text-greige-chiaro">Kuratierte Ausdrücke intellektuellen Luxus.</p>
+			</div>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+				{Object.entries(collectionNames).map(([slug, name]) => (
+					<a href={`/de/kollektionen/${slug}`} class="group block p-8 rounded-2xl border border-grigio-antracite/30 hover:border-greige-chiaro/50 transition-all duration-300">
+						<h2 class="font-bodoni text-3xl text-bianco-sporco group-hover:text-greige-chiaro transition-colors">{name}</h2>
+					</a>
+				))}
+			</div>
+		</div>
+	</main>
+</Layout>

@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Manifesto from '../../components/Manifesto.astro';
+import JewelryShowcase from '../../components/JewelryShowcase.astro';
+import ShaderBackground from '../../components/ShaderBackground.astro';
+import ImageGrid from '../../components/ImageGrid.astro';
+---
+<Layout title="PORRATI | La Forma del Pensamiento" lang="es">
+	<Hero title="La Forma del Pensamiento" subtitle="La Arquitectura del Ser." />
+	<Manifesto 
+		title1="La Arquitectura <br/> del Ser."
+		p1_1="PORRATI no evoluciona. Vuelve a la esencia. Nacido en Valenza, la marca se dedica a principios inmutables: la pureza de la línea, la autoridad del volumen, la inteligencia de la síntesis."
+		p1_2="Los nuestros son objetos de síntesis. No adornan el cuerpo. Lo sellan."
+		title2="Diamantes <br/> por Diseño."
+		p2_1="Esta búsqueda de la forma pura exige un material igualmente consciente. Seleccionamos nuestros diamantes no de la tierra, sino del proyecto: creaciones de laboratorio nacidas de una elección ética y tecnológica."
+		p2_2="Un diamante PORRATI es química, física y ópticamente idéntico a un diamante natural, pero su origen es una declaración de respeto por el futuro de nuestro planeta."
+	/>
+	<JewelryShowcase 
+		title="Explorar por Categoría"
+		subtitle="Cada creación es una afirmación de rigor e intelecto,<br>diseñada para sellar el estilo personal."
+		buttonText="Explorar"
+		cat1Name="Colgante"
+		cat2Name="Anillo"
+		cat3Name="Pulsera"
+		cat4Name="Pendiente"
+	/>
+	<ShaderBackground title="Rigor Digital" subtitle="Donde el código encuentra la artesanía." />
+	<ImageGrid title="Anatomía de una Idea" subtitle="Principios inmutables de rigor, intelecto y permanencia que desafían el tiempo." />
+</Layout>
+<script>
+	import '../../scripts/animations.js';
+</script>

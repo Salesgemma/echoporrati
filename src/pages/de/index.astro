@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Manifesto from '../../components/Manifesto.astro';
+import JewelryShowcase from '../../components/JewelryShowcase.astro';
+import ShaderBackground from '../../components/ShaderBackground.astro';
+import ImageGrid from '../../components/ImageGrid.astro';
+---
+<Layout title="PORRATI | Die Form des Denkens" lang="de">
+	<Hero title="Die Form des Denkens" subtitle="Die Architektur des Selbst." />
+	<Manifesto 
+		title1="Die Architektur <br/> des Selbst."
+		p1_1="PORRATI entwickelt sich nicht weiter. Es kehrt zum Wesentlichen zurück. In Valenza geboren, widmet sich die Marke unveränderlichen Prinzipien: der Reinheit der Linie, der Autorität des Volumens, der Intelligenz der Synthese."
+		p1_2="Unsere Objekte sind Synthese. Sie schmücken den Körper nicht. Sie versiegeln ihn."
+		title2="Diamanten <br/> aus Design."
+		p2_1="Diese Suche nach reiner Form verlangt ein ebenso bewusstes Material. Wir wählen unsere Diamanten nicht aus der Erde, sondern aus dem Projekt: Laborkreationen, geboren aus einer ethischen und technologischen Entscheidung."
+		p2_2="Ein PORRATI-Diamant ist chemisch, physikalisch und optisch identisch mit einem natürlichen Diamanten, aber sein Ursprung ist ein Statement des Respekts für die Zukunft unseres Planeten."
+	/>
+	<JewelryShowcase 
+		title="Nach Kategorie entdecken"
+		subtitle="Jede Kreation ist ein Statement von Strenge und Intellekt,<br>entworfen, um den persönlichen Stil zu versiegeln."
+		buttonText="Entdecken"
+		cat1Name="Anhänger"
+		cat2Name="Ring"
+		cat3Name="Armband"
+		cat4Name="Ohrring"
+	/>
+	<ShaderBackground title="Digitale Strenge" subtitle="Wo Code auf Handwerk trifft." />
+	<ImageGrid title="Anatomie einer Idee" subtitle="Unveränderliche Prinzipien von Strenge, Intellekt und Permanenz, die der Zeit trotzen." />
+</Layout>
+<script>
+	import '../../scripts/animations.js';
+</script>

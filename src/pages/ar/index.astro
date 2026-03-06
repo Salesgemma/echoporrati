@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Manifesto from '../../components/Manifesto.astro';
+import JewelryShowcase from '../../components/JewelryShowcase.astro';
+import ShaderBackground from '../../components/ShaderBackground.astro';
+import ImageGrid from '../../components/ImageGrid.astro';
+---
+<Layout title="PORRATI | شكل الفكر" lang="ar">
+	<Hero title="شكل الفكر" subtitle="هندسة الذات." />
+	<Manifesto 
+		title1="هندسة <br/> الذات."
+		p1_1="PORRATI لا يتطور. يعود إلى الجوهر. ولد في فالينزا، تكرس العلامة نفسها لمبادئ ثابتة: نقاء الخط، سلطة الحجم، ذكاء التوليف."
+		p1_2="منتجاتنا أشياء توليفية. لا تزين الجسد. بل تختمه."
+		title2="ألماس <br/> بالتصميم."
+		p2_1="هذا البحث عن الشكل النقي يتطلب مادة واعية بنفس القدر. نختار ألماسنا ليس من الأرض، بل من المشروع: إبداعات مختبرية ولدت من خيار أخلاقي وتكنولوجي."
+		p2_2="ألماس PORRATI مطابق كيميائياً وفيزيائياً وبصرياً للألماس الطبيعي، لكن أصله بيان احترام لمستقبل كوكبنا."
+	/>
+	<JewelryShowcase 
+		title="استكشف حسب الفئة"
+		subtitle="كل إبداع هو تأكيد على الدقة والفكر،<br>مصمم لختم الأسلوب الشخصي."
+		buttonText="استكشف"
+		cat1Name="قلادة"
+		cat2Name="خاتم"
+		cat3Name="سوار"
+		cat4Name="قرط"
+	/>
+	<ShaderBackground title="الدقة الرقمية" subtitle="حيث يلتقي الكود بالحرفية." />
+	<ImageGrid title="تشريح فكرة" subtitle="مبادئ ثابتة من الدقة والفكر والديمومة تتحدى الزمن." />
+</Layout>
+<script>
+	import '../../scripts/animations.js';
+</script>

@@ -1754,5 +1754,2639 @@
       "category": "earrings",
       "poster": "/photos/earrings/canone-rettilineo-05.jpg"
     }
+  },
+  "es": {
+    "teorema": {
+      "title": "\"Deco Mosaic\" Fancy Greenish-Yellow Diamond Pendant",
+      "description": "A fascinating collision between vintage aesthetics and sustainable luxury innovation. An architectural masterpiece with a rare Greenish-Yellow lab-grown diamond in a round cut, set within a formidable starburst structure of 14k white gold. The geometric halo alternates baguette-cut diamonds with round brilliants. A jewel of sculptural allure.",
+      "details": [
+        "Fancy Greenish-Yellow Lab-Grown Diamond",
+        "Baguette & Round Cut Halo",
+        "14k White Gold Starburst Setting"
+      ],
+      "video": "/videos/pendants/teorema.mp4",
+      "category": "pendants",
+      "poster": "/photos/pendants/teorema.jpg"
+    },
+    "axioma": {
+      "title": "\"Romantic Aura\" Fancy Pink Pear-Cut Diamond Pendant",
+      "description": "The ultimate emblem of femininity and High Jewelry. A magnificent Fancy Pink lab-grown diamond in a flawless pear cut, embraced by a voluminous double halo of pure white diamonds. The central gem appears to float in a sea of light. Masterfully crafted in 14k white gold with a diamond-encrusted bail. A modern heirloom of eternal love and ethical luxury.",
+      "details": [
+        "Fancy Pink Lab-Grown Pear Diamond",
+        "Double Diamond Halo",
+        "14k White Gold with Diamond Bail"
+      ],
+      "video": "/videos/pendants/axioma.mp4",
+      "category": "pendants",
+      "poster": "/photos/pendants/axioma.jpg"
+    },
+    "sintesi": {
+      "title": "\"Romantic Aura\" Fancy Pink Double Halo Pendant",
+      "description": "The ultimate emblem of femininity. A magnificent Fancy Pink lab-grown pear diamond embraced by a double halo with subtle pink accents in its most exclusive variation. Masterfully crafted in 14k white gold. A modern heirloom.",
+      "details": [
+        "Fancy Pink Lab-Grown Pear Diamond",
+        "Double Halo with Pink Accents",
+        "14k White Gold"
+      ],
+      "video": "/videos/pendants/sintesi.mp4",
+      "category": "pendants",
+      "poster": "/photos/pendants/sintesi.jpg"
+    },
+    "canone": {
+      "title": "\"Imperial Ocean\" Fancy Blue Emerald-Cut Diamond Pendant",
+      "description": "Majestic, profound, and unforgettable. A striking Fancy Blue lab-grown diamond in a sophisticated emerald cut, unleashing sapphire-toned flashes with every movement. Elevated by a regal sunburst halo of round white diamonds in 14k white gold. A jewel of extraordinary charisma for theatrical, ethical, and timeless luxury.",
+      "details": [
+        "Fancy Blue Lab-Grown Emerald-Cut Diamond",
+        "Sunburst Diamond Halo",
+        "14k White Gold"
+      ],
+      "video": "/videos/pendants/canone.mp4",
+      "category": "pendants",
+      "poster": "/photos/pendants/canone.jpg"
+    },
+    "fiore-astrale-blu": {
+      "title": "\"Eternal Bloom\" Fancy Blue Diamond Ring",
+      "description": "Springtime blossoms on your finger, frozen in imperishable light. A floral sculpture where each petal is a luminous ice-blue lab-grown diamond in a pear cut, gathered around a brilliant white diamond core. Hand-set in fluid 14k white gold. A joyful, audacious cocktail ring for those who wear nature's beauty without compromising it.",
+      "details": [
+        "Fancy Blue Lab-Grown Pear Diamonds",
+        "14k White Gold",
+        "Floral Petal Design"
+      ],
+      "video": "/videos/rings/fiore-astrale-blu.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/fiore-astrale-blu.jpg"
+    },
+    "fiore-astrale-rosa": {
+      "title": "\"Eternal Bloom\" Fancy Pink Diamond Ring",
+      "description": "Springtime blossoms on your finger, frozen in imperishable light. A floral sculpture where each petal is a luminous blush-pink lab-grown diamond in a pear cut, gathered around a brilliant white diamond core. Hand-set in 14k white gold. A deeply feminine cocktail ring.",
+      "details": [
+        "Fancy Pink Lab-Grown Pear Diamonds",
+        "14k White Gold",
+        "Floral Petal Design"
+      ],
+      "video": "/videos/rings/fiore-astrale-rosa.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/fiore-astrale-rosa.jpg"
+    },
+    "teorema-solitario-01": {
+      "title": "\"Absolute Light\" Fancy Diamond Ring with Micro-Pavé I",
+      "description": "The ultimate expression of minimalist elegance where the stone is the undisputed star. A majestic colored lab-grown diamond encircled by a delicate halo of white micro-diamonds cascading down a slender 14k white gold band. The perfect modern engagement ring.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Micro-Pavé Halo"
+      ],
+      "video": "/videos/rings/teorema-solitario-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/teorema-solitario-01.jpg"
+    },
+    "teorema-solitario-02": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring I",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/teorema-solitario-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/teorema-solitario-02.jpg"
+    },
+    "aura-ovale-01": {
+      "title": "\"Royal Promise\" Fancy Diamond Trilogy Ring II",
+      "description": "The ultimate symbol of enduring love. A majestic fancy-hued lab-grown diamond at center, flanked by pristine white diamonds in 14k white gold. A masterpiece of proportion and ethical elegance.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Trilogy Three-Stone Design"
+      ],
+      "video": "/videos/rings/aura-ovale-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-01.jpg"
+    },
+    "aura-ovale-02": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring II",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/aura-ovale-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-02.jpg"
+    },
+    "aura-cuscino-blu": {
+      "title": "\"Absolute Light\" Fancy Blue Diamond Ring with Micro-Pavé",
+      "description": "The ultimate expression of minimalist elegance where the stone is the undisputed star. A majestic colored lab-grown diamond encircled by a delicate halo of white micro-diamonds cascading down a slender 14k white gold band. The perfect modern engagement ring.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Micro-Pavé Halo"
+      ],
+      "video": "/videos/rings/aura-cuscino-blu.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-cuscino-blu.jpg"
+    },
+    "teorema-solitario-03": {
+      "title": "\"Infinite Embrace\" Bypass Design Ring I",
+      "description": "Far from convention, close to pure art. Two diamond-encrusted 14k white gold bands intertwine sinuously, wrapping around the central Fancy Pink diamond without ever touching, in a high-fashion bypass style. Sensual, contemporary, and bold. An ethical jewel for the avant-garde woman.",
+      "details": [
+        "Fancy Pink Lab-Grown Diamond",
+        "14k White Gold",
+        "Bypass Intertwined Design"
+      ],
+      "video": "/videos/rings/teorema-solitario-03.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/teorema-solitario-03.jpg"
+    },
+    "prospettiva-doppia-01": {
+      "title": "\"Crimson Heart\" Fancy Pink Heart-Cut Halo Ring I",
+      "description": "The heart shape is the most complex for a master cutter, demanding impeccable symmetry. This ring captures the essence of romance with a Fancy Pink lab-grown heart diamond, encircled by a radiant halo of white diamonds. The 14k white gold pavé band wraps the finger in light. A priceless gift for unforgettable declarations.",
+      "details": [
+        "Fancy Pink Heart-Cut Diamond",
+        "14k White Gold",
+        "Diamond Halo & Pavé Band"
+      ],
+      "video": "/videos/rings/prospettiva-doppia-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/prospettiva-doppia-01.jpg"
+    },
+    "aura-smeraldo-01": {
+      "title": "\"Crimson Heart\" Fancy Pink Heart-Cut Halo Ring II",
+      "description": "The heart shape demands impeccable symmetry to unlock brilliance. A Fancy Pink lab-grown heart diamond encircled by a radiant halo in 14k white gold with pavé band. An unforgettable declaration of love.",
+      "details": [
+        "Fancy Pink Heart-Cut Diamond",
+        "14k White Gold",
+        "Diamond Halo & Pavé Band"
+      ],
+      "video": "/videos/rings/aura-smeraldo-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-smeraldo-01.jpg"
+    },
+    "aura-smeraldo-02": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring III",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/aura-smeraldo-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-smeraldo-02.jpg"
+    },
+    "aura-smeraldo-03": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring IV",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/aura-smeraldo-03.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-smeraldo-03.jpg"
+    },
+    "fiore-di-ghiaccio": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring V",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/fiore-di-ghiaccio.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/fiore-di-ghiaccio.jpg"
+    },
+    "aura-cuscino-rosa-01": {
+      "title": "\"Vintage Heritage\" Sunburst Halo Ring I",
+      "description": "An aesthetic stolen from the Golden Age of High Jewelry, recreated with ethical technologies. A rare colored lab-grown diamond set at the center of an elaborate Sunburst-style halo. Baguettes and round brilliants merge into a mosaic of light on 14k white gold.",
+      "details": [
+        "Rare Fancy Color Diamond",
+        "14k White Gold",
+        "Sunburst Halo Design"
+      ],
+      "video": "/videos/rings/aura-cuscino-rosa-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-cuscino-rosa-01.jpg"
+    },
+    "aura-goccia-rosa": {
+      "title": "\"Deco Majesty\" Fancy Pink Drop Ring",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/aura-goccia-rosa.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-goccia-rosa.jpg"
+    },
+    "aura-cuscino-rosa-02": {
+      "title": "\"Crimson Heart\" Fancy Pink Heart-Cut Halo Ring III",
+      "description": "A Fancy Pink lab-grown heart diamond encircled by a radiant halo in 14k white gold with scintillating pavé band. Romance perfected in ethical luxury.",
+      "details": [
+        "Fancy Pink Heart-Cut Diamond",
+        "14k White Gold",
+        "Diamond Halo & Pavé Band"
+      ],
+      "video": "/videos/rings/aura-cuscino-rosa-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-cuscino-rosa-02.jpg"
+    },
+    "aura-ovale-03": {
+      "title": "\"Vintage Heritage\" Sunburst Halo Ring II",
+      "description": "An aesthetic stolen from the Golden Age of High Jewelry, recreated with ethical technologies. A rare colored lab-grown diamond set at the center of an elaborate Sunburst-style halo. Baguettes and round brilliants merge into a mosaic of light on 14k white gold.",
+      "details": [
+        "Rare Fancy Color Diamond",
+        "14k White Gold",
+        "Sunburst Halo Design"
+      ],
+      "video": "/videos/rings/aura-ovale-03.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-03.jpg"
+    },
+    "aura-ovale-04": {
+      "title": "\"Absolute Light\" Fancy Diamond Ring with Micro-Pavé II",
+      "description": "The ultimate expression of minimalist elegance where the stone is the undisputed star. A majestic colored lab-grown diamond encircled by a delicate halo of white micro-diamonds cascading down a slender 14k white gold band. The perfect modern engagement ring.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Micro-Pavé Halo"
+      ],
+      "video": "/videos/rings/aura-ovale-04.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-04.jpg"
+    },
+    "aura-smeraldo-verde": {
+      "title": "\"Royal Promise\" Fancy Green Diamond Trilogy Ring",
+      "description": "The ultimate symbol of enduring love. A rare Fancy Green lab-grown diamond at center, flanked by pristine white diamonds in 14k white gold. A masterpiece of proportion and ethical elegance.",
+      "details": [
+        "Fancy Green Lab-Grown Diamond",
+        "14k White Gold",
+        "Trilogy Three-Stone Design"
+      ],
+      "video": "/videos/rings/aura-smeraldo-verde.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-smeraldo-verde.jpg"
+    },
+    "aura-ovale-05": {
+      "title": "\"Vintage Heritage\" Sunburst Halo Ring III",
+      "description": "An aesthetic stolen from the Golden Age of High Jewelry, recreated with ethical technologies. A rare colored lab-grown diamond set at the center of an elaborate Sunburst-style halo. Baguettes and round brilliants merge into a mosaic of light on 14k white gold.",
+      "details": [
+        "Rare Fancy Color Diamond",
+        "14k White Gold",
+        "Sunburst Halo Design"
+      ],
+      "video": "/videos/rings/aura-ovale-05.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-05.jpg"
+    },
+    "prospettiva-doppia-02": {
+      "title": "\"Infinite Embrace\" Bypass Design Ring II",
+      "description": "Far from convention, close to pure art. Two diamond-encrusted 14k white gold bands intertwine around the central fancy diamond in a sensual bypass style. Contemporary, bold, and ethical.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Bypass Intertwined Design"
+      ],
+      "video": "/videos/rings/prospettiva-doppia-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/prospettiva-doppia-02.jpg"
+    },
+    "canone-inverso": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring VI",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/canone-inverso.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/canone-inverso.jpg"
+    },
+    "teorema-duo-02": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring VII",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/teorema-duo-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/teorema-duo-02.jpg"
+    },
+    "solitario-essenziale": {
+      "title": "\"Royal Promise\" Fancy Pink Diamond Trilogy Ring",
+      "description": "The ultimate symbol of enduring love. A majestic Fancy Pink lab-grown diamond at center, secured by rose gold prongs to enhance its warm saturation. Flanked by two pristine white pear-cut diamonds in 14k white gold. A masterpiece of proportion and ethical elegance.",
+      "details": [
+        "Fancy Pink Lab-Grown Center Diamond",
+        "Rose Gold & 14k White Gold",
+        "Trilogy Design with Pear Side Stones"
+      ],
+      "video": "/videos/rings/solitario-essenziale.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/solitario-essenziale.jpg"
+    },
+    "linea-pura-01": {
+      "title": "\"Jardin d'Éden\" Diamond Floral Bracelet",
+      "description": "An ode to nature's beauty, forged in eternal light. A High Jewelry masterpiece transforming exceptionally pure lab-grown diamonds into a delicate floral garland. Pear and marquise-cut stones hand-set in 14k white gold. A statement piece—commanding yet romantic.",
+      "details": [
+        "Lab-Grown Pear & Marquise Diamonds",
+        "14k White Gold",
+        "Floral Garland Design"
+      ],
+      "video": "/videos/bracelets/linea-pura-01.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-01.jpg"
+    },
+    "linea-pura-02": {
+      "title": "\"Drops of Light\" Pear-Cut Tennis Bracelet",
+      "description": "A contemporary reimagining of the classic tennis bracelet. A seamless sequence of pear-cut lab-grown diamonds on a fluid 14k white gold setting. The tapered silhouette creates a dynamic visual rhythm with asymmetrical brilliance.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Fluid Articulated Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-02.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-02.jpg"
+    },
+    "linea-pura-03": {
+      "title": "\"Majesty\" Grand Tennis Bracelet I",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-03.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-03.jpg"
+    },
+    "linea-pura-04": {
+      "title": "\"Majesty\" Grand Tennis Bracelet II",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-04.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-04.jpg"
+    },
+    "linea-pura-05": {
+      "title": "\"Eternity\" Classic Tennis Bracelet I",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-05.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-05.jpg"
+    },
+    "linea-pura-06": {
+      "title": "\"Eternity\" Classic Tennis Bracelet II",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-06.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-06.jpg"
+    },
+    "sequenza-architettonica-01": {
+      "title": "\"Spark\" Essential Tennis Bracelet I",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/sequenza-architettonica-01.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/sequenza-architettonica-01.jpg"
+    },
+    "linea-pura-07": {
+      "title": "\"Spark\" Essential Tennis Bracelet II",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-07.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-07.jpg"
+    },
+    "linea-pura-08": {
+      "title": "\"Eternity\" Classic Tennis Bracelet III",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-08.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-08.jpg"
+    },
+    "linea-pura-09": {
+      "title": "\"Spark\" Essential Tennis Bracelet III",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-09.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-09.jpg"
+    },
+    "linea-pura-10": {
+      "title": "\"Spark\" Essential Tennis Bracelet IV",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-10.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-10.jpg"
+    },
+    "linea-pura-11": {
+      "title": "\"Spark\" Essential Tennis Bracelet V",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-11.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-11.jpg"
+    },
+    "linea-pura-12": {
+      "title": "\"Spark\" Essential Tennis Bracelet VI",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-12.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-12.jpg"
+    },
+    "mosaico-cromatico": {
+      "title": "\"Pastel Aura\" Fancy Color Diamond Bracelet",
+      "description": "A wearable work of art celebrating the rarity of color. Alternates colorless lab-grown diamonds with pastel hues: ice blue and blush pink. Pear cuts with round diamond clusters in 14k white gold. A jewel of regal allure for those seeking absolute exclusivity.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Mixed Pear & Round Cuts"
+      ],
+      "video": "/videos/bracelets/mosaico-cromatico.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/mosaico-cromatico.jpg"
+    },
+    "continuum-floreale": {
+      "title": "\"Geometric Reflections\" Emerald-Cut Tennis Bracelet I",
+      "description": "Magnetic, sophisticated, with Art Deco allure. Emerald-cut lab-grown diamonds perfectly aligned in 14-karat white gold, creating a mesmerizing \"hall of mirrors\" effect. A bracelet of strong character and ethical luxury.",
+      "details": [
+        "Lab-Grown Emerald-Cut Diamonds",
+        "14k White Gold",
+        "Art Deco Design"
+      ],
+      "video": "/videos/bracelets/continuum-floreale.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/continuum-floreale.jpg"
+    },
+    "sequenza-architettonica-02": {
+      "title": "\"Geometric Reflections\" Emerald-Cut Tennis Bracelet II",
+      "description": "Magnetic, sophisticated, with Art Deco allure. Emerald-cut lab-grown diamonds perfectly aligned in 14-karat white gold, creating a mesmerizing \"hall of mirrors\" effect. A bracelet of strong character and ethical luxury.",
+      "details": [
+        "Lab-Grown Emerald-Cut Diamonds",
+        "14k White Gold",
+        "Art Deco Design"
+      ],
+      "video": "/videos/bracelets/sequenza-architettonica-02.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/sequenza-architettonica-02.jpg"
+    },
+    "frammenti-di-ghiaccio": {
+      "title": "\"Ice Shards\" Emerald-Cut Diamond Bracelet",
+      "description": "Magnetic, sophisticated, with Art Deco allure. Emerald-cut lab-grown diamonds perfectly aligned in 14-karat white gold, creating a mesmerizing \"hall of mirrors\" effect. A bracelet of strong character and ethical luxury.",
+      "details": [
+        "Lab-Grown Emerald-Cut Diamonds",
+        "14k White Gold",
+        "Art Deco Design"
+      ],
+      "video": "/videos/bracelets/frammenti-di-ghiaccio.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/frammenti-di-ghiaccio.jpg"
+    },
+    "cascata-di-luce-01": {
+      "title": "\"Cascading Light\" Pear-Cut Drop Earrings I",
+      "description": "An ode to fluidity and absolute elegance. Pear-cut lab-grown diamonds perfectly graduated to frame the face and elongate the neck. Articulated 14k white gold setting moves with natural flexibility. A masterpiece of sustainable High Jewelry.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Articulated Drop Design"
+      ],
+      "video": "/videos/earrings/cascata-di-luce-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/cascata-di-luce-01.jpg"
+    },
+    "composizione-cromatica-01": {
+      "title": "\"Cascading Light\" Pear-Cut Drop Earrings II",
+      "description": "An ode to fluidity and absolute elegance. Pear-cut lab-grown diamonds perfectly graduated to frame the face and elongate the neck. Articulated 14k white gold setting moves with natural flexibility. A masterpiece of sustainable High Jewelry.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Articulated Drop Design"
+      ],
+      "video": "/videos/earrings/composizione-cromatica-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/composizione-cromatica-01.jpg"
+    },
+    "sequenza-geometrica-01": {
+      "title": "\"Brilliant Ascension\" Graduated Drop Earrings I",
+      "description": "The timeless allure of the round brilliant cut elevated to its highest expression. Graduated lab-grown round diamonds in invisible 14k white gold structure. Incomparable fire.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Graduated Drop Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-01.jpg"
+    },
+    "cascata-di-luce-02": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings I",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/cascata-di-luce-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/cascata-di-luce-02.jpg"
+    },
+    "sequenza-geometrica-02": {
+      "title": "\"Radiant Trinity\" Drop Earrings with Fancy Pear I",
+      "description": "The perfect balance between classicism and originality. An elegant descent: round diamond at the lobe, luminous transitional gem, culminating in a fancy-hued pear-cut diamond. In 14k gold.",
+      "details": [
+        "Fancy Color & White Diamonds",
+        "14k White Gold",
+        "Three-Stone Drop Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-02.jpg"
+    },
+    "sequenza-geometrica-03": {
+      "title": "\"Cascading Light\" Pear-Cut Drop Earrings III",
+      "description": "An ode to fluidity and absolute elegance. Pear-cut lab-grown diamonds perfectly graduated to frame the face and elongate the neck. Articulated 14k white gold setting moves with natural flexibility. A masterpiece of sustainable High Jewelry.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Articulated Drop Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-03.jpg"
+    },
+    "composizione-cromatica-02": {
+      "title": "\"Radiant Trinity\" Drop Earrings with Fancy Pear II",
+      "description": "The perfect balance between classicism and originality. An elegant descent: round diamond at the lobe, luminous transitional gem, culminating in a fancy-hued pear-cut diamond. In 14k gold.",
+      "details": [
+        "Fancy Color & White Diamonds",
+        "14k White Gold",
+        "Three-Stone Drop Design"
+      ],
+      "video": "/videos/earrings/composizione-cromatica-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/composizione-cromatica-02.jpg"
+    },
+    "canone-rettilineo-01": {
+      "title": "\"Precious Bloom\" Floral Fancy Diamond Earrings I",
+      "description": "Springtime captured in an eternal jewel. A floral cluster of petal-shaped lab-grown diamonds at the lobe, suspending a majestic colored drop. Handcrafted in 14k white gold. Pure ethical luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Floral Cluster Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-01.jpg"
+    },
+    "sequenza-geometrica-04": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings I",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-04.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-04.jpg"
+    },
+    "canone-rettilineo-02": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings II",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-02.jpg"
+    },
+    "canone-rettilineo-03": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings III",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-03.jpg"
+    },
+    "costellazione-01": {
+      "title": "\"Radiant Trinity\" Drop Earrings with Fancy Pear III",
+      "description": "The perfect balance between classicism and originality. An elegant descent: round diamond at the lobe, luminous transitional gem, culminating in a fancy-hued pear-cut diamond. In 14k gold.",
+      "details": [
+        "Fancy Color & White Diamonds",
+        "14k White Gold",
+        "Three-Stone Drop Design"
+      ],
+      "video": "/videos/earrings/costellazione-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/costellazione-01.jpg"
+    },
+    "costellazione-02": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings II",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/costellazione-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/costellazione-02.jpg"
+    },
+    "canone-rettilineo-04": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings III",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-04.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-04.jpg"
+    },
+    "costellazione-03": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings IV",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/costellazione-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/costellazione-03.jpg"
+    },
+    "cascata-di-luce-03": {
+      "title": "\"Cascading Light\" Pear-Cut Drop Earrings IV",
+      "description": "An ode to fluidity and absolute elegance. Pear-cut lab-grown diamonds perfectly graduated to frame the face and elongate the neck. Articulated 14k white gold setting moves with natural flexibility. A masterpiece of sustainable High Jewelry.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Articulated Drop Design"
+      ],
+      "video": "/videos/earrings/cascata-di-luce-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/cascata-di-luce-03.jpg"
+    },
+    "composizione-cromatica-03": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings IV",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/composizione-cromatica-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/composizione-cromatica-03.jpg"
+    },
+    "teorema-verticale-01": {
+      "title": "\"Brilliant Ascension\" Graduated Drop Earrings II",
+      "description": "The timeless allure of the round brilliant cut elevated to its highest expression. Graduated lab-grown round diamonds in invisible 14k white gold structure. Incomparable fire.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Graduated Drop Design"
+      ],
+      "video": "/videos/earrings/teorema-verticale-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/teorema-verticale-01.jpg"
+    },
+    "teorema-verticale-02": {
+      "title": "\"Precious Bloom\" Floral Fancy Diamond Earrings II",
+      "description": "Springtime captured in an eternal jewel. A floral cluster of petal-shaped lab-grown diamonds at the lobe, suspending a majestic colored drop. Handcrafted in 14k white gold. Pure ethical luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Floral Cluster Design"
+      ],
+      "video": "/videos/earrings/teorema-verticale-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/teorema-verticale-02.jpg"
+    },
+    "teorema-verticale-03": {
+      "title": "\"Precious Bloom\" Floral Fancy Diamond Earrings III",
+      "description": "Springtime captured in an eternal jewel. A floral cluster of petal-shaped lab-grown diamonds at the lobe, suspending a majestic colored drop. Handcrafted in 14k white gold. Pure ethical luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Floral Cluster Design"
+      ],
+      "video": "/videos/earrings/teorema-verticale-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/teorema-verticale-03.jpg"
+    },
+    "linea-essenziale-01": {
+      "title": "\"Imperial Drops\" Chandelier Earrings in 14k White Gold",
+      "description": "The ne plus ultra of High Jewelry. Multiple strands of pear-cut lab-grown diamonds branch into an opulent chandelier structure in 14k white gold, creating a luminous fringe that dances with every movement. The quintessence of sustainable luxury.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Chandelier Structure"
+      ],
+      "video": "/videos/earrings/linea-essenziale-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/linea-essenziale-01.jpg"
+    },
+    "sequenza-geometrica-05": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings V",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-05.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-05.jpg"
+    },
+    "sequenza-geometrica-06": {
+      "title": "\"Precious Bloom\" Floral Fancy Diamond Earrings IV",
+      "description": "Springtime captured in an eternal jewel. A floral cluster of petal-shaped lab-grown diamonds at the lobe, suspending a majestic colored drop. Handcrafted in 14k white gold. Pure ethical luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Floral Cluster Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-06.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-06.jpg"
+    },
+    "sequenza-geometrica-07": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings V",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-07.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-07.jpg"
+    },
+    "sequenza-geometrica-08": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings VI",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-08.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-08.jpg"
+    },
+    "sequenza-geometrica-09": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings VII",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-09.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-09.jpg"
+    },
+    "sequenza-geometrica-10": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings VIII",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-10.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-10.jpg"
+    },
+    "canone-rettilineo-05": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings VI",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-05.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-05.jpg"
+    }
+  },
+  "de": {
+    "teorema": {
+      "title": "\"Deco Mosaic\" Fancy Greenish-Yellow Diamond Pendant",
+      "description": "A fascinating collision between vintage aesthetics and sustainable luxury innovation. An architectural masterpiece with a rare Greenish-Yellow lab-grown diamond in a round cut, set within a formidable starburst structure of 14k white gold. The geometric halo alternates baguette-cut diamonds with round brilliants. A jewel of sculptural allure.",
+      "details": [
+        "Fancy Greenish-Yellow Lab-Grown Diamond",
+        "Baguette & Round Cut Halo",
+        "14k White Gold Starburst Setting"
+      ],
+      "video": "/videos/pendants/teorema.mp4",
+      "category": "pendants",
+      "poster": "/photos/pendants/teorema.jpg"
+    },
+    "axioma": {
+      "title": "\"Romantic Aura\" Fancy Pink Pear-Cut Diamond Pendant",
+      "description": "The ultimate emblem of femininity and High Jewelry. A magnificent Fancy Pink lab-grown diamond in a flawless pear cut, embraced by a voluminous double halo of pure white diamonds. The central gem appears to float in a sea of light. Masterfully crafted in 14k white gold with a diamond-encrusted bail. A modern heirloom of eternal love and ethical luxury.",
+      "details": [
+        "Fancy Pink Lab-Grown Pear Diamond",
+        "Double Diamond Halo",
+        "14k White Gold with Diamond Bail"
+      ],
+      "video": "/videos/pendants/axioma.mp4",
+      "category": "pendants",
+      "poster": "/photos/pendants/axioma.jpg"
+    },
+    "sintesi": {
+      "title": "\"Romantic Aura\" Fancy Pink Double Halo Pendant",
+      "description": "The ultimate emblem of femininity. A magnificent Fancy Pink lab-grown pear diamond embraced by a double halo with subtle pink accents in its most exclusive variation. Masterfully crafted in 14k white gold. A modern heirloom.",
+      "details": [
+        "Fancy Pink Lab-Grown Pear Diamond",
+        "Double Halo with Pink Accents",
+        "14k White Gold"
+      ],
+      "video": "/videos/pendants/sintesi.mp4",
+      "category": "pendants",
+      "poster": "/photos/pendants/sintesi.jpg"
+    },
+    "canone": {
+      "title": "\"Imperial Ocean\" Fancy Blue Emerald-Cut Diamond Pendant",
+      "description": "Majestic, profound, and unforgettable. A striking Fancy Blue lab-grown diamond in a sophisticated emerald cut, unleashing sapphire-toned flashes with every movement. Elevated by a regal sunburst halo of round white diamonds in 14k white gold. A jewel of extraordinary charisma for theatrical, ethical, and timeless luxury.",
+      "details": [
+        "Fancy Blue Lab-Grown Emerald-Cut Diamond",
+        "Sunburst Diamond Halo",
+        "14k White Gold"
+      ],
+      "video": "/videos/pendants/canone.mp4",
+      "category": "pendants",
+      "poster": "/photos/pendants/canone.jpg"
+    },
+    "fiore-astrale-blu": {
+      "title": "\"Eternal Bloom\" Fancy Blue Diamond Ring",
+      "description": "Springtime blossoms on your finger, frozen in imperishable light. A floral sculpture where each petal is a luminous ice-blue lab-grown diamond in a pear cut, gathered around a brilliant white diamond core. Hand-set in fluid 14k white gold. A joyful, audacious cocktail ring for those who wear nature's beauty without compromising it.",
+      "details": [
+        "Fancy Blue Lab-Grown Pear Diamonds",
+        "14k White Gold",
+        "Floral Petal Design"
+      ],
+      "video": "/videos/rings/fiore-astrale-blu.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/fiore-astrale-blu.jpg"
+    },
+    "fiore-astrale-rosa": {
+      "title": "\"Eternal Bloom\" Fancy Pink Diamond Ring",
+      "description": "Springtime blossoms on your finger, frozen in imperishable light. A floral sculpture where each petal is a luminous blush-pink lab-grown diamond in a pear cut, gathered around a brilliant white diamond core. Hand-set in 14k white gold. A deeply feminine cocktail ring.",
+      "details": [
+        "Fancy Pink Lab-Grown Pear Diamonds",
+        "14k White Gold",
+        "Floral Petal Design"
+      ],
+      "video": "/videos/rings/fiore-astrale-rosa.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/fiore-astrale-rosa.jpg"
+    },
+    "teorema-solitario-01": {
+      "title": "\"Absolute Light\" Fancy Diamond Ring with Micro-Pavé I",
+      "description": "The ultimate expression of minimalist elegance where the stone is the undisputed star. A majestic colored lab-grown diamond encircled by a delicate halo of white micro-diamonds cascading down a slender 14k white gold band. The perfect modern engagement ring.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Micro-Pavé Halo"
+      ],
+      "video": "/videos/rings/teorema-solitario-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/teorema-solitario-01.jpg"
+    },
+    "teorema-solitario-02": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring I",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/teorema-solitario-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/teorema-solitario-02.jpg"
+    },
+    "aura-ovale-01": {
+      "title": "\"Royal Promise\" Fancy Diamond Trilogy Ring II",
+      "description": "The ultimate symbol of enduring love. A majestic fancy-hued lab-grown diamond at center, flanked by pristine white diamonds in 14k white gold. A masterpiece of proportion and ethical elegance.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Trilogy Three-Stone Design"
+      ],
+      "video": "/videos/rings/aura-ovale-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-01.jpg"
+    },
+    "aura-ovale-02": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring II",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/aura-ovale-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-02.jpg"
+    },
+    "aura-cuscino-blu": {
+      "title": "\"Absolute Light\" Fancy Blue Diamond Ring with Micro-Pavé",
+      "description": "The ultimate expression of minimalist elegance where the stone is the undisputed star. A majestic colored lab-grown diamond encircled by a delicate halo of white micro-diamonds cascading down a slender 14k white gold band. The perfect modern engagement ring.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Micro-Pavé Halo"
+      ],
+      "video": "/videos/rings/aura-cuscino-blu.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-cuscino-blu.jpg"
+    },
+    "teorema-solitario-03": {
+      "title": "\"Infinite Embrace\" Bypass Design Ring I",
+      "description": "Far from convention, close to pure art. Two diamond-encrusted 14k white gold bands intertwine sinuously, wrapping around the central Fancy Pink diamond without ever touching, in a high-fashion bypass style. Sensual, contemporary, and bold. An ethical jewel for the avant-garde woman.",
+      "details": [
+        "Fancy Pink Lab-Grown Diamond",
+        "14k White Gold",
+        "Bypass Intertwined Design"
+      ],
+      "video": "/videos/rings/teorema-solitario-03.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/teorema-solitario-03.jpg"
+    },
+    "prospettiva-doppia-01": {
+      "title": "\"Crimson Heart\" Fancy Pink Heart-Cut Halo Ring I",
+      "description": "The heart shape is the most complex for a master cutter, demanding impeccable symmetry. This ring captures the essence of romance with a Fancy Pink lab-grown heart diamond, encircled by a radiant halo of white diamonds. The 14k white gold pavé band wraps the finger in light. A priceless gift for unforgettable declarations.",
+      "details": [
+        "Fancy Pink Heart-Cut Diamond",
+        "14k White Gold",
+        "Diamond Halo & Pavé Band"
+      ],
+      "video": "/videos/rings/prospettiva-doppia-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/prospettiva-doppia-01.jpg"
+    },
+    "aura-smeraldo-01": {
+      "title": "\"Crimson Heart\" Fancy Pink Heart-Cut Halo Ring II",
+      "description": "The heart shape demands impeccable symmetry to unlock brilliance. A Fancy Pink lab-grown heart diamond encircled by a radiant halo in 14k white gold with pavé band. An unforgettable declaration of love.",
+      "details": [
+        "Fancy Pink Heart-Cut Diamond",
+        "14k White Gold",
+        "Diamond Halo & Pavé Band"
+      ],
+      "video": "/videos/rings/aura-smeraldo-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-smeraldo-01.jpg"
+    },
+    "aura-smeraldo-02": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring III",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/aura-smeraldo-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-smeraldo-02.jpg"
+    },
+    "aura-smeraldo-03": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring IV",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/aura-smeraldo-03.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-smeraldo-03.jpg"
+    },
+    "fiore-di-ghiaccio": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring V",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/fiore-di-ghiaccio.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/fiore-di-ghiaccio.jpg"
+    },
+    "aura-cuscino-rosa-01": {
+      "title": "\"Vintage Heritage\" Sunburst Halo Ring I",
+      "description": "An aesthetic stolen from the Golden Age of High Jewelry, recreated with ethical technologies. A rare colored lab-grown diamond set at the center of an elaborate Sunburst-style halo. Baguettes and round brilliants merge into a mosaic of light on 14k white gold.",
+      "details": [
+        "Rare Fancy Color Diamond",
+        "14k White Gold",
+        "Sunburst Halo Design"
+      ],
+      "video": "/videos/rings/aura-cuscino-rosa-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-cuscino-rosa-01.jpg"
+    },
+    "aura-goccia-rosa": {
+      "title": "\"Deco Majesty\" Fancy Pink Drop Ring",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/aura-goccia-rosa.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-goccia-rosa.jpg"
+    },
+    "aura-cuscino-rosa-02": {
+      "title": "\"Crimson Heart\" Fancy Pink Heart-Cut Halo Ring III",
+      "description": "A Fancy Pink lab-grown heart diamond encircled by a radiant halo in 14k white gold with scintillating pavé band. Romance perfected in ethical luxury.",
+      "details": [
+        "Fancy Pink Heart-Cut Diamond",
+        "14k White Gold",
+        "Diamond Halo & Pavé Band"
+      ],
+      "video": "/videos/rings/aura-cuscino-rosa-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-cuscino-rosa-02.jpg"
+    },
+    "aura-ovale-03": {
+      "title": "\"Vintage Heritage\" Sunburst Halo Ring II",
+      "description": "An aesthetic stolen from the Golden Age of High Jewelry, recreated with ethical technologies. A rare colored lab-grown diamond set at the center of an elaborate Sunburst-style halo. Baguettes and round brilliants merge into a mosaic of light on 14k white gold.",
+      "details": [
+        "Rare Fancy Color Diamond",
+        "14k White Gold",
+        "Sunburst Halo Design"
+      ],
+      "video": "/videos/rings/aura-ovale-03.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-03.jpg"
+    },
+    "aura-ovale-04": {
+      "title": "\"Absolute Light\" Fancy Diamond Ring with Micro-Pavé II",
+      "description": "The ultimate expression of minimalist elegance where the stone is the undisputed star. A majestic colored lab-grown diamond encircled by a delicate halo of white micro-diamonds cascading down a slender 14k white gold band. The perfect modern engagement ring.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Micro-Pavé Halo"
+      ],
+      "video": "/videos/rings/aura-ovale-04.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-04.jpg"
+    },
+    "aura-smeraldo-verde": {
+      "title": "\"Royal Promise\" Fancy Green Diamond Trilogy Ring",
+      "description": "The ultimate symbol of enduring love. A rare Fancy Green lab-grown diamond at center, flanked by pristine white diamonds in 14k white gold. A masterpiece of proportion and ethical elegance.",
+      "details": [
+        "Fancy Green Lab-Grown Diamond",
+        "14k White Gold",
+        "Trilogy Three-Stone Design"
+      ],
+      "video": "/videos/rings/aura-smeraldo-verde.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-smeraldo-verde.jpg"
+    },
+    "aura-ovale-05": {
+      "title": "\"Vintage Heritage\" Sunburst Halo Ring III",
+      "description": "An aesthetic stolen from the Golden Age of High Jewelry, recreated with ethical technologies. A rare colored lab-grown diamond set at the center of an elaborate Sunburst-style halo. Baguettes and round brilliants merge into a mosaic of light on 14k white gold.",
+      "details": [
+        "Rare Fancy Color Diamond",
+        "14k White Gold",
+        "Sunburst Halo Design"
+      ],
+      "video": "/videos/rings/aura-ovale-05.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-05.jpg"
+    },
+    "prospettiva-doppia-02": {
+      "title": "\"Infinite Embrace\" Bypass Design Ring II",
+      "description": "Far from convention, close to pure art. Two diamond-encrusted 14k white gold bands intertwine around the central fancy diamond in a sensual bypass style. Contemporary, bold, and ethical.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Bypass Intertwined Design"
+      ],
+      "video": "/videos/rings/prospettiva-doppia-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/prospettiva-doppia-02.jpg"
+    },
+    "canone-inverso": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring VI",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/canone-inverso.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/canone-inverso.jpg"
+    },
+    "teorema-duo-02": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring VII",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/teorema-duo-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/teorema-duo-02.jpg"
+    },
+    "solitario-essenziale": {
+      "title": "\"Royal Promise\" Fancy Pink Diamond Trilogy Ring",
+      "description": "The ultimate symbol of enduring love. A majestic Fancy Pink lab-grown diamond at center, secured by rose gold prongs to enhance its warm saturation. Flanked by two pristine white pear-cut diamonds in 14k white gold. A masterpiece of proportion and ethical elegance.",
+      "details": [
+        "Fancy Pink Lab-Grown Center Diamond",
+        "Rose Gold & 14k White Gold",
+        "Trilogy Design with Pear Side Stones"
+      ],
+      "video": "/videos/rings/solitario-essenziale.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/solitario-essenziale.jpg"
+    },
+    "linea-pura-01": {
+      "title": "\"Jardin d'Éden\" Diamond Floral Bracelet",
+      "description": "An ode to nature's beauty, forged in eternal light. A High Jewelry masterpiece transforming exceptionally pure lab-grown diamonds into a delicate floral garland. Pear and marquise-cut stones hand-set in 14k white gold. A statement piece—commanding yet romantic.",
+      "details": [
+        "Lab-Grown Pear & Marquise Diamonds",
+        "14k White Gold",
+        "Floral Garland Design"
+      ],
+      "video": "/videos/bracelets/linea-pura-01.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-01.jpg"
+    },
+    "linea-pura-02": {
+      "title": "\"Drops of Light\" Pear-Cut Tennis Bracelet",
+      "description": "A contemporary reimagining of the classic tennis bracelet. A seamless sequence of pear-cut lab-grown diamonds on a fluid 14k white gold setting. The tapered silhouette creates a dynamic visual rhythm with asymmetrical brilliance.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Fluid Articulated Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-02.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-02.jpg"
+    },
+    "linea-pura-03": {
+      "title": "\"Majesty\" Grand Tennis Bracelet I",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-03.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-03.jpg"
+    },
+    "linea-pura-04": {
+      "title": "\"Majesty\" Grand Tennis Bracelet II",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-04.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-04.jpg"
+    },
+    "linea-pura-05": {
+      "title": "\"Eternity\" Classic Tennis Bracelet I",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-05.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-05.jpg"
+    },
+    "linea-pura-06": {
+      "title": "\"Eternity\" Classic Tennis Bracelet II",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-06.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-06.jpg"
+    },
+    "sequenza-architettonica-01": {
+      "title": "\"Spark\" Essential Tennis Bracelet I",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/sequenza-architettonica-01.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/sequenza-architettonica-01.jpg"
+    },
+    "linea-pura-07": {
+      "title": "\"Spark\" Essential Tennis Bracelet II",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-07.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-07.jpg"
+    },
+    "linea-pura-08": {
+      "title": "\"Eternity\" Classic Tennis Bracelet III",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-08.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-08.jpg"
+    },
+    "linea-pura-09": {
+      "title": "\"Spark\" Essential Tennis Bracelet III",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-09.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-09.jpg"
+    },
+    "linea-pura-10": {
+      "title": "\"Spark\" Essential Tennis Bracelet IV",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-10.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-10.jpg"
+    },
+    "linea-pura-11": {
+      "title": "\"Spark\" Essential Tennis Bracelet V",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-11.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-11.jpg"
+    },
+    "linea-pura-12": {
+      "title": "\"Spark\" Essential Tennis Bracelet VI",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-12.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-12.jpg"
+    },
+    "mosaico-cromatico": {
+      "title": "\"Pastel Aura\" Fancy Color Diamond Bracelet",
+      "description": "A wearable work of art celebrating the rarity of color. Alternates colorless lab-grown diamonds with pastel hues: ice blue and blush pink. Pear cuts with round diamond clusters in 14k white gold. A jewel of regal allure for those seeking absolute exclusivity.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Mixed Pear & Round Cuts"
+      ],
+      "video": "/videos/bracelets/mosaico-cromatico.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/mosaico-cromatico.jpg"
+    },
+    "continuum-floreale": {
+      "title": "\"Geometric Reflections\" Emerald-Cut Tennis Bracelet I",
+      "description": "Magnetic, sophisticated, with Art Deco allure. Emerald-cut lab-grown diamonds perfectly aligned in 14-karat white gold, creating a mesmerizing \"hall of mirrors\" effect. A bracelet of strong character and ethical luxury.",
+      "details": [
+        "Lab-Grown Emerald-Cut Diamonds",
+        "14k White Gold",
+        "Art Deco Design"
+      ],
+      "video": "/videos/bracelets/continuum-floreale.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/continuum-floreale.jpg"
+    },
+    "sequenza-architettonica-02": {
+      "title": "\"Geometric Reflections\" Emerald-Cut Tennis Bracelet II",
+      "description": "Magnetic, sophisticated, with Art Deco allure. Emerald-cut lab-grown diamonds perfectly aligned in 14-karat white gold, creating a mesmerizing \"hall of mirrors\" effect. A bracelet of strong character and ethical luxury.",
+      "details": [
+        "Lab-Grown Emerald-Cut Diamonds",
+        "14k White Gold",
+        "Art Deco Design"
+      ],
+      "video": "/videos/bracelets/sequenza-architettonica-02.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/sequenza-architettonica-02.jpg"
+    },
+    "frammenti-di-ghiaccio": {
+      "title": "\"Ice Shards\" Emerald-Cut Diamond Bracelet",
+      "description": "Magnetic, sophisticated, with Art Deco allure. Emerald-cut lab-grown diamonds perfectly aligned in 14-karat white gold, creating a mesmerizing \"hall of mirrors\" effect. A bracelet of strong character and ethical luxury.",
+      "details": [
+        "Lab-Grown Emerald-Cut Diamonds",
+        "14k White Gold",
+        "Art Deco Design"
+      ],
+      "video": "/videos/bracelets/frammenti-di-ghiaccio.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/frammenti-di-ghiaccio.jpg"
+    },
+    "cascata-di-luce-01": {
+      "title": "\"Cascading Light\" Pear-Cut Drop Earrings I",
+      "description": "An ode to fluidity and absolute elegance. Pear-cut lab-grown diamonds perfectly graduated to frame the face and elongate the neck. Articulated 14k white gold setting moves with natural flexibility. A masterpiece of sustainable High Jewelry.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Articulated Drop Design"
+      ],
+      "video": "/videos/earrings/cascata-di-luce-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/cascata-di-luce-01.jpg"
+    },
+    "composizione-cromatica-01": {
+      "title": "\"Cascading Light\" Pear-Cut Drop Earrings II",
+      "description": "An ode to fluidity and absolute elegance. Pear-cut lab-grown diamonds perfectly graduated to frame the face and elongate the neck. Articulated 14k white gold setting moves with natural flexibility. A masterpiece of sustainable High Jewelry.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Articulated Drop Design"
+      ],
+      "video": "/videos/earrings/composizione-cromatica-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/composizione-cromatica-01.jpg"
+    },
+    "sequenza-geometrica-01": {
+      "title": "\"Brilliant Ascension\" Graduated Drop Earrings I",
+      "description": "The timeless allure of the round brilliant cut elevated to its highest expression. Graduated lab-grown round diamonds in invisible 14k white gold structure. Incomparable fire.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Graduated Drop Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-01.jpg"
+    },
+    "cascata-di-luce-02": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings I",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/cascata-di-luce-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/cascata-di-luce-02.jpg"
+    },
+    "sequenza-geometrica-02": {
+      "title": "\"Radiant Trinity\" Drop Earrings with Fancy Pear I",
+      "description": "The perfect balance between classicism and originality. An elegant descent: round diamond at the lobe, luminous transitional gem, culminating in a fancy-hued pear-cut diamond. In 14k gold.",
+      "details": [
+        "Fancy Color & White Diamonds",
+        "14k White Gold",
+        "Three-Stone Drop Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-02.jpg"
+    },
+    "sequenza-geometrica-03": {
+      "title": "\"Cascading Light\" Pear-Cut Drop Earrings III",
+      "description": "An ode to fluidity and absolute elegance. Pear-cut lab-grown diamonds perfectly graduated to frame the face and elongate the neck. Articulated 14k white gold setting moves with natural flexibility. A masterpiece of sustainable High Jewelry.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Articulated Drop Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-03.jpg"
+    },
+    "composizione-cromatica-02": {
+      "title": "\"Radiant Trinity\" Drop Earrings with Fancy Pear II",
+      "description": "The perfect balance between classicism and originality. An elegant descent: round diamond at the lobe, luminous transitional gem, culminating in a fancy-hued pear-cut diamond. In 14k gold.",
+      "details": [
+        "Fancy Color & White Diamonds",
+        "14k White Gold",
+        "Three-Stone Drop Design"
+      ],
+      "video": "/videos/earrings/composizione-cromatica-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/composizione-cromatica-02.jpg"
+    },
+    "canone-rettilineo-01": {
+      "title": "\"Precious Bloom\" Floral Fancy Diamond Earrings I",
+      "description": "Springtime captured in an eternal jewel. A floral cluster of petal-shaped lab-grown diamonds at the lobe, suspending a majestic colored drop. Handcrafted in 14k white gold. Pure ethical luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Floral Cluster Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-01.jpg"
+    },
+    "sequenza-geometrica-04": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings I",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-04.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-04.jpg"
+    },
+    "canone-rettilineo-02": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings II",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-02.jpg"
+    },
+    "canone-rettilineo-03": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings III",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-03.jpg"
+    },
+    "costellazione-01": {
+      "title": "\"Radiant Trinity\" Drop Earrings with Fancy Pear III",
+      "description": "The perfect balance between classicism and originality. An elegant descent: round diamond at the lobe, luminous transitional gem, culminating in a fancy-hued pear-cut diamond. In 14k gold.",
+      "details": [
+        "Fancy Color & White Diamonds",
+        "14k White Gold",
+        "Three-Stone Drop Design"
+      ],
+      "video": "/videos/earrings/costellazione-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/costellazione-01.jpg"
+    },
+    "costellazione-02": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings II",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/costellazione-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/costellazione-02.jpg"
+    },
+    "canone-rettilineo-04": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings III",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-04.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-04.jpg"
+    },
+    "costellazione-03": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings IV",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/costellazione-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/costellazione-03.jpg"
+    },
+    "cascata-di-luce-03": {
+      "title": "\"Cascading Light\" Pear-Cut Drop Earrings IV",
+      "description": "An ode to fluidity and absolute elegance. Pear-cut lab-grown diamonds perfectly graduated to frame the face and elongate the neck. Articulated 14k white gold setting moves with natural flexibility. A masterpiece of sustainable High Jewelry.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Articulated Drop Design"
+      ],
+      "video": "/videos/earrings/cascata-di-luce-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/cascata-di-luce-03.jpg"
+    },
+    "composizione-cromatica-03": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings IV",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/composizione-cromatica-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/composizione-cromatica-03.jpg"
+    },
+    "teorema-verticale-01": {
+      "title": "\"Brilliant Ascension\" Graduated Drop Earrings II",
+      "description": "The timeless allure of the round brilliant cut elevated to its highest expression. Graduated lab-grown round diamonds in invisible 14k white gold structure. Incomparable fire.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Graduated Drop Design"
+      ],
+      "video": "/videos/earrings/teorema-verticale-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/teorema-verticale-01.jpg"
+    },
+    "teorema-verticale-02": {
+      "title": "\"Precious Bloom\" Floral Fancy Diamond Earrings II",
+      "description": "Springtime captured in an eternal jewel. A floral cluster of petal-shaped lab-grown diamonds at the lobe, suspending a majestic colored drop. Handcrafted in 14k white gold. Pure ethical luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Floral Cluster Design"
+      ],
+      "video": "/videos/earrings/teorema-verticale-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/teorema-verticale-02.jpg"
+    },
+    "teorema-verticale-03": {
+      "title": "\"Precious Bloom\" Floral Fancy Diamond Earrings III",
+      "description": "Springtime captured in an eternal jewel. A floral cluster of petal-shaped lab-grown diamonds at the lobe, suspending a majestic colored drop. Handcrafted in 14k white gold. Pure ethical luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Floral Cluster Design"
+      ],
+      "video": "/videos/earrings/teorema-verticale-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/teorema-verticale-03.jpg"
+    },
+    "linea-essenziale-01": {
+      "title": "\"Imperial Drops\" Chandelier Earrings in 14k White Gold",
+      "description": "The ne plus ultra of High Jewelry. Multiple strands of pear-cut lab-grown diamonds branch into an opulent chandelier structure in 14k white gold, creating a luminous fringe that dances with every movement. The quintessence of sustainable luxury.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Chandelier Structure"
+      ],
+      "video": "/videos/earrings/linea-essenziale-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/linea-essenziale-01.jpg"
+    },
+    "sequenza-geometrica-05": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings V",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-05.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-05.jpg"
+    },
+    "sequenza-geometrica-06": {
+      "title": "\"Precious Bloom\" Floral Fancy Diamond Earrings IV",
+      "description": "Springtime captured in an eternal jewel. A floral cluster of petal-shaped lab-grown diamonds at the lobe, suspending a majestic colored drop. Handcrafted in 14k white gold. Pure ethical luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Floral Cluster Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-06.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-06.jpg"
+    },
+    "sequenza-geometrica-07": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings V",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-07.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-07.jpg"
+    },
+    "sequenza-geometrica-08": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings VI",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-08.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-08.jpg"
+    },
+    "sequenza-geometrica-09": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings VII",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-09.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-09.jpg"
+    },
+    "sequenza-geometrica-10": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings VIII",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-10.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-10.jpg"
+    },
+    "canone-rettilineo-05": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings VI",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-05.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-05.jpg"
+    }
+  },
+  "ar": {
+    "teorema": {
+      "title": "\"Deco Mosaic\" Fancy Greenish-Yellow Diamond Pendant",
+      "description": "A fascinating collision between vintage aesthetics and sustainable luxury innovation. An architectural masterpiece with a rare Greenish-Yellow lab-grown diamond in a round cut, set within a formidable starburst structure of 14k white gold. The geometric halo alternates baguette-cut diamonds with round brilliants. A jewel of sculptural allure.",
+      "details": [
+        "Fancy Greenish-Yellow Lab-Grown Diamond",
+        "Baguette & Round Cut Halo",
+        "14k White Gold Starburst Setting"
+      ],
+      "video": "/videos/pendants/teorema.mp4",
+      "category": "pendants",
+      "poster": "/photos/pendants/teorema.jpg"
+    },
+    "axioma": {
+      "title": "\"Romantic Aura\" Fancy Pink Pear-Cut Diamond Pendant",
+      "description": "The ultimate emblem of femininity and High Jewelry. A magnificent Fancy Pink lab-grown diamond in a flawless pear cut, embraced by a voluminous double halo of pure white diamonds. The central gem appears to float in a sea of light. Masterfully crafted in 14k white gold with a diamond-encrusted bail. A modern heirloom of eternal love and ethical luxury.",
+      "details": [
+        "Fancy Pink Lab-Grown Pear Diamond",
+        "Double Diamond Halo",
+        "14k White Gold with Diamond Bail"
+      ],
+      "video": "/videos/pendants/axioma.mp4",
+      "category": "pendants",
+      "poster": "/photos/pendants/axioma.jpg"
+    },
+    "sintesi": {
+      "title": "\"Romantic Aura\" Fancy Pink Double Halo Pendant",
+      "description": "The ultimate emblem of femininity. A magnificent Fancy Pink lab-grown pear diamond embraced by a double halo with subtle pink accents in its most exclusive variation. Masterfully crafted in 14k white gold. A modern heirloom.",
+      "details": [
+        "Fancy Pink Lab-Grown Pear Diamond",
+        "Double Halo with Pink Accents",
+        "14k White Gold"
+      ],
+      "video": "/videos/pendants/sintesi.mp4",
+      "category": "pendants",
+      "poster": "/photos/pendants/sintesi.jpg"
+    },
+    "canone": {
+      "title": "\"Imperial Ocean\" Fancy Blue Emerald-Cut Diamond Pendant",
+      "description": "Majestic, profound, and unforgettable. A striking Fancy Blue lab-grown diamond in a sophisticated emerald cut, unleashing sapphire-toned flashes with every movement. Elevated by a regal sunburst halo of round white diamonds in 14k white gold. A jewel of extraordinary charisma for theatrical, ethical, and timeless luxury.",
+      "details": [
+        "Fancy Blue Lab-Grown Emerald-Cut Diamond",
+        "Sunburst Diamond Halo",
+        "14k White Gold"
+      ],
+      "video": "/videos/pendants/canone.mp4",
+      "category": "pendants",
+      "poster": "/photos/pendants/canone.jpg"
+    },
+    "fiore-astrale-blu": {
+      "title": "\"Eternal Bloom\" Fancy Blue Diamond Ring",
+      "description": "Springtime blossoms on your finger, frozen in imperishable light. A floral sculpture where each petal is a luminous ice-blue lab-grown diamond in a pear cut, gathered around a brilliant white diamond core. Hand-set in fluid 14k white gold. A joyful, audacious cocktail ring for those who wear nature's beauty without compromising it.",
+      "details": [
+        "Fancy Blue Lab-Grown Pear Diamonds",
+        "14k White Gold",
+        "Floral Petal Design"
+      ],
+      "video": "/videos/rings/fiore-astrale-blu.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/fiore-astrale-blu.jpg"
+    },
+    "fiore-astrale-rosa": {
+      "title": "\"Eternal Bloom\" Fancy Pink Diamond Ring",
+      "description": "Springtime blossoms on your finger, frozen in imperishable light. A floral sculpture where each petal is a luminous blush-pink lab-grown diamond in a pear cut, gathered around a brilliant white diamond core. Hand-set in 14k white gold. A deeply feminine cocktail ring.",
+      "details": [
+        "Fancy Pink Lab-Grown Pear Diamonds",
+        "14k White Gold",
+        "Floral Petal Design"
+      ],
+      "video": "/videos/rings/fiore-astrale-rosa.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/fiore-astrale-rosa.jpg"
+    },
+    "teorema-solitario-01": {
+      "title": "\"Absolute Light\" Fancy Diamond Ring with Micro-Pavé I",
+      "description": "The ultimate expression of minimalist elegance where the stone is the undisputed star. A majestic colored lab-grown diamond encircled by a delicate halo of white micro-diamonds cascading down a slender 14k white gold band. The perfect modern engagement ring.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Micro-Pavé Halo"
+      ],
+      "video": "/videos/rings/teorema-solitario-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/teorema-solitario-01.jpg"
+    },
+    "teorema-solitario-02": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring I",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/teorema-solitario-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/teorema-solitario-02.jpg"
+    },
+    "aura-ovale-01": {
+      "title": "\"Royal Promise\" Fancy Diamond Trilogy Ring II",
+      "description": "The ultimate symbol of enduring love. A majestic fancy-hued lab-grown diamond at center, flanked by pristine white diamonds in 14k white gold. A masterpiece of proportion and ethical elegance.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Trilogy Three-Stone Design"
+      ],
+      "video": "/videos/rings/aura-ovale-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-01.jpg"
+    },
+    "aura-ovale-02": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring II",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/aura-ovale-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-02.jpg"
+    },
+    "aura-cuscino-blu": {
+      "title": "\"Absolute Light\" Fancy Blue Diamond Ring with Micro-Pavé",
+      "description": "The ultimate expression of minimalist elegance where the stone is the undisputed star. A majestic colored lab-grown diamond encircled by a delicate halo of white micro-diamonds cascading down a slender 14k white gold band. The perfect modern engagement ring.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Micro-Pavé Halo"
+      ],
+      "video": "/videos/rings/aura-cuscino-blu.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-cuscino-blu.jpg"
+    },
+    "teorema-solitario-03": {
+      "title": "\"Infinite Embrace\" Bypass Design Ring I",
+      "description": "Far from convention, close to pure art. Two diamond-encrusted 14k white gold bands intertwine sinuously, wrapping around the central Fancy Pink diamond without ever touching, in a high-fashion bypass style. Sensual, contemporary, and bold. An ethical jewel for the avant-garde woman.",
+      "details": [
+        "Fancy Pink Lab-Grown Diamond",
+        "14k White Gold",
+        "Bypass Intertwined Design"
+      ],
+      "video": "/videos/rings/teorema-solitario-03.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/teorema-solitario-03.jpg"
+    },
+    "prospettiva-doppia-01": {
+      "title": "\"Crimson Heart\" Fancy Pink Heart-Cut Halo Ring I",
+      "description": "The heart shape is the most complex for a master cutter, demanding impeccable symmetry. This ring captures the essence of romance with a Fancy Pink lab-grown heart diamond, encircled by a radiant halo of white diamonds. The 14k white gold pavé band wraps the finger in light. A priceless gift for unforgettable declarations.",
+      "details": [
+        "Fancy Pink Heart-Cut Diamond",
+        "14k White Gold",
+        "Diamond Halo & Pavé Band"
+      ],
+      "video": "/videos/rings/prospettiva-doppia-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/prospettiva-doppia-01.jpg"
+    },
+    "aura-smeraldo-01": {
+      "title": "\"Crimson Heart\" Fancy Pink Heart-Cut Halo Ring II",
+      "description": "The heart shape demands impeccable symmetry to unlock brilliance. A Fancy Pink lab-grown heart diamond encircled by a radiant halo in 14k white gold with pavé band. An unforgettable declaration of love.",
+      "details": [
+        "Fancy Pink Heart-Cut Diamond",
+        "14k White Gold",
+        "Diamond Halo & Pavé Band"
+      ],
+      "video": "/videos/rings/aura-smeraldo-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-smeraldo-01.jpg"
+    },
+    "aura-smeraldo-02": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring III",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/aura-smeraldo-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-smeraldo-02.jpg"
+    },
+    "aura-smeraldo-03": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring IV",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/aura-smeraldo-03.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-smeraldo-03.jpg"
+    },
+    "fiore-di-ghiaccio": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring V",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/fiore-di-ghiaccio.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/fiore-di-ghiaccio.jpg"
+    },
+    "aura-cuscino-rosa-01": {
+      "title": "\"Vintage Heritage\" Sunburst Halo Ring I",
+      "description": "An aesthetic stolen from the Golden Age of High Jewelry, recreated with ethical technologies. A rare colored lab-grown diamond set at the center of an elaborate Sunburst-style halo. Baguettes and round brilliants merge into a mosaic of light on 14k white gold.",
+      "details": [
+        "Rare Fancy Color Diamond",
+        "14k White Gold",
+        "Sunburst Halo Design"
+      ],
+      "video": "/videos/rings/aura-cuscino-rosa-01.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-cuscino-rosa-01.jpg"
+    },
+    "aura-goccia-rosa": {
+      "title": "\"Deco Majesty\" Fancy Pink Drop Ring",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/aura-goccia-rosa.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-goccia-rosa.jpg"
+    },
+    "aura-cuscino-rosa-02": {
+      "title": "\"Crimson Heart\" Fancy Pink Heart-Cut Halo Ring III",
+      "description": "A Fancy Pink lab-grown heart diamond encircled by a radiant halo in 14k white gold with scintillating pavé band. Romance perfected in ethical luxury.",
+      "details": [
+        "Fancy Pink Heart-Cut Diamond",
+        "14k White Gold",
+        "Diamond Halo & Pavé Band"
+      ],
+      "video": "/videos/rings/aura-cuscino-rosa-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-cuscino-rosa-02.jpg"
+    },
+    "aura-ovale-03": {
+      "title": "\"Vintage Heritage\" Sunburst Halo Ring II",
+      "description": "An aesthetic stolen from the Golden Age of High Jewelry, recreated with ethical technologies. A rare colored lab-grown diamond set at the center of an elaborate Sunburst-style halo. Baguettes and round brilliants merge into a mosaic of light on 14k white gold.",
+      "details": [
+        "Rare Fancy Color Diamond",
+        "14k White Gold",
+        "Sunburst Halo Design"
+      ],
+      "video": "/videos/rings/aura-ovale-03.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-03.jpg"
+    },
+    "aura-ovale-04": {
+      "title": "\"Absolute Light\" Fancy Diamond Ring with Micro-Pavé II",
+      "description": "The ultimate expression of minimalist elegance where the stone is the undisputed star. A majestic colored lab-grown diamond encircled by a delicate halo of white micro-diamonds cascading down a slender 14k white gold band. The perfect modern engagement ring.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Micro-Pavé Halo"
+      ],
+      "video": "/videos/rings/aura-ovale-04.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-04.jpg"
+    },
+    "aura-smeraldo-verde": {
+      "title": "\"Royal Promise\" Fancy Green Diamond Trilogy Ring",
+      "description": "The ultimate symbol of enduring love. A rare Fancy Green lab-grown diamond at center, flanked by pristine white diamonds in 14k white gold. A masterpiece of proportion and ethical elegance.",
+      "details": [
+        "Fancy Green Lab-Grown Diamond",
+        "14k White Gold",
+        "Trilogy Three-Stone Design"
+      ],
+      "video": "/videos/rings/aura-smeraldo-verde.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-smeraldo-verde.jpg"
+    },
+    "aura-ovale-05": {
+      "title": "\"Vintage Heritage\" Sunburst Halo Ring III",
+      "description": "An aesthetic stolen from the Golden Age of High Jewelry, recreated with ethical technologies. A rare colored lab-grown diamond set at the center of an elaborate Sunburst-style halo. Baguettes and round brilliants merge into a mosaic of light on 14k white gold.",
+      "details": [
+        "Rare Fancy Color Diamond",
+        "14k White Gold",
+        "Sunburst Halo Design"
+      ],
+      "video": "/videos/rings/aura-ovale-05.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/aura-ovale-05.jpg"
+    },
+    "prospettiva-doppia-02": {
+      "title": "\"Infinite Embrace\" Bypass Design Ring II",
+      "description": "Far from convention, close to pure art. Two diamond-encrusted 14k white gold bands intertwine around the central fancy diamond in a sensual bypass style. Contemporary, bold, and ethical.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Bypass Intertwined Design"
+      ],
+      "video": "/videos/rings/prospettiva-doppia-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/prospettiva-doppia-02.jpg"
+    },
+    "canone-inverso": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring VI",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/canone-inverso.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/canone-inverso.jpg"
+    },
+    "teorema-duo-02": {
+      "title": "\"Deco Majesty\" Fancy Diamond Ring VII",
+      "description": "Designed to command the room. Clean architectural lines frame a breathtaking lab-grown diamond. The central gem is amplified by luxurious double halos and diamond-encrusted split shanks in 14k white gold. A statement ring of princely, conscious luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamond",
+        "14k White Gold",
+        "Double Halo & Split Shank"
+      ],
+      "video": "/videos/rings/teorema-duo-02.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/teorema-duo-02.jpg"
+    },
+    "solitario-essenziale": {
+      "title": "\"Royal Promise\" Fancy Pink Diamond Trilogy Ring",
+      "description": "The ultimate symbol of enduring love. A majestic Fancy Pink lab-grown diamond at center, secured by rose gold prongs to enhance its warm saturation. Flanked by two pristine white pear-cut diamonds in 14k white gold. A masterpiece of proportion and ethical elegance.",
+      "details": [
+        "Fancy Pink Lab-Grown Center Diamond",
+        "Rose Gold & 14k White Gold",
+        "Trilogy Design with Pear Side Stones"
+      ],
+      "video": "/videos/rings/solitario-essenziale.mp4",
+      "category": "rings",
+      "poster": "/photos/rings/solitario-essenziale.jpg"
+    },
+    "linea-pura-01": {
+      "title": "\"Jardin d'Éden\" Diamond Floral Bracelet",
+      "description": "An ode to nature's beauty, forged in eternal light. A High Jewelry masterpiece transforming exceptionally pure lab-grown diamonds into a delicate floral garland. Pear and marquise-cut stones hand-set in 14k white gold. A statement piece—commanding yet romantic.",
+      "details": [
+        "Lab-Grown Pear & Marquise Diamonds",
+        "14k White Gold",
+        "Floral Garland Design"
+      ],
+      "video": "/videos/bracelets/linea-pura-01.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-01.jpg"
+    },
+    "linea-pura-02": {
+      "title": "\"Drops of Light\" Pear-Cut Tennis Bracelet",
+      "description": "A contemporary reimagining of the classic tennis bracelet. A seamless sequence of pear-cut lab-grown diamonds on a fluid 14k white gold setting. The tapered silhouette creates a dynamic visual rhythm with asymmetrical brilliance.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Fluid Articulated Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-02.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-02.jpg"
+    },
+    "linea-pura-03": {
+      "title": "\"Majesty\" Grand Tennis Bracelet I",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-03.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-03.jpg"
+    },
+    "linea-pura-04": {
+      "title": "\"Majesty\" Grand Tennis Bracelet II",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-04.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-04.jpg"
+    },
+    "linea-pura-05": {
+      "title": "\"Eternity\" Classic Tennis Bracelet I",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-05.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-05.jpg"
+    },
+    "linea-pura-06": {
+      "title": "\"Eternity\" Classic Tennis Bracelet II",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-06.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-06.jpg"
+    },
+    "sequenza-architettonica-01": {
+      "title": "\"Spark\" Essential Tennis Bracelet I",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/sequenza-architettonica-01.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/sequenza-architettonica-01.jpg"
+    },
+    "linea-pura-07": {
+      "title": "\"Spark\" Essential Tennis Bracelet II",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-07.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-07.jpg"
+    },
+    "linea-pura-08": {
+      "title": "\"Eternity\" Classic Tennis Bracelet III",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-08.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-08.jpg"
+    },
+    "linea-pura-09": {
+      "title": "\"Spark\" Essential Tennis Bracelet III",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-09.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-09.jpg"
+    },
+    "linea-pura-10": {
+      "title": "\"Spark\" Essential Tennis Bracelet IV",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-10.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-10.jpg"
+    },
+    "linea-pura-11": {
+      "title": "\"Spark\" Essential Tennis Bracelet V",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-11.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-11.jpg"
+    },
+    "linea-pura-12": {
+      "title": "\"Spark\" Essential Tennis Bracelet VI",
+      "description": "The ultimate symbol of timeless elegance. Our classic tennis bracelet in 14-karat white gold is a masterpiece of symmetry and light. A continuous line of round brilliant lab-grown diamonds, rigorously matched for exceptional fire and color. An ethical, sustainable must-have.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Four-Prong Setting"
+      ],
+      "video": "/videos/bracelets/linea-pura-12.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/linea-pura-12.jpg"
+    },
+    "mosaico-cromatico": {
+      "title": "\"Pastel Aura\" Fancy Color Diamond Bracelet",
+      "description": "A wearable work of art celebrating the rarity of color. Alternates colorless lab-grown diamonds with pastel hues: ice blue and blush pink. Pear cuts with round diamond clusters in 14k white gold. A jewel of regal allure for those seeking absolute exclusivity.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Mixed Pear & Round Cuts"
+      ],
+      "video": "/videos/bracelets/mosaico-cromatico.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/mosaico-cromatico.jpg"
+    },
+    "continuum-floreale": {
+      "title": "\"Geometric Reflections\" Emerald-Cut Tennis Bracelet I",
+      "description": "Magnetic, sophisticated, with Art Deco allure. Emerald-cut lab-grown diamonds perfectly aligned in 14-karat white gold, creating a mesmerizing \"hall of mirrors\" effect. A bracelet of strong character and ethical luxury.",
+      "details": [
+        "Lab-Grown Emerald-Cut Diamonds",
+        "14k White Gold",
+        "Art Deco Design"
+      ],
+      "video": "/videos/bracelets/continuum-floreale.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/continuum-floreale.jpg"
+    },
+    "sequenza-architettonica-02": {
+      "title": "\"Geometric Reflections\" Emerald-Cut Tennis Bracelet II",
+      "description": "Magnetic, sophisticated, with Art Deco allure. Emerald-cut lab-grown diamonds perfectly aligned in 14-karat white gold, creating a mesmerizing \"hall of mirrors\" effect. A bracelet of strong character and ethical luxury.",
+      "details": [
+        "Lab-Grown Emerald-Cut Diamonds",
+        "14k White Gold",
+        "Art Deco Design"
+      ],
+      "video": "/videos/bracelets/sequenza-architettonica-02.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/sequenza-architettonica-02.jpg"
+    },
+    "frammenti-di-ghiaccio": {
+      "title": "\"Ice Shards\" Emerald-Cut Diamond Bracelet",
+      "description": "Magnetic, sophisticated, with Art Deco allure. Emerald-cut lab-grown diamonds perfectly aligned in 14-karat white gold, creating a mesmerizing \"hall of mirrors\" effect. A bracelet of strong character and ethical luxury.",
+      "details": [
+        "Lab-Grown Emerald-Cut Diamonds",
+        "14k White Gold",
+        "Art Deco Design"
+      ],
+      "video": "/videos/bracelets/frammenti-di-ghiaccio.mp4",
+      "category": "bracelets",
+      "poster": "/photos/bracelets/frammenti-di-ghiaccio.jpg"
+    },
+    "cascata-di-luce-01": {
+      "title": "\"Cascading Light\" Pear-Cut Drop Earrings I",
+      "description": "An ode to fluidity and absolute elegance. Pear-cut lab-grown diamonds perfectly graduated to frame the face and elongate the neck. Articulated 14k white gold setting moves with natural flexibility. A masterpiece of sustainable High Jewelry.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Articulated Drop Design"
+      ],
+      "video": "/videos/earrings/cascata-di-luce-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/cascata-di-luce-01.jpg"
+    },
+    "composizione-cromatica-01": {
+      "title": "\"Cascading Light\" Pear-Cut Drop Earrings II",
+      "description": "An ode to fluidity and absolute elegance. Pear-cut lab-grown diamonds perfectly graduated to frame the face and elongate the neck. Articulated 14k white gold setting moves with natural flexibility. A masterpiece of sustainable High Jewelry.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Articulated Drop Design"
+      ],
+      "video": "/videos/earrings/composizione-cromatica-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/composizione-cromatica-01.jpg"
+    },
+    "sequenza-geometrica-01": {
+      "title": "\"Brilliant Ascension\" Graduated Drop Earrings I",
+      "description": "The timeless allure of the round brilliant cut elevated to its highest expression. Graduated lab-grown round diamonds in invisible 14k white gold structure. Incomparable fire.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Graduated Drop Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-01.jpg"
+    },
+    "cascata-di-luce-02": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings I",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/cascata-di-luce-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/cascata-di-luce-02.jpg"
+    },
+    "sequenza-geometrica-02": {
+      "title": "\"Radiant Trinity\" Drop Earrings with Fancy Pear I",
+      "description": "The perfect balance between classicism and originality. An elegant descent: round diamond at the lobe, luminous transitional gem, culminating in a fancy-hued pear-cut diamond. In 14k gold.",
+      "details": [
+        "Fancy Color & White Diamonds",
+        "14k White Gold",
+        "Three-Stone Drop Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-02.jpg"
+    },
+    "sequenza-geometrica-03": {
+      "title": "\"Cascading Light\" Pear-Cut Drop Earrings III",
+      "description": "An ode to fluidity and absolute elegance. Pear-cut lab-grown diamonds perfectly graduated to frame the face and elongate the neck. Articulated 14k white gold setting moves with natural flexibility. A masterpiece of sustainable High Jewelry.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Articulated Drop Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-03.jpg"
+    },
+    "composizione-cromatica-02": {
+      "title": "\"Radiant Trinity\" Drop Earrings with Fancy Pear II",
+      "description": "The perfect balance between classicism and originality. An elegant descent: round diamond at the lobe, luminous transitional gem, culminating in a fancy-hued pear-cut diamond. In 14k gold.",
+      "details": [
+        "Fancy Color & White Diamonds",
+        "14k White Gold",
+        "Three-Stone Drop Design"
+      ],
+      "video": "/videos/earrings/composizione-cromatica-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/composizione-cromatica-02.jpg"
+    },
+    "canone-rettilineo-01": {
+      "title": "\"Precious Bloom\" Floral Fancy Diamond Earrings I",
+      "description": "Springtime captured in an eternal jewel. A floral cluster of petal-shaped lab-grown diamonds at the lobe, suspending a majestic colored drop. Handcrafted in 14k white gold. Pure ethical luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Floral Cluster Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-01.jpg"
+    },
+    "sequenza-geometrica-04": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings I",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-04.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-04.jpg"
+    },
+    "canone-rettilineo-02": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings II",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-02.jpg"
+    },
+    "canone-rettilineo-03": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings III",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-03.jpg"
+    },
+    "costellazione-01": {
+      "title": "\"Radiant Trinity\" Drop Earrings with Fancy Pear III",
+      "description": "The perfect balance between classicism and originality. An elegant descent: round diamond at the lobe, luminous transitional gem, culminating in a fancy-hued pear-cut diamond. In 14k gold.",
+      "details": [
+        "Fancy Color & White Diamonds",
+        "14k White Gold",
+        "Three-Stone Drop Design"
+      ],
+      "video": "/videos/earrings/costellazione-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/costellazione-01.jpg"
+    },
+    "costellazione-02": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings II",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/costellazione-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/costellazione-02.jpg"
+    },
+    "canone-rettilineo-04": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings III",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-04.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-04.jpg"
+    },
+    "costellazione-03": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings IV",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/costellazione-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/costellazione-03.jpg"
+    },
+    "cascata-di-luce-03": {
+      "title": "\"Cascading Light\" Pear-Cut Drop Earrings IV",
+      "description": "An ode to fluidity and absolute elegance. Pear-cut lab-grown diamonds perfectly graduated to frame the face and elongate the neck. Articulated 14k white gold setting moves with natural flexibility. A masterpiece of sustainable High Jewelry.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Articulated Drop Design"
+      ],
+      "video": "/videos/earrings/cascata-di-luce-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/cascata-di-luce-03.jpg"
+    },
+    "composizione-cromatica-03": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings IV",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/composizione-cromatica-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/composizione-cromatica-03.jpg"
+    },
+    "teorema-verticale-01": {
+      "title": "\"Brilliant Ascension\" Graduated Drop Earrings II",
+      "description": "The timeless allure of the round brilliant cut elevated to its highest expression. Graduated lab-grown round diamonds in invisible 14k white gold structure. Incomparable fire.",
+      "details": [
+        "Lab-Grown Round Brilliant Diamonds",
+        "14k White Gold",
+        "Graduated Drop Design"
+      ],
+      "video": "/videos/earrings/teorema-verticale-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/teorema-verticale-01.jpg"
+    },
+    "teorema-verticale-02": {
+      "title": "\"Precious Bloom\" Floral Fancy Diamond Earrings II",
+      "description": "Springtime captured in an eternal jewel. A floral cluster of petal-shaped lab-grown diamonds at the lobe, suspending a majestic colored drop. Handcrafted in 14k white gold. Pure ethical luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Floral Cluster Design"
+      ],
+      "video": "/videos/earrings/teorema-verticale-02.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/teorema-verticale-02.jpg"
+    },
+    "teorema-verticale-03": {
+      "title": "\"Precious Bloom\" Floral Fancy Diamond Earrings III",
+      "description": "Springtime captured in an eternal jewel. A floral cluster of petal-shaped lab-grown diamonds at the lobe, suspending a majestic colored drop. Handcrafted in 14k white gold. Pure ethical luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Floral Cluster Design"
+      ],
+      "video": "/videos/earrings/teorema-verticale-03.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/teorema-verticale-03.jpg"
+    },
+    "linea-essenziale-01": {
+      "title": "\"Imperial Drops\" Chandelier Earrings in 14k White Gold",
+      "description": "The ne plus ultra of High Jewelry. Multiple strands of pear-cut lab-grown diamonds branch into an opulent chandelier structure in 14k white gold, creating a luminous fringe that dances with every movement. The quintessence of sustainable luxury.",
+      "details": [
+        "Lab-Grown Pear-Cut Diamonds",
+        "14k White Gold",
+        "Chandelier Structure"
+      ],
+      "video": "/videos/earrings/linea-essenziale-01.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/linea-essenziale-01.jpg"
+    },
+    "sequenza-geometrica-05": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings V",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-05.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-05.jpg"
+    },
+    "sequenza-geometrica-06": {
+      "title": "\"Precious Bloom\" Floral Fancy Diamond Earrings IV",
+      "description": "Springtime captured in an eternal jewel. A floral cluster of petal-shaped lab-grown diamonds at the lobe, suspending a majestic colored drop. Handcrafted in 14k white gold. Pure ethical luxury.",
+      "details": [
+        "Fancy Color Lab-Grown Diamonds",
+        "14k White Gold",
+        "Floral Cluster Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-06.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-06.jpg"
+    },
+    "sequenza-geometrica-07": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings V",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-07.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-07.jpg"
+    },
+    "sequenza-geometrica-08": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings VI",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-08.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-08.jpg"
+    },
+    "sequenza-geometrica-09": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings VII",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-09.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-09.jpg"
+    },
+    "sequenza-geometrica-10": {
+      "title": "\"Geometric Symphony\" Mixed-Cut Linear Earrings VIII",
+      "description": "Bold alternation of shapes—princess, emerald, round, and pear cuts in an impeccable visual rhythm creating a multifaceted rain of light. Minimalist 14k white gold setting.",
+      "details": [
+        "Mixed-Cut Lab-Grown Diamonds",
+        "14k White Gold",
+        "Avant-Garde Linear Design"
+      ],
+      "video": "/videos/earrings/sequenza-geometrica-10.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/sequenza-geometrica-10.jpg"
+    },
+    "canone-rettilineo-05": {
+      "title": "\"Rhapsody\" Emerald-Cut & Fancy Color Earrings VI",
+      "description": "Where geometric rigor meets the romance of color. Emerald-cut lab-grown diamond at the lobe contrasting with a pastel pear-cut drop. Forged in 14k white gold with Art Deco charm.",
+      "details": [
+        "Emerald-Cut & Fancy Color Diamonds",
+        "14k White Gold",
+        "Art Deco Contrast Design"
+      ],
+      "video": "/videos/earrings/canone-rettilineo-05.mp4",
+      "category": "earrings",
+      "poster": "/photos/earrings/canone-rettilineo-05.jpg"
+    }
   }
 }

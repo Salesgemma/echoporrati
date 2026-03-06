@@ -1,0 +1,40 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import allProducts from '../../../data/products.json';
+const productsData = allProducts['es'] || allProducts.en;
+
+export function getStaticPaths() {
+	const products = allProducts['es'] || allProducts.en;
+	return Object.keys(products).map(id => ({ params: { producto: id } }));
+}
+
+const { producto } = Astro.params;
+const data = productsData[producto];
+if (!data) { return new Response(null, { status: 404 }); }
+---
+<Layout title={`PORRATI | ${data.title}`} lang="es">
+	<main class="py-32 md:py-40 bg-nero-assoluto">
+		<div class="max-w-7xl mx-auto px-6 lg:px-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+				<div class="aspect-square bg-grigio-blu-notte/30 rounded-lg overflow-hidden">
+					<video src={data.video} poster={data.poster || undefined} class="w-full h-full object-cover" autoplay loop muted playsinline preload="metadata"></video>
+				</div>
+				<div>
+					<h1 class="font-bodoni text-4xl md:text-5xl text-bianco-sporco">{data.title}</h1>
+					<p class="mt-4 text-lg text-greige-chiaro leading-relaxed">{data.description}</p>
+					<ul class="mt-8 space-y-2 border-t border-grigio-antracite pt-6">
+						{data.details.map(detail => (
+							<li class="flex items-center text-greige-chiaro">
+								<svg class="w-4 h-4 mr-3 text-greige-chiaro/50" fill="currentColor" viewBox="0 0 20 20">...</svg>
+								<span>{detail}</span>
+							</li>
+						))}
+					</ul>
+					<a href="mailto:sales@gemmaeuropa.com" class="inline-block mt-8 px-8 py-3 bg-bianco-sporco text-nero-assoluto font-medium rounded-full hover:bg-greige-chiaro transition-colors">
+						Solicitar Información
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>

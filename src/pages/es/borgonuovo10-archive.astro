@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Borgonuovo10ArchiveForm from '../../components/react/Borgonuovo10ArchiveForm.tsx';
+---
+<Layout title="Borgonuovo-10 Archive | PORRATI" lang="es">
+	<main class="bg-nero-assoluto py-24 md:py-32">
+		<div class="max-w-3xl mx-auto px-6 text-center">
+			<h1 class="font-bodoni text-4xl md:text-5xl text-bianco-sporco mb-4">Borgonuovo-10 Archive</h1>
+			<p class="text-greige-chiaro text-lg mb-10">Solicitud de acceso privado al archivo de la colección.</p>
+			<Borgonuovo10ArchiveForm client:load lang="es" />
+		</div>
+	</main>
+</Layout>

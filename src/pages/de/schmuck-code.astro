@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import JewelCodeSearch from '../../components/react/JewelCodeSearch.tsx';
+---
+<Layout title="Finden Sie Ihr Schmuckstück | PORRATI" lang="de">
+	<main class="bg-nero-assoluto py-24 md:py-32">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="text-center mb-12">
+				<h1 class="font-bodoni text-4xl md:text-5xl text-bianco-sporco mb-4">Finden Sie Ihr Schmuckstück</h1>
+				<p class="text-greige-chiaro text-lg max-w-2xl mx-auto">Geben Sie den Code Ihres PORRATI-Schmuckstücks ein, um die Echtheit zu überprüfen und Produktdetails anzuzeigen.</p>
+			</div>
+			<JewelCodeSearch client:load lang="de" />
+		</div>
+	</main>
+</Layout>

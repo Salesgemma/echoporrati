@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import JewelCodeSearch from '../../components/react/JewelCodeSearch.tsx';
+---
+<Layout title="ابحث عن مجوهراتك | PORRATI" lang="ar">
+	<main class="bg-nero-assoluto py-24 md:py-32">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="text-center mb-12">
+				<h1 class="font-bodoni text-4xl md:text-5xl text-bianco-sporco mb-4">ابحث عن مجوهراتك</h1>
+				<p class="text-greige-chiaro text-lg max-w-2xl mx-auto">أدخل رمز مجوهرات PORRATI للتحقق من الأصالة وعرض تفاصيل المنتج.</p>
+			</div>
+			<JewelCodeSearch client:load lang="ar" />
+		</div>
+	</main>
+</Layout>

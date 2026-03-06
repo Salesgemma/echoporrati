@@ -3,86 +3,123 @@
 const currentPath = Astro.url.pathname;
 const isItalian = currentPath.startsWith('/it');
 
-// Smart language switch: compute equivalent URL in the other language
-const mapToIt: Record<string, string> = { pendants: 'pendenti', rings: 'anelli', bracelets: 'bracciali', earrings: 'orecchini' };
-const mapToEn: Record<string, string> = { pendenti: 'pendants', anelli: 'rings', bracciali: 'bracelets', orecchini: 'earrings' };
+// Detect current language from path
+type Lang = 'en' | 'it' | 'es' | 'de' | 'ar';
+const supportedLangs: Lang[] = ['en', 'it', 'es', 'de', 'ar'];
+const currentLang: Lang = (currentPath.split('/')[1] as Lang) || 'en';
 
-function getLanguagePath(targetLang: 'it' | 'en'): string {
-    const p = currentPath;
-    if (p === '/en' || p === '/it' || p === '/') return `/${targetLang}`;
-    
-    if (targetLang === 'it' && p.startsWith('/en/')) {
-        const rest = p.slice(3); // remove /en
-        const parts = rest.split('/').filter(Boolean);
-        if (parts[0] === 'products') return `/it/prodotti/${parts.slice(1).join('/')}`;
-        if (parts[0] === 'collections') {
-            const slug = parts[1] || '';
-            return slug ? `/it/collezioni/${mapToIt[slug] || slug}` : '/it/collezioni';
+// Route segment maps per language
+const routeMap: Record<Lang, Record<string, string>> = {
+    en: { collections: 'collections', products: 'products', showroom: 'showroom-milan', code: 'jewel-code', faq: 'faq', archive: 'borgonuovo10-archive', knowledge: 'knowledge' },
+    it: { collections: 'collezioni', products: 'prodotti', showroom: 'showroom-milano', code: 'codice-gioiello', faq: 'faq', archive: 'borgonuovo10-archive', knowledge: 'enciclopedia' },
+    es: { collections: 'colecciones', products: 'productos', showroom: 'showroom-milan', code: 'codigo-joya', faq: 'faq', archive: 'borgonuovo10-archive', knowledge: 'enciclopedia' },
+    de: { collections: 'kollektionen', products: 'produkte', showroom: 'showroom-mailand', code: 'schmuck-code', faq: 'faq', archive: 'borgonuovo10-archive', knowledge: 'enzyklopaedie' },
+    ar: { collections: 'collections', products: 'products', showroom: 'showroom-milan', code: 'jewel-code', faq: 'faq', archive: 'borgonuovo10-archive', knowledge: 'knowledge' },
+};
+
+const collectionSlugs: Record<Lang, Record<string, string>> = {
+    en: { pendants: 'pendants', rings: 'rings', bracelets: 'bracelets', earrings: 'earrings' },
+    it: { pendants: 'pendenti', rings: 'anelli', bracelets: 'bracciali', earrings: 'orecchini' },
+    es: { pendants: 'colgantes', rings: 'anillos', bracelets: 'pulseras', earrings: 'pendientes' },
+    de: { pendants: 'anhaenger', rings: 'ringe', bracelets: 'armbaender', earrings: 'ohrringe' },
+    ar: { pendants: 'pendants', rings: 'rings', bracelets: 'bracelets', earrings: 'earrings' },
+};
+
+// Reverse lookup: find canonical key from any localized slug
+function findCanonicalSlug(slug: string, type: 'collection' | 'route'): string {
+    const maps = type === 'collection' ? collectionSlugs : routeMap;
+    for (const lang of supportedLangs) {
+        for (const [canonical, localized] of Object.entries(maps[lang])) {
+            if (localized === slug) return canonical;
         }
-        if (parts[0] === 'jewel-code') return '/it/codice-gioiello';
-        if (parts[0] === 'showroom-milan') return '/it/showroom-milano';
-        if (parts[0] === 'knowledge') return `/it/enciclopedia/${parts.slice(1).join('/')}`;
-        return `/it${rest}`;
     }
-    
-    if (targetLang === 'en' && p.startsWith('/it/')) {
-        const rest = p.slice(3); // remove /it
-        const parts = rest.split('/').filter(Boolean);
-        if (parts[0] === 'prodotti') return `/en/products/${parts.slice(1).join('/')}`;
-        if (parts[0] === 'collezioni') {
-            const slug = parts[1] || '';
-            return slug ? `/en/collections/${mapToEn[slug] || slug}` : '/en/collections';
-        }
-        if (parts[0] === 'codice-gioiello') return '/en/jewel-code';
-        if (parts[0] === 'showroom-milano') return '/en/showroom-milan';
-        if (parts[0] === 'enciclopedia') return `/en/knowledge/${parts.slice(1).join('/')}`;
-        return `/en${rest}`;
-    }
-    
-    return `/${targetLang}`;
+    return slug;
 }
 
-const itPath = getLanguagePath('it');
-const enPath = getLanguagePath('en');
+function getLanguagePath(targetLang: Lang): string {
+    if (currentPath === '/' || supportedLangs.some(l => currentPath === `/${l}`)) {
+        return `/${targetLang}`;
+    }
+    
+    const parts = currentPath.split('/').filter(Boolean); // e.g. ['en', 'collections', 'rings']
+    const sourceLang = parts[0] as Lang;
+    const segments = parts.slice(1); // e.g. ['collections', 'rings']
+    
+    if (!segments.length) return `/${targetLang}`;
+    
+    // Find canonical route key for the first segment
+    const canonicalRoute = findCanonicalSlug(segments[0], 'route');
+    const targetRoute = routeMap[targetLang][canonicalRoute] || segments[0];
+    
+    // Handle collection sub-slugs
+    if ((canonicalRoute === 'collections') && segments[1]) {
+        const canonicalCollection = findCanonicalSlug(segments[1], 'collection');
+        const targetCollection = collectionSlugs[targetLang][canonicalCollection] || segments[1];
+        return `/${targetLang}/${targetRoute}/${targetCollection}`;
+    }
+    
+    // Handle product sub-slugs (product IDs are universal)
+    if (canonicalRoute === 'products' && segments[1]) {
+        return `/${targetLang}/${targetRoute}/${segments.slice(1).join('/')}`;
+    }
+    
+    return `/${targetLang}/${targetRoute}${segments.length > 1 ? '/' + segments.slice(1).join('/') : ''}`;
+}
+
+// Nav labels per language
+const navLabels: Record<Lang, Record<string, string>> = {
+    en: { collections: 'COLLECTIONS', showroom: 'SHOWROOM', code: 'CODE', archive: 'ARCHIVE', home: 'Home', faq: 'FAQ', jewelCode: 'Jewel Code' },
+    it: { collections: 'COLLEZIONI', showroom: 'SHOWROOM', code: 'CODICE', archive: 'ARCHIVE', home: 'Home', faq: 'FAQ', jewelCode: 'Codice Gioiello' },
+    es: { collections: 'COLECCIONES', showroom: 'SHOWROOM', code: 'CÓDIGO', archive: 'ARCHIVE', home: 'Inicio', faq: 'FAQ', jewelCode: 'Código Joya' },
+    de: { collections: 'KOLLEKTIONEN', showroom: 'SHOWROOM', code: 'CODE', archive: 'ARCHIV', home: 'Startseite', faq: 'FAQ', jewelCode: 'Schmuck-Code' },
+    ar: { collections: 'المجموعات', showroom: 'صالة العرض', code: 'الرمز', archive: 'الأرشيف', home: 'الرئيسية', faq: 'FAQ', jewelCode: 'رمز المجوهرات' },
+};
+
+const nav = navLabels[currentLang] || navLabels.en;
+const langPaths = Object.fromEntries(supportedLangs.map(l => [l, getLanguagePath(l)])) as Record<Lang, string>;
+const langLabels: Record<Lang, string> = { en: 'EN', it: 'IT', es: 'ES', de: 'DE', ar: 'AR' };
 ---
 <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out">
     <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex justify-between items-center">
         <!-- Logo -->
-        <a href={isItalian ? '/it' : '/en'} class="font-bodoni text-3xl font-bold tracking-wider text-bianco-sporco opacity-0 animate-fade-in-delay">
+        <a href={`/${currentLang}`} class="font-bodoni text-3xl font-bold tracking-wider text-bianco-sporco opacity-0 animate-fade-in-delay">
             PORRATI
         </a>
 
         <!-- Desktop nav (hidden on mobile) -->
         <div class="hidden md:flex items-center gap-8 text-sm font-medium opacity-0 animate-fade-in-delay">
             <div class="flex items-center gap-6">
-                <a href={isItalian ? '/it/collezioni' : '/en/collections'} 
+                <a href={`/${currentLang}/${routeMap[currentLang].collections}`}
                    class="text-greige-chiaro hover:text-bianco-sporco transition-colors duration-300 uppercase tracking-wide text-xs">
-                    {isItalian ? 'COLLEZIONI' : 'COLLECTIONS'}
+                    {nav.collections}
                 </a>
-                <a href={isItalian ? '/it/showroom-milano' : '/en/showroom-milan'} 
+                <a href={`/${currentLang}/${routeMap[currentLang].showroom}`}
                    class="text-greige-chiaro hover:text-bianco-sporco transition-colors duration-300 uppercase tracking-wide text-xs">
-                    SHOWROOM
+                    {nav.showroom}
                 </a>
-                <a href={isItalian ? '/it/codice-gioiello' : '/en/jewel-code'} 
+                <a href={`/${currentLang}/${routeMap[currentLang].code}`}
                    class="text-greige-chiaro hover:text-bianco-sporco transition-colors duration-300 uppercase tracking-wide text-xs">
-                    {isItalian ? 'CODICE' : 'CODE'}
+                    {nav.code}
                 </a>
-                <a href={isItalian ? '/it/borgonuovo10-archive' : '/en/borgonuovo10-archive'} 
+                <a href={`/${currentLang}/${routeMap[currentLang].archive}`}
                    class="text-greige-chiaro hover:text-bianco-sporco transition-colors duration-300 uppercase tracking-wide text-xs">
-                    ARCHIVE
+                    {nav.archive}
                 </a>
                 <div class="w-px h-3 bg-white/20"></div>
             </div>
-            <div class="flex items-center gap-4">
-                <a href={itPath} class:list={[
-                    "hover:text-bianco-sporco transition-colors duration-300",
-                    { "text-bianco-sporco": isItalian, "text-greige-chiaro": !isItalian }
-                ]}>IT</a>
-                <span class="text-grigio-antracite">/</span>
-                <a href={enPath} class:list={[
-                    "hover:text-bianco-sporco transition-colors duration-300",
-                    { "text-bianco-sporco": !isItalian, "text-greige-chiaro": isItalian }
-                ]}>EN</a>
+            <div class="relative lang-dropdown-container">
+                <button type="button" class="lang-dropdown-btn flex items-center gap-1 text-bianco-sporco text-xs uppercase tracking-wider">
+                    {langLabels[currentLang]}
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div class="lang-dropdown hidden absolute right-0 top-full mt-2 bg-nero-assoluto/95 backdrop-blur-md border border-grigio-antracite/40 rounded-lg py-1 min-w-[80px] shadow-xl">
+                    {supportedLangs.map(l => (
+                        <a href={langPaths[l]} class:list={[
+                            "block px-4 py-1.5 text-xs uppercase tracking-wider transition-colors duration-200",
+                            { "text-bianco-sporco font-bold": l === currentLang, "text-greige-chiaro/70 hover:text-bianco-sporco": l !== currentLang }
+                        ]}>{langLabels[l]}</a>
+                    ))}
+                </div>
             </div>
         </div>
 
@@ -107,23 +144,23 @@ const enPath = getLanguagePath('en');
             </button>
         </div>
         <nav class="flex flex-col gap-1 px-6 mt-4">
-            <a href={isItalian ? '/it' : '/en'} class="mobile-nav-link">{isItalian ? 'Home' : 'Home'}</a>
-            <a href={isItalian ? '/it/collezioni' : '/en/collections'} class="mobile-nav-link">{isItalian ? 'Collezioni' : 'Collections'}</a>
-            <a href={isItalian ? '/it/showroom-milano' : '/en/showroom-milan'} class="mobile-nav-link">Showroom</a>
-            <a href={isItalian ? '/it/codice-gioiello' : '/en/jewel-code'} class="mobile-nav-link">{isItalian ? 'Codice Gioiello' : 'Jewel Code'}</a>
-            <a href={isItalian ? '/it/borgonuovo10-archive' : '/en/borgonuovo10-archive'} class="mobile-nav-link">Archive</a>
-            <a href={isItalian ? '/it/faq' : '/en/faq'} class="mobile-nav-link">FAQ</a>
+            <a href={`/${currentLang}`} class="mobile-nav-link">{nav.home}</a>
+            <a href={`/${currentLang}/${routeMap[currentLang].collections}`} class="mobile-nav-link">{nav.collections}</a>
+            <a href={`/${currentLang}/${routeMap[currentLang].showroom}`} class="mobile-nav-link">{nav.showroom}</a>
+            <a href={`/${currentLang}/${routeMap[currentLang].code}`} class="mobile-nav-link">{nav.jewelCode}</a>
+            <a href={`/${currentLang}/${routeMap[currentLang].archive}`} class="mobile-nav-link">{nav.archive}</a>
+            <a href={`/${currentLang}/${routeMap[currentLang].faq}`} class="mobile-nav-link">{nav.faq}</a>
         </nav>
-        <div class="px-6 mt-10 flex items-center gap-6 text-sm">
-            <a href={itPath} class:list={[
-                "uppercase tracking-wider transition-colors duration-300",
-                { "text-bianco-sporco font-bold": isItalian, "text-greige-chiaro/60": !isItalian }
-            ]}>IT</a>
-            <span class="text-grigio-antracite">/</span>
-            <a href={enPath} class:list={[
-                "uppercase tracking-wider transition-colors duration-300",
-                { "text-bianco-sporco font-bold": !isItalian, "text-greige-chiaro/60": isItalian }
-            ]}>EN</a>
+        <div class="px-6 mt-10 flex flex-wrap items-center gap-3 text-sm">
+            {supportedLangs.map((l, i) => (
+                <Fragment>
+                    {i > 0 && <span class="text-grigio-antracite">/</span>}
+                    <a href={langPaths[l]} class:list={[
+                        "uppercase tracking-wider transition-colors duration-300",
+                        { "text-bianco-sporco font-bold": l === currentLang, "text-greige-chiaro/60": l !== currentLang }
+                    ]}>{langLabels[l]}</a>
+                </Fragment>
+            ))}
         </div>
     </div>
 </div>
@@ -157,6 +194,16 @@ const enPath = getLanguagePath('en');
     menuBtn?.addEventListener('click', openMenu);
     menuClose?.addEventListener('click', closeMenu);
     mobileMenu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+
+    // Language dropdown toggle
+    const langBtn = document.querySelector('.lang-dropdown-btn');
+    const langDropdown = document.querySelector('.lang-dropdown');
+    langBtn?.addEventListener('click', () => langDropdown?.classList.toggle('hidden'));
+    document.addEventListener('click', (e) => {
+        if (!(e.target as Element)?.closest('.lang-dropdown-container')) {
+            langDropdown?.classList.add('hidden');
+        }
+    });
 </script>
 
 <style>

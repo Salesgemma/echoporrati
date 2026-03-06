@@ -102,71 +102,70 @@ const seoSchema = {
   ]
 };
 
-// Generate hreflang URLs
-const mapToIt: Record<string, string> = { pendants: 'pendenti', rings: 'anelli', bracelets: 'bracciali', earrings: 'orecchini' };
-const mapToEn: Record<string, string> = { pendenti: 'pendants', anelli: 'rings', bracciali: 'bracelets', orecchini: 'earrings' };
+// Generate hreflang URLs for 5 languages
+type SupportedLang = 'en' | 'it' | 'es' | 'de' | 'ar';
+const allLangs: SupportedLang[] = ['en', 'it', 'es', 'de', 'ar'];
 
-function mapCollectionSlug(slug: string, to: 'it' | 'en') {
-  return to === 'it' ? (mapToIt[slug] || slug) : (mapToEn[slug] || slug);
-}
+const hreflangRoutes: Record<SupportedLang, Record<string, string>> = {
+  en: { collections: 'collections', products: 'products', showroom: 'showroom-milan', code: 'jewel-code', faq: 'faq', archive: 'borgonuovo10-archive', knowledge: 'knowledge', search: 'search' },
+  it: { collections: 'collezioni', products: 'prodotti', showroom: 'showroom-milano', code: 'codice-gioiello', faq: 'faq', archive: 'borgonuovo10-archive', knowledge: 'enciclopedia', search: 'ricerca' },
+  es: { collections: 'colecciones', products: 'productos', showroom: 'showroom-milan', code: 'codigo-joya', faq: 'faq', archive: 'borgonuovo10-archive', knowledge: 'enciclopedia', search: 'buscar' },
+  de: { collections: 'kollektionen', products: 'produkte', showroom: 'showroom-mailand', code: 'schmuck-code', faq: 'faq', archive: 'borgonuovo10-archive', knowledge: 'enzyklopaedie', search: 'suche' },
+  ar: { collections: 'collections', products: 'products', showroom: 'showroom-milan', code: 'jewel-code', faq: 'faq', archive: 'borgonuovo10-archive', knowledge: 'knowledge', search: 'search' },
+};
 
-function getAlternatePaths(pathname: string): { en: string; it: string } | null {
-  if (pathname === '/en' || pathname === '/it') {
-    return { en: '/en', it: '/it' };
-  }
-  if (pathname.startsWith('/en/')) {
-    const parts = pathname.split('/');
-    const seg1 = parts[2];
-    switch (seg1) {
-      case 'products':
-        if (parts.length === 3 || parts[3] === '') {
-          return { en: pathname, it: `/it/prodotti` };
-        }
-        return { en: pathname, it: `/it/prodotti/${parts.slice(3).join('/')}` };
-      case 'collections': {
-        const slug = parts[3] || '';
-        if (!slug) {
-          return { en: pathname, it: `/it/collezioni` };
-        }
-        return { en: pathname, it: `/it/collezioni/${mapCollectionSlug(slug, 'it')}` };
-      }
-      case 'knowledge':
-        return { en: pathname, it: `/it/enciclopedia/${parts.slice(3).join('/')}` };
-      default:
-        return { en: pathname, it: `/it${pathname.slice(3)}` };
+const hreflangCollections: Record<SupportedLang, Record<string, string>> = {
+  en: { pendants: 'pendants', rings: 'rings', bracelets: 'bracelets', earrings: 'earrings' },
+  it: { pendants: 'pendenti', rings: 'anelli', bracelets: 'bracciali', earrings: 'orecchini' },
+  es: { pendants: 'colgantes', rings: 'anillos', bracelets: 'pulseras', earrings: 'pendientes' },
+  de: { pendants: 'anhaenger', rings: 'ringe', bracelets: 'armbaender', earrings: 'ohrringe' },
+  ar: { pendants: 'pendants', rings: 'rings', bracelets: 'bracelets', earrings: 'earrings' },
+};
+
+function findCanonical(slug: string, maps: Record<SupportedLang, Record<string, string>>): string {
+  for (const l of allLangs) {
+    for (const [canonical, localized] of Object.entries(maps[l])) {
+      if (localized === slug) return canonical;
     }
   }
-  if (pathname.startsWith('/it/')) {
-    const parts = pathname.split('/');
-    const seg1 = parts[2];
-    switch (seg1) {
-      case 'prodotti':
-        if (parts.length === 3 || parts[3] === '') {
-          return { en: `/en/products`, it: pathname };
-        }
-        return { en: `/en/products/${parts.slice(3).join('/')}`, it: pathname };
-      case 'collezioni': {
-        const slug = parts[3] || '';
-        if (!slug) {
-          return { en: `/en/collections`, it: pathname };
-        }
-        return { en: `/en/collections/${mapCollectionSlug(slug, 'en')}`, it: pathname };
-      }
-      case 'enciclopedia':
-        return { en: `/en/knowledge/${parts.slice(3).join('/')}`, it: pathname };
-      default:
-        return { en: `/en${pathname.slice(3)}`, it: pathname };
-    }
-  }
-  // Not a localized route; do not emit hreflang
-  return null;
+  return slug;
 }
 
-const alternates = getAlternatePaths(currentPath);
+function getAlternates(pathname: string): Record<SupportedLang, string> | null {
+  const parts = pathname.split('/').filter(Boolean);
+  const sourceLang = parts[0] as SupportedLang;
+  if (!allLangs.includes(sourceLang)) return null;
+  
+  const segments = parts.slice(1);
+  if (!segments.length) {
+    return Object.fromEntries(allLangs.map(l => [l, `/${l}`])) as Record<SupportedLang, string>;
+  }
+  
+  const canonicalRoute = findCanonical(segments[0], hreflangRoutes);
+  
+  return Object.fromEntries(allLangs.map(targetLang => {
+    const targetRoute = hreflangRoutes[targetLang][canonicalRoute] || segments[0];
+    
+    if (canonicalRoute === 'collections' && segments[1]) {
+      const canonicalColl = findCanonical(segments[1], hreflangCollections);
+      const targetColl = hreflangCollections[targetLang][canonicalColl] || segments[1];
+      return [targetLang, `/${targetLang}/${targetRoute}/${targetColl}`];
+    }
+    
+    if (canonicalRoute === 'products' && segments[1]) {
+      return [targetLang, `/${targetLang}/${targetRoute}/${segments.slice(1).join('/')}`];
+    }
+    
+    return [targetLang, `/${targetLang}/${targetRoute}${segments.length > 1 ? '/' + segments.slice(1).join('/') : ''}`];
+  })) as Record<SupportedLang, string>;
+}
+
+const alternates = getAlternates(currentPath);
+const isRTL = lang === 'ar';
 ---
 
 <!DOCTYPE html>
-<html lang={lang} class="scroll-smooth">
+<html lang={lang} dir={isRTL ? 'rtl' : 'ltr'} class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -197,8 +196,9 @@ const alternates = getAlternatePaths(currentPath);
 		<!-- hreflang tags for multilingual SEO -->
 		{alternates && (
 			<Fragment>
-				<link rel="alternate" hreflang="en" href={`${siteUrl}${alternates.en}`} />
-				<link rel="alternate" hreflang="it" href={`${siteUrl}${alternates.it}`} />
+				{allLangs.map(l => (
+					<link rel="alternate" hreflang={l} href={`${siteUrl}${alternates[l]}`} />
+				))}
 				<link rel="alternate" hreflang="x-default" href={`${siteUrl}${alternates.en}`} />
 			</Fragment>
 		)}
