@@ -1,0 +1,34 @@
+---
+// src/components/ImageGrid.astro
+interface Props {
+    title: string;
+    subtitle: string;
+}
+const { title, subtitle } = Astro.props;
+---
+<section class="image-grid-container py-24 md:py-32 bg-blu-inchiostro">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-bianco-sporco">{title}</h2>
+            <p class="mt-3 text-lg text-greige-chiaro max-w-2xl mx-auto">{subtitle}</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="grid gap-4">
+                <div class="grid-item overflow-hidden rounded-lg"><img loading="lazy" decoding="async" class="h-auto w-full transition-transform duration-500 ease-in-out hover:scale-105" src="/images2/PORRATIPROP2.png" alt="Permanent Design"></div>
+                <div class="grid-item overflow-hidden rounded-lg"><img class="h-auto w-full transition-transform duration-500 ease-in-out hover:scale-105" src="/images2/PORRATIPROP6.png" alt="Sculptural Purity"></div>
+            </div>
+            <div class="grid gap-4">
+                <div class="grid-item overflow-hidden rounded-lg"><img loading="lazy" decoding="async" class="h-auto w-full transition-transform duration-500 ease-in-out hover:scale-105" src="/images2/PORRATIPROP4.png" alt="Micro-Architectures"></div>
+                <div class="grid-item overflow-hidden rounded-lg"><img loading="lazy" decoding="async" class="h-auto w-full transition-transform duration-500 ease-in-out hover:scale-105" src="/images2/PORRATIPROP.png" alt="The Form of Thought Essence"></div>
+            </div>
+            <div class="grid gap-4">
+                <div class="grid-item overflow-hidden rounded-lg"><img loading="lazy" decoding="async" class="h-auto w-full transition-transform duration-500 ease-in-out hover:scale-105" src="/images2/PORRATIPROP5.png" alt="Composition"></div>
+                <div class="grid-item overflow-hidden rounded-lg"><img loading="lazy" decoding="async" class="h-auto w-full transition-transform duration-500 ease-in-out hover:scale-105" src="/images2/PORRATIPROP3.png" alt="Intellect"></div>
+            </div>
+            <div class="grid gap-4">
+                <div class="grid-item overflow-hidden rounded-lg"><img loading="lazy" decoding="async" class="h-auto w-full transition-transform duration-500 ease-in-out hover:scale-105" src="/images2/PORRATIPROP8.png" alt="Urban Architecture"></div>
+                <div class="grid-item overflow-hidden rounded-lg"><img loading="lazy" decoding="async" class="h-auto w-full transition-transform duration-500 ease-in-out hover:scale-105" src="/images2/PORRATIPROP9.png" alt="Architectural Vision"></div>
+            </div>
+        </div>
+    </div>
+</section>

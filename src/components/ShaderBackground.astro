@@ -1,0 +1,27 @@
+---
+// src/components/ShaderBackground.astro
+import { BrandGradient } from './react/BrandGradient.tsx'; // <-- Importa il nuovo componente
+
+interface Props {
+    title: string;
+    subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+<section class="relative isolate h-[650px] w-full flex flex-col items-center justify-center overflow-hidden my-16">
+    <!-- Contenitore per il componente React -->
+    <div class="absolute inset-0 -z-10">
+        <BrandGradient client:visible /> {/* <-- Usa il nuovo componente */}
+    </div>
+
+    <!-- Il testo rimane invariato -->
+    <div class="relative z-10 text-center">
+        <h2 class="font-serif text-5xl md:text-7xl font-bold text-bianco-sporco pointer-events-none">
+            {title}
+        </h2>
+        <p class="mt-4 text-lg text-greige-chiaro pointer-events-none">
+            {subtitle}
+        </p>
+    </div>
+</section>

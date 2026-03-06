@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Manifesto from '../../components/Manifesto.astro';
+import JewelryShowcase from '../../components/JewelryShowcase.astro';
+import ShaderBackground from '../../components/ShaderBackground.astro';
+import JewelryCollections from '../../components/JewelryCollections.astro';
+import ImageGrid from '../../components/ImageGrid.astro';
+
+const collectionsData = [
+    { title: "Rigor", description: "Precision in every line. Architectural purity meets meticulous craftsmanship.", features: ["Lab-grown diamonds", "Gold", "Architectural design"], cta: "Explore Rigor", badge: "New Collection", image: '/images/anello.png', isVideo: false, link: '/en/collections/rings' },
+    { title: "Intellect", description: "Conceptual jewelry for the thinking individual. Each piece embodies depth.", features: ["Conceptual design", "Precious materials", "Unique pieces"], cta: "Explore Intellect", badge: "Signature", image: '/images/pendente.png', isVideo: false, link: '/en/collections/pendants' },
+    { title: "Permanence", description: "Timeless pieces that transcend trends. Architecture in jewelry form.", features: ["Pure architectural forms", "Sustainable materials", "Design philosophy"], cta: "Explore Permanence", badge: "Heritage Collection", image: '/images/bracciale.png', isVideo: false, link: '/en/collections/bracelets' }
+];
+---
+<Layout title="PORRATI | The Form of Thought" lang="en">
+	
+	<Hero 
+        title="The Form of Thought"
+        subtitle="The Architecture of the Self."
+    />
+	
+    <Manifesto 
+        title1="The Architecture <br/> of the Self."
+        p1_1="PORRATI does not evolve. It returns to essence. Born in Valenza, the brand dedicates itself to immutable principles: the purity of line, the authority of volume, the intelligence of synthesis."
+        p1_2="Ours are objects of synthesis. They do not adorn the body. They seal it."
+        title2="Diamonds <br/> by Design."
+        p2_1="This search for pure form demands an equally conscious material. We select our diamonds not from the earth, but from the project: laboratory creations born from an ethical and technological choice."
+        p2_2="A PORRATI diamond is chemically, physically, and optically identical to a natural diamond, but its origin is a statement of respect for the future of our planet."
+    />
+
+	<JewelryShowcase 
+        title="Explore by Category"
+        subtitle="Each creation is a statement of rigor and intellect,<br>designed to seal one's personal style."
+        buttonText="Explore"
+        cat1Name="Pendant"
+        cat2Name="Ring"
+        cat3Name="Bracelet"
+        cat4Name="Earring"
+    />
+
+	<ShaderBackground 
+        title="Digital Rigor"
+        subtitle="Where code meets craftsmanship."
+    />
+
+    <JewelryCollections 
+        title="The Collections"
+        subtitle="Curated expressions of intellectual luxury. Each collection embodies a different facet of 'The Architecture of the Self'."
+        collections={collectionsData}
+    />
+    
+    <ImageGrid 
+        title="Anatomy of an Idea"
+        subtitle="Immutable principles of rigor, intellect, and permanence that challenge time."
+    />
+</Layout>
+<script>
+    import '../../scripts/animations.js';
+</script>

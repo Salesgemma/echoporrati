@@ -1,0 +1,53 @@
+---
+// src/components/ProductStructuredData.astro
+interface Props {
+	productName: string;
+	description: string;
+	price?: number;
+	currency?: string;
+	image?: string;
+	category?: string;
+	sku?: string;
+}
+
+const { 
+	productName, 
+	description, 
+	price, 
+	currency = 'EUR', 
+	image, 
+	category, 
+	sku 
+} = Astro.props;
+
+// Define product structured data
+const productData = {
+	"@context": "https://schema.org/",
+	"@type": "Product",
+	"name": productName,
+	"description": description,
+	"offers": price ? {
+		"@type": "Offer",
+		"price": price,
+		"priceCurrency": currency,
+		"availability": "https://schema.org/InStock",
+		"url": `https://www.porratigioielli.it${Astro.url.pathname}`
+	} : undefined,
+	"image": image ? [image] : undefined,
+	"category": category,
+	"sku": sku,
+	"brand": {
+		"@type": "Brand",
+		"name": "PORRATI"
+	}
+};
+
+// Remove undefined properties
+const cleanProductData = Object.fromEntries(
+	Object.entries(productData).filter(([_, v]) => v !== undefined)
+);
+---
+
+<script type="application/ld+json">
+	{JSON.stringify(cleanProductData)}
+</script>

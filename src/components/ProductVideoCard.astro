@@ -1,0 +1,31 @@
+---
+// src/components/ProductVideoCard.astro
+interface Props {
+    videoSrc: string;
+    title: string;
+}
+const { videoSrc, title } = Astro.props;
+---
+
+<div class="product-video-card group relative overflow-hidden rounded-2xl bg-gradient-to-br from-grigio-blu-notte to-nero-assoluto p-6 transition-all duration-500 hover:shadow-2xl">
+    <div class="absolute inset-0 bg-gradient-radial from-blue-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+    
+    <div class="relative z-10">
+        <div class="aspect-square w-full rounded-xl overflow-hidden mb-4">
+            <video 
+                src={videoSrc}
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                autoplay
+                loop
+                muted
+                playsinline
+            ></video>
+        </div>
+        
+        <h3 class="font-serif text-lg font-bold text-bianco-sporco text-center">{title}</h3>
+    </div>
+</div>
+
+<style>
+.bg-gradient-radial { background-image: radial-gradient(circle, var(--tw-gradient-stops)); }
+</style>

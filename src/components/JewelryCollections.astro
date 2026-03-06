@@ -1,0 +1,132 @@
+---
+// src/components/JewelryCollections.astro
+interface Collection {
+    title: string;
+    description: string;
+    features: string[];
+    cta: string;
+    badge: string;
+    image: string;
+    isVideo: boolean;
+    link?: string;
+}
+interface Props {
+    title: string;
+    subtitle: string;
+    collections: Collection[];
+}
+const { title, subtitle, collections } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const isItalian = currentPath.startsWith('/it');
+---
+<section class="collections-section bg-nero-assoluto pt-24 md:pt-32 pb-24 md:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-bianco-sporco">{title}</h2>
+            <p class="mt-4 text-lg text-greige-chiaro leading-relaxed">{subtitle}</p>
+        </div>
+    </div>
+    
+    <div class="horizontal-scroll-container" id="collections-scroll">
+        <div class="collections-track flex gap-8">
+            {collections.map(collection => (
+                <div class="collection-slide group relative flex-shrink-0 w-[90vw] md:w-[45vw] aspect-[4/3] rounded-2xl overflow-hidden p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-grigio-blu-notte/20 border border-grigio-antracite">
+                    <div class="text-container">
+                        <span class="inline-block bg-grigio-antracite text-greige-chiaro text-xs font-medium px-3 py-1 rounded-full mb-4">{collection.badge}</span>
+                        <h3 class="font-serif text-3xl md:text-4xl font-bold text-bianco-sporco">{collection.title}</h3>
+                        <p class="mt-4 text-greige-chiaro leading-relaxed text-sm">{collection.description}</p>
+                        <ul class="mt-6 space-y-2 text-sm">
+                             {collection.features.map(feature => (
+                                <li class="flex items-center text-greige-chiaro/80">
+                                    <svg class="w-4 h-4 mr-3 text-greige-chiaro/50 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    <span>{feature}</span>
+                                </li>
+                            ))}
+                        </ul>
+                         <a href={collection.link || (isItalian ? '/it/collezioni' : '/en/collections')} class="inline-flex items-center text-bianco-sporco font-medium mt-8 group">
+                            <span>{collection.cta}</span>
+                            <svg class="ml-2 w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                    <div class="image-container relative h-full">
+                        {collection.isVideo ? (
+                            <video 
+                                src={collection.image} 
+                                aria-label={`Collezione ${collection.title}`}
+                                class="w-full h-full object-contain transform transition-transform duration-700 ease-out group-hover:scale-105"
+                                autoplay
+                                loop
+                                muted
+                                playsinline
+                            ></video>
+                        ) : (
+                            <img 
+                                loading="lazy" decoding="async"
+                                src={collection.image} 
+                                alt={`Collezione ${collection.title}`}
+                                class="w-full h-full object-contain transform transition-transform duration-700 ease-out group-hover:scale-105"
+                            >
+                        )}
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div id="scroll-hint" class="flex items-center justify-center gap-2 mt-6 text-greige-chiaro/50 text-xs uppercase tracking-widest transition-opacity duration-500">
+        <svg class="w-4 h-4 animate-bounce-x" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        <span>{isItalian ? 'Scorri per esplorare' : 'Scroll to explore'}</span>
+        <svg class="w-4 h-4 animate-bounce-x" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+    </div>
+</section>
+
+<style>
+.horizontal-scroll-container {
+    /* Abilita lo scroll orizzontale e nasconde la barra di scorrimento */
+    overflow-x: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.horizontal-scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+/* Aggiunge un po' di padding ai lati per non far attaccare le card ai bordi */
+.collections-track {
+    padding-left: max(24px, (100% - 1400px) / 2);
+    padding-right: max(24px, (100% - 1400px) / 2);
+}
+
+/* AGGIUNGI QUESTE REGOLE */
+.collections-section .text-container p,
+.collections-section .text-container li {
+    color: var(--greige-chiaro);
+}
+
+.collections-section .text-container li {
+    opacity: 0.8;
+}
+
+@keyframes bounce-x {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+}
+.animate-bounce-x {
+    animation: bounce-x 1.5s ease-in-out infinite;
+}
+</style>
+
+<script>
+    const scrollContainer = document.getElementById('collections-scroll');
+    const scrollHint = document.getElementById('scroll-hint');
+    if (scrollContainer && scrollHint) {
+        scrollContainer.addEventListener('scroll', () => {
+            if (scrollContainer.scrollLeft > 40) {
+                scrollHint.style.opacity = '0';
+            } else {
+                scrollHint.style.opacity = '1';
+            }
+        }, { passive: true });
+    }
+</script>

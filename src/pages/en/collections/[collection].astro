@@ -1,0 +1,144 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import SeoSchema from '../../../components/SeoSchema.astro';
+import allProducts from '../../../data/products.json';
+
+const productsData = allProducts.en;
+const collectionNames = { 'pendants': 'Pendants', 'rings': 'Rings', 'bracelets': 'Bracelets', 'earrings': 'Earrings' };
+
+export function getStaticPaths() {
+    // CODICE RIPRISTINATO
+    return [
+        { params: { collection: 'pendants' } },
+        { params: { collection: 'rings' } },
+        { params: { collection: 'bracelets' } },
+        { params: { collection: 'earrings' } }
+    ];
+}
+
+const { collection } = Astro.params;
+if (!collectionNames[collection]) { return new Response(null, { status: 404 }); }
+
+const products = Object.entries(productsData)
+    .filter(([id, data]) => data.category === collection)
+    .map(([id, data]) => ({ id, ...data }));
+
+const collectionName = collectionNames[collection];
+
+// SEO metadata
+const metaTitle = `${collectionName} | PORRATI Collection`;
+const metaDescription = `Explore PORRATI ${collectionName.toLowerCase()} crafted with architectural rigor and lab-grown diamonds.`;
+
+// JSON-LD ItemList & Breadcrumb
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "itemListElement": products.map((p, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "item": {
+          "@type": "Product",
+          "name": p.title,
+          "url": `https://www.porratigioielli.it/en/products/${p.id}`
+        }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.porratigioielli.it/en"},
+        {"@type": "ListItem", "position": 2, "name": "Collections", "item": "https://www.porratigioielli.it/en/collections"},
+        {"@type": "ListItem", "position": 3, "name": collectionName, "item": Astro.url.href}
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={`PORRATI | ${collectionName}`} lang="en" metaTitle={metaTitle} metaDescription={metaDescription}>
+    
+    <Fragment slot="head">
+        <SeoSchema schema={itemListSchema} />
+    </Fragment>
+
+    <main class="py-32 md:py-40 bg-nero-assoluto">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="font-bodoni text-5xl text-bianco-sporco">{collectionName}</h1>
+                <p class="mt-4 text-lg text-greige-chiaro">Explore our exclusive collection of {collection.toLowerCase()}.</p>
+            </div>
+            
+            {products.length > 0 ? (
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {products.map(product => (
+                        <a href={`/en/products/${product.id}`} class="group block">
+                            <div class="aspect-square bg-grigio-blu-notte/30 rounded-lg overflow-hidden">
+                                <video 
+                                    src={product.video.replace('/videos/', '/videos-optimized/')}
+                                    poster={product.poster || undefined}
+                                    class="video-card w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    autoplay
+                                    loop 
+                                    muted 
+                                    playsinline
+                                    preload="none"
+                                ></video>
+                            </div>
+                            <h3 class="font-serif text-xl text-center mt-4 text-bianco-sporco">{product.title}</h3>
+                        </a>
+                    ))}
+                </div>
+            ) : (
+                <div class="text-center py-20">
+                    <p class="text-greige-chiaro text-xl">No products available for this collection at the moment.</p>
+                </div>
+            )}
+        </div>
+    </main>
+</Layout>
+
+<script>
+    document.addEventListener('astro:page-load', () => {
+        const videos = document.querySelectorAll('.video-card');
+
+        // Funzione per provare ad avviare un video
+        const playVideo = (video) => {
+            // Controlliamo se il video è già in riproduzione
+            if (video.paused) {
+                const promise = video.play();
+                if (promise !== undefined) {
+                    promise.catch(error => {
+                        // L'autoplay è stato bloccato dal browser, non è un vero errore.
+                        // L'IntersectionObserver lo farà partire allo scroll.
+                        // console.log('Autoplay prevented. Will play on scroll.');
+                    });
+                }
+            }
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const video = entry.target as HTMLVideoElement;
+                if (entry.isIntersecting) {
+                    playVideo(video); // Usa la nostra funzione più robusta
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.1 });
+
+        videos.forEach(video => {
+            // Avvia l'osservatore
+            observer.observe(video);
+            
+            // TENTATIVO INIZIALE: prova a far partire subito i video che sono già in vista
+            // (utile se l'utente carica la pagina già a metà)
+            const rect = video.getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                 playVideo(video);
+            }
+        });
+    });
+</script>

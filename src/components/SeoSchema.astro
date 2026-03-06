@@ -1,0 +1,12 @@
+---
+// src/components/SeoSchema.astro
+interface Props {
+	schema: object;
+}
+
+const { schema } = Astro.props;
+---
+
+<script type="application/ld+json">
+	{JSON.stringify(schema)}
+</script>

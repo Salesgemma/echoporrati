@@ -1,0 +1,135 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import SeoSchema from '../../../components/SeoSchema.astro';
+import allProducts from '../../../data/products.json';
+
+const collectionNames = { 'pendenti': 'Pendenti', 'anelli': 'Anelli', 'bracciali': 'Bracciali', 'orecchini': 'Orecchini' };
+// MAPPA da URL a categoria nel JSON
+const categoryMap = { 'pendenti': 'pendants', 'anelli': 'rings', 'bracciali': 'bracelets', 'orecchini': 'earrings' };
+const productsData = allProducts.it;
+
+export function getStaticPaths() {
+    return [
+        { params: { collezione: 'pendenti' } },
+        { params: { collezione: 'anelli' } },
+        { params: { collezione: 'bracciali' } },
+        { params: { collezione: 'orecchini' } }
+    ];
+}
+
+const { collezione } = Astro.params;
+if (!collectionNames[collezione]) { return new Response(null, { status: 404 }); }
+
+// Logica di filtro CORRETTA E SEMPLICE
+const products = Object.entries(productsData)
+    .filter(([id, data]) => data.category === categoryMap[collezione])
+    .map(([id, data]) => ({ id, ...data }));
+
+const collectionName = collectionNames[collezione];
+
+// SEO metadata (IT)
+const metaTitle = `${collectionName} | Collezione PORRATI`;
+const metaDescription = `Esplora la collezione ${collectionName.toLowerCase()} di PORRATI, rigore architettonico e diamanti lab-grown.`;
+
+// JSON-LD ItemList & Breadcrumb (IT)
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "itemListElement": products.map((p, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "item": {
+          "@type": "Product",
+          "name": p.title,
+          "url": `https://www.porratigioielli.it/it/prodotti/${p.id}`
+        }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.porratigioielli.it/it"},
+        {"@type": "ListItem", "position": 2, "name": "Collezioni", "item": "https://www.porratigioielli.it/it/collezioni"},
+        {"@type": "ListItem", "position": 3, "name": collectionName, "item": Astro.url.href}
+      ]
+    }
+  ]
+};
+---
+<Layout title={`PORRATI | ${collectionName}`} lang="it" metaTitle={metaTitle} metaDescription={metaDescription}>
+    <main class="py-32 md:py-40 bg-nero-assoluto">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="font-bodoni text-5xl text-bianco-sporco">{collectionName}</h1>
+                <p class="mt-4 text-lg text-greige-chiaro">Esplora la nostra esclusiva collezione di {collectionName.toLowerCase()}.</p>
+            </div>
+            {products.length > 0 ? (
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {products.map(product => (
+                        <a href={`/it/prodotti/${product.id}`} class="group block">
+                            <div class="aspect-square bg-grigio-blu-notte/30 rounded-lg overflow-hidden">
+                                <video 
+                                    src={product.video.replace('/videos/', '/videos-optimized/')}
+                                    poster={product.poster || undefined}
+                                    class="video-card w-full h-full object-cover ..."
+                                    autoplay
+                                    loop 
+                                    muted 
+                                    playsinline
+                                    preload="none"
+                                ></video>
+                            </div>
+                            <h3 class="font-serif text-xl text-center mt-4 ...">{product.title}</h3>
+                        </a>
+                    ))}
+                </div>
+            ) : ( <div class="text-center py-20">...</div> )}
+        </div>
+    </main>
+</Layout>
+
+<script>
+    document.addEventListener('astro:page-load', () => {
+        const videos = document.querySelectorAll('.video-card');
+
+        // Funzione per provare ad avviare un video
+        const playVideo = (video) => {
+            // Controlliamo se il video è già in riproduzione
+            if (video.paused) {
+                const promise = video.play();
+                if (promise !== undefined) {
+                    promise.catch(error => {
+                        // L'autoplay è stato bloccato dal browser, non è un vero errore.
+                        // L'IntersectionObserver lo farà partire allo scroll.
+                        // console.log('Autoplay prevented. Will play on scroll.');
+                    });
+                }
+            }
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const video = entry.target as HTMLVideoElement;
+                if (entry.isIntersecting) {
+                    playVideo(video); // Usa la nostra funzione più robusta
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.1 });
+
+        videos.forEach(video => {
+            // Avvia l'osservatore
+            observer.observe(video);
+            
+            // TENTATIVO INIZIALE: prova a far partire subito i video che sono già in vista
+            // (utile se l'utente carica la pagina già a metà)
+            const rect = video.getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                 playVideo(video);
+            }
+        });
+    });
+</script>

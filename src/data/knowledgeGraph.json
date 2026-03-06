@@ -1,0 +1,23 @@
+[
+  {
+    "id": "brutalism-in-jewelry",
+    "title": "Brutalism in Jewelry",
+    "definition": "Brutalism in jewelry is a design movement that embraces raw, unadorned materials and bold geometric forms. Drawing inspiration from architectural brutalism, this approach to jewelry design prioritizes structural honesty and material authenticity over ornamental decoration. PORRATI interprets this aesthetic through rigorous geometric compositions and the juxtaposition of industrial textures with the refined brilliance of lab-grown diamonds.",
+    "relatedConcepts": ["Architectural Jewelry", "Minimalist Design", "Industrial Aesthetics"],
+    "relatedProducts": ["ring-01", "pendant-02"]
+  },
+  {
+    "id": "the-asscher-cut-diamond",
+    "title": "The Asscher Cut Diamond",
+    "definition": "The Asscher cut is a square-cut diamond with cropped corners and a high crown, creating a distinctive windmill-like facet pattern when viewed from above. Invented by the Asscher brothers in 1902, this cut emphasizes clarity and symmetry over brilliance. PORRATI reinterprets this classic cut using ethically-sourced lab-grown diamonds, maintaining the geometric precision that makes the Asscher cut a perfect match for our architectural design philosophy.",
+    "relatedConcepts": ["Diamond Cuts", "Lab-Grown Diamonds", "Geometric Design"],
+    "relatedProducts": ["ring-03", "earrings-01"]
+  },
+  {
+    "id": "sustainable-luxury",
+    "title": "Sustainable Luxury",
+    "definition": "Sustainable luxury represents a paradigm shift in the luxury goods industry, where environmental and social responsibility become integral to the value proposition. At PORRATI, sustainable luxury means crafting architectural jewelry with ethically-sourced lab-grown diamonds and recycled precious metals, proving that conscious consumption does not compromise aesthetic excellence. Our commitment extends beyond materials to encompass responsible manufacturing and transparent supply chains.",
+    "relatedConcepts": ["Ethical Jewelry", "Lab-Grown Diamonds", "Circular Economy"],
+    "relatedProducts": ["bracelet-01", "ring-02"]
+  }
+]

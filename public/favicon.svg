@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- PORRATI Favicon - Minimalist P with architectural lines -->
+  <rect width="32" height="32" fill="#0C0C0C"/>
+  
+  <!-- Architectural P design -->
+  <g fill="#D9D9D9">
+    <!-- Vertical line -->
+    <rect x="8" y="6" width="2" height="20"/>
+    
+    <!-- Top horizontal -->
+    <rect x="8" y="6" width="12" height="2"/>
+    
+    <!-- Middle horizontal -->
+    <rect x="8" y="15" width="10" height="2"/>
+    
+    <!-- Right vertical (top section) -->
+    <rect x="18" y="6" width="2" height="11"/>
+    
+    <!-- Architectural detail lines -->
+    <rect x="22" y="8" width="2" height="1"/>
+    <rect x="22" y="11" width="2" height="1"/>
+    <rect x="22" y="14" width="2" height="1"/>
+  </g>
+</svg>

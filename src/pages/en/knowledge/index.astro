@@ -1,0 +1,57 @@
+---
+// src/pages/en/knowledge/index.astro
+import Layout from '../../../layouts/Layout.astro';
+import knowledgeData from '../../../data/knowledgeGraph.json';
+
+// Ordiniamo i topic alfabeticamente per la visualizzazione
+const sortedTopics = knowledgeData.sort((a, b) => a.title.localeCompare(b.title));
+---
+<Layout 
+    title="PORRATI | Knowledge Graph" 
+    metaTitle="Knowledge Graph | PORRATI"
+    metaDescription="Explore the concepts, philosophies, and architectural inspirations behind PORRATI's intellectual luxury jewelry."
+    lang="en"
+>
+    <main class="py-32 md:py-40 bg-nero-assoluto">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <!-- Intestazione -->
+            <div class="text-center mb-16 anim-el">
+                <h1 class="font-bodoni text-4xl md:text-5xl text-bianco-sporco">Knowledge Graph</h1>
+                <p class="mt-4 text-lg text-greige-chiaro leading-relaxed">
+                    Explore the concepts, philosophies, and architectural inspirations that define "The Architecture of the Self."
+                </p>
+            </div>
+
+            <!-- Lista A-Z dei Topic -->
+            <div class="space-y-8">
+                {sortedTopics.map(topic => (
+                    <div class="anim-el">
+                        <a href={`/en/knowledge/${topic.id}`} class="block p-8 bg-grigio-blu-notte/30 border border-grigio-antracite rounded-lg hover:border-bianco-sporco/50 transition-colors duration-300">
+                            <h2 class="font-bodoni text-2xl text-bianco-sporco">{topic.title}</h2>
+                            <p class="mt-2 text-greige-chiaro text-base line-clamp-2">{topic.definition}</p>
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<script>
+    import gsap from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animazione a cascata per la lista
+    gsap.from(".anim-el", {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        ease: 'power3.out',
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: 'main',
+            start: 'top 80%',
+        }
+    });
+</script>

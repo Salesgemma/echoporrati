@@ -1,0 +1,142 @@
+---
+// src/components/JewelryShowcase.astro
+interface Props {
+    title: string;
+    subtitle: string;
+    buttonText: string;
+
+    // Le props per i nomi delle categorie sono ora opzionali
+    cat1Name?: string;
+    cat2Name?: string;
+    cat3Name?: string;
+    cat4Name?: string;
+}
+const { 
+    title, 
+    subtitle, 
+    buttonText,
+    cat1Name = "Pendant",
+    cat2Name = "Ring",
+    cat3Name = "Bracelet",
+    cat4Name = "Earring"
+} = Astro.props;
+
+// Map category names to collection paths
+const getCategoryPath = (categoryName: string, currentPath: string) => {
+    // Determine if we're on an English or Italian page
+    const isEnglish = currentPath.startsWith('/en/') || currentPath === '/en';
+    
+    // Map category names to collection paths for each language
+    if (isEnglish) {
+        switch (categoryName) {
+            case cat1Name: return '/en/collections/pendants';
+            case cat2Name: return '/en/collections/rings';
+            case cat3Name: return '/en/collections/bracelets';
+            case cat4Name: return '/en/collections/earrings';
+            default: return '#';
+        }
+    } else {
+        // Italian mappings
+        switch (categoryName) {
+            case cat1Name: return '/it/collezioni/pendenti';
+            case cat2Name: return '/it/collezioni/anelli';
+            case cat3Name: return '/it/collezioni/bracciali';
+            case cat4Name: return '/it/collezioni/orecchini';
+            default: return '#';
+        }
+    }
+};
+
+// L'array usa le props o i valori di default
+const categories = [
+    { name: cat1Name, image: '/photos/pendants/axioma.jpg', alt: `Category ${cat1Name} — "Romantic Aura" Fancy Pink Pendant`, glowColor: 'blue', isVideo: false },
+    { name: cat2Name, image: '/photos/rings/solitario-essenziale.jpg', alt: `Category ${cat2Name} — "Royal Promise" Fancy Pink Trilogy Ring`, glowColor: 'purple', isVideo: false },
+    { name: cat3Name, image: '/photos/bracelets/linea-pura-01.jpg', alt: `Category ${cat3Name} — "Jardin d'Éden" Diamond Floral Bracelet`, glowColor: 'cyan', isVideo: false },
+    { name: cat4Name, image: '/photos/earrings/sequenza-geometrica-06.jpg', alt: `Category ${cat4Name} — "Precious Bloom" Fancy Blue Earrings`, glowColor: 'blue', isVideo: false }
+];
+---
+<section class="jewelry-showcase-container py-24 md:py-32 bg-nero-assoluto relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-radial from-blu-inchiostro/20 via-transparent to-transparent"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-20">
+            <h2 class="showcase-title font-serif text-5xl md:text-6xl font-bold text-bianco-sporco mb-6">
+                {title}
+            </h2>
+            <p class="showcase-subtitle text-xl text-greige-chiaro max-w-3xl mx-auto leading-relaxed">
+                <Fragment set:html={subtitle} />
+            </p>
+        </div>
+
+        <!-- MODIFICA 1: La griglia ora è a 4 colonne su schermi grandi e il gap è ridotto -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {categories.map(category => (
+                <a href={getCategoryPath(category.name, Astro.url.pathname)} class="jewelry-item group relative block">
+                    <div class="jewelry-glow-container h-full relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-grigio-blu-notte to-nero-assoluto p-8">
+                        <!-- Sfondo Glow colorato -->
+                        <div class={`absolute inset-0 bg-gradient-radial from-${category.glowColor}-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+                        
+                        <!-- Contenitore Media (flex-grow per occupare spazio) -->
+                        <div class="relative z-10 jewelry-image-container flex-grow flex items-center justify-center">
+                            {category.isVideo ? (
+                                <video 
+                                    src={category.image} 
+                                    aria-label={category.alt}
+                                    class="jewelry-image w-full h-full object-contain transition-all duration-700 ease-out transform group-hover:scale-105 aspect-square"
+                                    autoplay
+                                    loop
+                                    muted
+                                    playsinline
+                                ></video>
+                            ) : (
+                                <img 
+                                    src={category.image} 
+                                    alt={category.alt}
+                                    class="jewelry-image w-full h-full object-contain transition-all duration-700 ease-out transform group-hover:scale-105"
+                                >
+                            )}
+                        </div>
+                        
+                        <!-- Dettagli -->
+                        <div class="mt-6 text-center relative z-10 flex-shrink-0">
+                            <h3 class="font-serif text-xl font-bold text-bianco-sporco mb-4">{category.name}</h3>
+                            <div class="jewelry-glow-button inline-block px-6 py-2 border border-greige-chiaro/30 rounded-full text-bianco-sporco text-sm hover:border-blue-400/50 hover:text-blue-100 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-500">
+                                {buttonText}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            ))}
+        </div>
+
+        <!-- MODIFICA 3: Rimosso il bottone CTA finale, non più necessario -->
+    </div>
+</section>
+
+<!-- IL TUO BLOCCO <style> ORIGINALE, 100% INVARIATO -->
+<style>
+.jewelry-glow-container::before {
+    content: ''; position: absolute; inset: -2px; padding: 2px;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #3b82f6);
+    border-radius: inherit; opacity: 0; transition: opacity 0.7s ease; z-index: -1;
+}
+.jewelry-item:hover .jewelry-glow-container::before { opacity: 0.3; }
+.bg-gradient-radial { background-image: radial-gradient(circle, var(--tw-gradient-stops)); }
+.jewelry-image::after {
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg) translateX(-100%); transition: transform 0.8s ease;
+}
+.jewelry-item:hover .jewelry-image::after { transform: rotate(45deg) translateX(100%); }
+@keyframes jewelry-pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.8; } }
+.jewelry-item:hover .jewelry-glow-container { animation: jewelry-pulse 2s ease-in-out infinite; }
+</style>
+
+<!-- Aggiungiamo uno stile per far brillare l'immagine stessa -->
+<style is:global> 
+    /* is:global permette di definire uno stile che non viene "isolato" da Astro */
+    .jewelry-item:hover .jewelry-image {
+        /* Applica un'ombra colorata direttamente all'immagine, creando il glow */
+        filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.4)); /* Esempio con viola, possiamo renderlo dinamico */
+    }
+</style>

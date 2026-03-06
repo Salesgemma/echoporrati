@@ -1,0 +1,51 @@
+---
+// src/components/Manifesto.astro (Versione con Immagini Corrette)
+interface Props {
+    title1: string;
+    p1_1: string;
+    p1_2: string;
+    title2: string;
+    p2_1: string;
+    p2_2: string;
+}
+const { title1, p1_1, p1_2, title2, p2_1, p2_2 } = Astro.props;
+---
+<section class="manifesto-section bg-nero-assoluto py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 space-y-20">
+
+        <!-- Blocco 1: The Architecture of the Self -->
+        <div class="manifesto-block grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-content">
+                <h2 class="font-bodoni text-4xl md:text-5xl font-bold text-bianco-sporco">
+                    <Fragment set:html={title1} />
+                </h2>
+                <p class="mt-6 text-lg text-greige-chiaro leading-relaxed">{p1_1}</p>
+                <p class="mt-4 text-lg text-greige-chiaro leading-relaxed">{p1_2}</p>
+            </div>
+            <div class="image-content aspect-[3/4] overflow-hidden rounded-2xl">
+                <!-- PERCORSO IMMAGINE 1 CORRETTO -->
+                <img loading="lazy" decoding="async" src="/images2/PORRATIPROP9.png" alt="Stile Porrati" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- Blocco 2: La Scelta dei Diamanti Lab-Grown -->
+        <div class="manifesto-block grid md:grid-cols-2 gap-12 items-center">
+            <div class="image-content aspect-[3/4] overflow-hidden rounded-2xl md:order-last">
+                 <!-- PERCORSO IMMAGINE 2 CORRETTO (scelta da images2) -->
+                 <img loading="lazy" decoding="async" src="/images2/PORRATIPROP3.png" alt="Diamante Lab-Grown Porrati" class="w-full h-full object-cover">
+            </div>
+            <div class="text-content">
+                <h2 class="font-bodoni text-4xl md:text-5xl font-bold text-bianco-sporco">
+                    <Fragment set:html={title2} />
+                </h2>
+                <p class="mt-6 text-lg text-greige-chiaro leading-relaxed">{p2_1}</p>
+                <p class="mt-4 text-lg text-greige-chiaro leading-relaxed">{p2_2}</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .manifesto-block { opacity: 0; transform: translateY(40px); }
+</style>

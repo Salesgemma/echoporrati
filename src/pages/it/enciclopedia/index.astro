@@ -1,0 +1,45 @@
+---
+// src/pages/it/enciclopedia/index.astro
+import Layout from '../../../layouts/Layout.astro';
+import knowledgeData from '../../../data/knowledgeGraph.json';
+
+const sortedTopics = knowledgeData.sort((a, b) => a.title.localeCompare(b.title));
+---
+<Layout 
+    title="PORRATI | Enciclopedia" 
+    metaTitle="Enciclopedia del Design | PORRATI"
+    metaDescription="Esplora i concetti, le filosofie e le ispirazioni architettoniche dietro i gioielli di lusso intellettuale di PORRATI."
+    lang="it"
+>
+    <main class="py-32 md:py-40 bg-nero-assoluto">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 anim-el">
+                <h1 class="font-bodoni text-4xl md:text-5xl text-bianco-sporco">Enciclopedia</h1>
+                <p class="mt-4 text-lg text-greige-chiaro leading-relaxed">
+                    Esplora i concetti, le filosofie e le ispirazioni architettoniche che definiscono "L'Architettura del Sé."
+                </p>
+            </div>
+            <div class="space-y-8">
+                {sortedTopics.map(topic => (
+                    <div class="anim-el">
+                        <a href={`/it/enciclopedia/${topic.id}`} class="block p-8 bg-grigio-blu-notte/30 border border-grigio-antracite rounded-lg hover:border-bianco-sporco/50 transition-colors duration-300">
+                            <h2 class="font-bodoni text-2xl text-bianco-sporco">{topic.title}</h2>
+                            <p class="mt-2 text-greige-chiaro text-base line-clamp-2">{topic.definition}</p>
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<script>
+    import gsap from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".anim-el", {
+        opacity: 0, y: 30, duration: 1, ease: 'power3.out',
+        stagger: 0.1, scrollTrigger: { trigger: 'main', start: 'top 80%' }
+    });
+</script>

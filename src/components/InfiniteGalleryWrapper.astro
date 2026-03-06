@@ -1,0 +1,38 @@
+---
+// src/components/InfiniteGalleryWrapper.astro
+import InfiniteGallery from './react/InfiniteGallery.tsx';
+
+interface Props {
+  images: { src: string; alt: string }[];
+  speed?: number;
+  opacityRange?: [number, number];
+  blurRange?: [number, number];
+  scaleRange?: [number, number];
+  positionRange?: [number, number];
+}
+
+const { 
+  images = [],
+  speed = 0.5,
+  opacityRange = [0.2, 1],
+  blurRange = [2, 0],
+  scaleRange = [0.8, 1.2],
+  positionRange = [-0.5, 0.5]
+} = Astro.props;
+---
+
+<div class="w-full h-screen">
+  <InfiniteGallery 
+    images={images}
+    speed={speed}
+    opacityRange={opacityRange}
+    blurRange={blurRange}
+    scaleRange={scaleRange}
+    positionRange={positionRange}
+    client:load
+  />
+</div>
+
+<style>
+  /* Stili aggiuntivi se necessari */
+</style>

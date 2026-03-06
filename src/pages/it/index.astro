@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Manifesto from '../../components/Manifesto.astro';
+import JewelryShowcase from '../../components/JewelryShowcase.astro';
+import ShaderBackground from '../../components/ShaderBackground.astro';
+import JewelryCollections from '../../components/JewelryCollections.astro';
+import ImageGrid from '../../components/ImageGrid.astro';
+
+// Dati corretti per le 3 collezioni, usando solo la chiave 'image'
+const collectionsData = [
+    { title: "Rigore", description: "Precisione in ogni linea. La purezza architettonica incontra l'artigianato meticoloso.", features: ["Diamanti lab-grown", "Oro", "Design architettonico"], cta: "Esplora Rigore", badge: "Nuova Collezione", image: '/images/anello.png', isVideo: false, link: '/it/collezioni/anelli' },
+    { title: "Intelletto", description: "Gioielli concettuali per l'individuo pensante. Ogni pezzo incarna profondità.", features: ["Design concettuale", "Materiali preziosi", "Pezzi unici"], cta: "Esplora Intelletto", badge: "Firma", image: '/images/pendente.png', isVideo: false, link: '/it/collezioni/pendenti' },
+    { title: "Permanente", description: "Pezzi senza tempo che trascendono le mode. Architettura in forma di gioiello.", features: ["Forme architettoniche pure", "Materiali sostenibili", "Filosofia del design"], cta: "Esplora Permanente", badge: "Collezione Patrimonio", image: '/images/bracciale.png', isVideo: false, link: '/it/collezioni/bracciali' }
+];
+---
+<Layout title="PORRATI | La Forma del Pensiero" lang="it">
+	
+	<Hero 
+        title="La Forma del Pensiero"
+        subtitle="L'Architettura del Sé."
+    />
+	
+    <!-- TESTI DEL MANIFESTO CORRETTI E TRADOTTI -->
+    <Manifesto 
+        title1="L'Architettura <br/> del Sé."
+        p1_1="PORRATI non si evolve. Torna all'essenza. Nato a Valenza, il brand si dedica a principi immutabili: la purezza della linea, l'autorità del volume, l'intelligenza della sintesi."
+        p1_2="I nostri sono oggetti di sintesi. Non adornano il corpo. Lo sigillano."
+        title2="Diamanti <br/> dal Progetto."
+        p2_1="Questa ricerca della forma pura esige una materia altrettanto consapevole. Selezioniamo i nostri diamanti non dalla terra, ma dal progetto: creazioni di laboratorio nate da una scelta etica e tecnologica."
+        p2_2="Un diamante PORRATI è chimicamente, fisicamente e otticamente identico a un diamante naturale, ma la sua origine è una dichiarazione di rispetto per il futuro del nostro pianeta."
+    />
+
+	<JewelryShowcase 
+        title="Esplora per Categoria"
+        subtitle="Ogni creazione è un'affermazione di rigore e intelletto,<br>progettata per sigillare lo stile personale."
+        buttonText="Esplora"
+        cat1Name="Pendente"
+        cat2Name="Anello"
+        cat3Name="Bracciale"
+        cat4Name="Orecchino"
+    />
+
+	<ShaderBackground 
+        title="Rigore Digitale"
+        subtitle="Dove il codice incontra l'artigianato."
+    />
+
+    <JewelryCollections 
+        title="Le Collezioni"
+        subtitle="Espressioni curate di lusso intellettuale. Ogni collezione incarna una diversa sfaccettatura de 'L'Architettura del Sé'."
+        collections={collectionsData}
+    />
+    
+    <ImageGrid 
+        title="Anatomia di un'Idea"
+        subtitle="Principi immutabili di rigore, intelletto e permanenza che sfidano il tempo."
+    />
+</Layout>
+<script>
+    import '../../scripts/animations.js';
+</script>

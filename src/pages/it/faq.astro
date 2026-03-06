@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SeoSchema from '../../components/SeoSchema.astro';
+
+const metaTitle = 'Domande frequenti | PORRATI';
+const metaDescription = 'FAQ su diamanti lab-grown e su come scegliere un anello di fidanzamento pensato secondo il linguaggio PORRATI.';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Che cosa sono i diamanti lab-grown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I diamanti lab-grown sono diamanti creati in laboratorio replicando le condizioni di pressione e temperatura del mantello terrestre. Sono chimicamente, fisicamente e otticamente identici ai diamanti estratti in miniera, ma la loro origine è controllata e tracciabile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come scegliere un anello di fidanzamento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per scegliere un anello di fidanzamento è importante considerare proporzioni della mano, stile quotidiano e sensibilità estetica di chi lo indosserà. Taglio del diamante, montatura e rapporto tra pietra centrale e pavé definiscono il carattere dell'anello. Una consulenza in showroom aiuta a trovare l'equilibrio ideale tra volume, luce e comfort."
+      }
+    }
+  ]
+};
+---
+
+<Layout title={metaTitle} lang="it" metaTitle={metaTitle} metaDescription={metaDescription}>
+  <Fragment slot="head">
+    <SeoSchema schema={faqSchema} />
+  </Fragment>
+
+  <main class="bg-nero-assoluto py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="font-bodoni text-4xl md:text-5xl text-bianco-sporco mb-8">Domande frequenti</h1>
+
+      <section class="mb-10">
+        <h2 class="font-bodoni text-2xl text-bianco-sporco mb-3">Che cosa sono i diamanti lab-grown?</h2>
+        <p class="text-greige-chiaro mb-3">
+          I diamanti lab-grown sono diamanti creati in laboratorio replicando le condizioni di pressione e temperatura del mantello terrestre.
+        </p>
+        <p class="text-greige-chiaro mb-3">
+          Sono chimicamente, fisicamente e otticamente identici ai diamanti estratti, ma la loro origine è controllata e tracciabile, con un potenziale impatto ambientale ridotto.
+        </p>
+        <p class="text-greige-chiaro">
+          Per PORRATI, il diamante di laboratorio è una scelta progettuale: una materia consapevole, coerente con la ricerca sulla forma e sulla responsabilità verso il futuro.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-bodoni text-2xl text-bianco-sporco mb-3">Come scegliere un anello di fidanzamento?</h2>
+        <p class="text-greige-chiaro mb-3">
+          La scelta di un anello di fidanzamento unisce emozione e progettazione. Si parte dalle proporzioni della mano e dallo stile di chi lo indosserà ogni giorno.
+        </p>
+        <p class="text-greige-chiaro mb-3">
+          Taglio del diamante, profilo della montatura e relazione tra pietra centrale e pavé definiscono il carattere dell'anello: da più essenziale a più scultoreo.
+        </p>
+        <p class="text-greige-chiaro">
+          In showroom è possibile vedere le diverse proporzioni dal vivo e ricevere una consulenza dedicata per trovare la combinazione ideale tra volume, luce e comfort.
+        </p>
+      </section>
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,15 @@
+---
+// src/components/GalleryBlock.astro
+import InfiniteGallery from './react/InfiniteGallery.tsx';
+
+interface Props {
+    id?: string;
+    images: string[];
+}
+const { id, images } = Astro.props;
+---
+<section id={id} class="story-block h-screen w-screen relative bg-nero-assoluto">
+    <!-- Il client:visible dice ad Astro di caricare il componente React 
+         solo quando la sezione sta per diventare visibile, per ottimizzare le performance. -->
+    <InfiniteGallery client:visible images={images} className="w-full h-full" />
+</section>

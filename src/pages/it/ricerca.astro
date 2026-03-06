@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const q = Astro.url.searchParams.get('q') || '';
+---
+<Layout title="Ricerca | PORRATI" lang="it" metaRobots="noindex, nofollow">
+  <main class="min-h-screen bg-nero-assoluto py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <h1 class="font-bodoni text-4xl text-bianco-sporco mb-6">Ricerca</h1>
+      <form method="get" class="flex gap-3 mb-8">
+        <label for="ricerca-q" class="sr-only">Termine di ricerca</label>
+        <input id="ricerca-q" type="text" name="q" value={q} placeholder="Cerca prodotti o argomenti…" class="flex-1 px-4 py-3 rounded-lg bg-grigio-blu-notte text-bianco-sporco border border-grigio-antracite outline-none" />
+        <button class="px-5 py-3 rounded-lg bg-bianco-sporco text-nero-assoluto font-medium">Cerca</button>
+      </form>
+      {q ? (
+        <p class="text-greige-chiaro">Ricerca per: <strong class="text-bianco-sporco">{q}</strong> — risultati in arrivo.</p>
+      ) : (
+        <p class="text-greige-chiaro">Digita una query per cercare.</p>
+      )}
+    </div>
+  </main>
+</Layout>

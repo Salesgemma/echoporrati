@@ -1,0 +1,52 @@
+---
+// src/components/StoryBlock.astro
+interface Props {
+    id?: string;
+    title?: string;
+    prose?: string[];
+    image?: string;
+    alt?: string;
+    layout?: 'text-only' | 'image-only' | 'text-left' | 'text-right';
+}
+const { id, title, prose, image, alt, layout = 'text-only' } = Astro.props;
+---
+<section id={id} class="story-block w-screen flex items-center justify-center min-h-screen md:h-screen py-20 md:py-0">
+    <div class="container mx-auto px-6 max-w-6xl">
+        
+        {layout === 'text-only' && (
+            <div class="anim-el text-center max-w-3xl mx-auto">
+                <h2 class="font-bodoni text-4xl md:text-5xl">{title}</h2>
+                <div class="mt-6 text-lg text-greige-chiaro leading-relaxed space-y-4">
+                    {prose.map(p => <p>{p}</p>)}
+                </div>
+            </div>
+        )}
+
+        {layout === 'image-only' && (
+             <div class="anim-el card-shadow-effect w-full h-[70vh] rounded-2xl overflow-hidden">
+                <img loading="lazy" decoding="async" src={image} alt={alt} class="w-full h-full object-cover"/>
+            </div>
+        )}
+
+        <!-- Layout "Due Card Separate" (Corretto) -->
+        {layout === 'text-left' && (
+            <div class="anim-el w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pannello Testo -->
+                <div class="card-shadow-effect flex items-center justify-center p-8 bg-nero-assoluto rounded-2xl">
+                    <div class="max-w-md">
+                        <h2 class="font-bodoni text-5xl md:text-6xl text-bianco-sporco">{title}</h2>
+                        <div class="mt-8 text-xl text-greige-chiaro leading-relaxed space-y-6">
+                            {prose.map(p => <p>{p}</p>)}
+                        </div>
+                    </div>
+                </div>
+                <!-- Pannello Immagine -->
+                <div class="card-shadow-effect w-full overflow-hidden rounded-2xl aspect-[4/5]">
+                     <img loading="lazy" decoding="async" src={image} alt={alt} class="w-full h-full object-cover"/>
+                </div>
+            </div>
+        )}
+
+    </div>
+</section>
+

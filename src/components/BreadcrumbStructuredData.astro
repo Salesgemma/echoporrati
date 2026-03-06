@@ -1,0 +1,29 @@
+---
+// src/components/BreadcrumbStructuredData.astro
+interface BreadcrumbItem {
+	name: string;
+	url: string;
+}
+
+interface Props {
+	items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+
+// Define breadcrumb structured data
+const breadcrumbData = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": items.map((item, index) => ({
+		"@type": "ListItem",
+		"position": index + 1,
+		"name": item.name,
+		"item": `https://www.porratigioielli.it${item.url}`
+	}))
+};
+---
+
+<script type="application/ld+json">
+	{JSON.stringify(breadcrumbData)}
+</script>

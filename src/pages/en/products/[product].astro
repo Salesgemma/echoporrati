@@ -1,0 +1,151 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import SeoSchema from '../../../components/SeoSchema.astro';
+// 1. IMPORTIAMO LA NOSTRA BANCA DATI
+import allProducts from '../../../data/products.json';
+
+export function getStaticPaths() {
+  // 2. USIAMO TUTTI I PRODOTTI INGLESI
+  const productsData = allProducts.en;
+
+  // 3. GENERIAMO UNA PAGINA PER OGNI PRODOTTO
+  return Object.keys(productsData).map(productId => ({
+    params: { product: productId },
+    props: { data: productsData[productId] }
+  }));
+}
+
+// 4. LA LOGICA PER RICEVERE I DATI È GIÀ CORRETTA
+const { data } = Astro.props;
+
+// SEO metadata
+const metaTitle = `${data?.title} | PORRATI`;
+const metaDescription = data?.description?.slice(0, 160) || '';
+
+// JSON-LD Product & Breadcrumb
+const productSchema = data ? {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": data.title,
+      "description": data.description,
+      "brand": {
+        "@type": "Brand",
+        "name": "PORRATI"
+      },
+      "category": data.category,
+      "url": Astro.url.href
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.porratigioielli.it/en"},
+        {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.porratigioielli.it/en/products"},
+        {"@type": "ListItem", "position": 3, "name": data.title, "item": Astro.url.href}
+      ]
+    }
+  ]
+} : null;
+
+if (!data) {
+  return new Response(null, { status: 404 });
+}
+---
+<Layout title={`PORRATI | ${data.title}`} lang="en" metaTitle={metaTitle} metaDescription={metaDescription}>
+    {productSchema && (
+        <Fragment slot="head">
+            <SeoSchema schema={productSchema} />
+        </Fragment>
+    )}
+    <main class="py-32 md:py-40 bg-nero-assoluto">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <div class="aspect-square bg-grigio-blu-notte/30 rounded-lg overflow-hidden">
+                    <video src={data.video} poster={data.poster || undefined} class="w-full h-full object-cover" autoplay loop muted playsinline preload="metadata"></video>
+                </div>
+
+                <div>
+                    <h1 class="font-bodoni text-4xl md:text-5xl text-bianco-sporco">{data.title}</h1>
+                    <p class="mt-4 text-lg text-greige-chiaro leading-relaxed">{data.description}</p>
+                    <ul class="mt-8 space-y-2 border-t border-grigio-antracite pt-6">
+                        {data.details.map(detail => (
+                            <li class="flex items-center text-greige-chiaro">
+                                <svg class="w-4 h-4 mr-3 text-greige-chiaro/50" fill="currentColor" viewBox="0 0 20 20">...</svg>
+                                <span>{detail}</span>
+                            </li>
+                        ))}
+                    </ul>
+                    <button id="open-modal-btn" class="inline-block mt-8 px-8 py-3 bg-bianco-sporco text-nero-assoluto font-medium ...">
+                        Request Information
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<!-- MODIFICA 2: Aggiungiamo la Modale (inizialmente nascosta) -->
+<div id="contact-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="modal-content" class="bg-grigio-blu-notte border border-grigio-antracite p-8 rounded-lg max-w-sm w-full text-center transform scale-95 transition-all duration-300">
+        <h3 class="font-bodoni text-2xl text-bianco-sporco mb-6">Contact Us</h3>
+        <div class="space-y-4">
+            <!-- Pulsante WhatsApp -->
+            <a id="whatsapp-link" href="" target="_blank" class="flex items-center justify-center w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+                <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                <span>Chat on WhatsApp</span>
+            </a>
+            <!-- Pulsante Email -->
+            <a id="email-link" href="" class="flex items-center justify-center w-full px-6 py-3 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700 transition-colors">
+                 <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                <span>Send an Email</span>
+            </a>
+        </div>
+        <button id="close-modal-btn" class="mt-8 text-sm text-greige-chiaro hover:text-bianco-sporco">Close</button>
+    </div>
+</div>
+
+<!-- MODIFICA 3: Aggiungiamo lo Script per la logica della modale -->
+<script define:vars={{ 
+    productTitle: data.title,
+    productUrl: Astro.url.href 
+}}>
+    const openBtn = document.getElementById('open-modal-btn');
+    const closeBtn = document.getElementById('close-modal-btn');
+    const modal = document.getElementById('contact-modal');
+    const modalContent = document.getElementById('modal-content');
+    const whatsappLink = document.getElementById('whatsapp-link');
+    const emailLink = document.getElementById('email-link');
+
+    const phoneNumber = '393461705191'; // Numero senza '+' o spazi
+    const emailAddress = 'sales@gemmaeuropa.com';
+    
+    // Messaggio preimpostato
+    const message = `Hello, I would like to receive more information about the product: ${productTitle}. Link: ${productUrl}`;
+    
+    // Costruisci i link
+    whatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+const safeSubject = 'Richiesta Informazioni: ' + productTitle.replace(/[^a-zA-Z0-9 ]/g, "");
+emailLink.href = `mailto:${emailAddress}?subject=${encodeURIComponent(safeSubject)}&body=${encodeURIComponent(message)}`;
+    function openModal() {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modalContent.classList.remove('scale-95');
+    }
+
+    function closeModal() {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modalContent.classList.add('scale-95');
+    }
+
+    openBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    
+    // Chiudi la modale se si clicca sullo sfondo
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+</script>

@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import JewelCodeSearch from '../../components/react/JewelCodeSearch';
+---
+
+<Layout
+  title="Jewel code"
+  lang="en"
+  metaTitle="Jewel code search | PORRATI"
+  metaDescription="Enter the jewel code to explore the PORRATI selection in a dedicated space."
+  metaRobots="noindex, nofollow"
+  hideHeader={false}
+  hideFooter={true}
+>
+  <main class="min-h-[100svh] bg-nero-assoluto text-bianco-sporco flex items-center justify-center px-4 py-12">
+    <JewelCodeSearch lang="en" client:load />
+  </main>
+</Layout>

@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SeoSchema from '../../components/SeoSchema.astro';
+
+const metaTitle = 'Frequently Asked Questions | PORRATI';
+const metaDescription = 'FAQ about lab-grown diamonds and how to choose an engagement ring through the PORRATI design language.';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are lab-grown diamonds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lab-grown diamonds are diamonds created in a laboratory by replicating the pressure and temperature conditions of the Earth’s mantle. They are chemically, physically and optically identical to mined diamonds, but their origin is controlled and traceable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I choose an engagement ring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choosing an engagement ring means balancing emotion and design. Consider hand proportions, everyday style and aesthetic sensibility. Diamond cut, setting and the relationship between the center stone and pavé define the character of the ring. A consultation in the showroom helps to find the ideal balance between volume, light and comfort." 
+      }
+    }
+  ]
+};
+---
+
+<Layout title={metaTitle} lang="en" metaTitle={metaTitle} metaDescription={metaDescription}>
+  <Fragment slot="head">
+    <SeoSchema schema={faqSchema} />
+  </Fragment>
+
+  <main class="bg-nero-assoluto py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="font-bodoni text-4xl md:text-5xl text-bianco-sporco mb-8">Frequently Asked Questions</h1>
+
+      <section class="mb-10">
+        <h2 class="font-bodoni text-2xl text-bianco-sporco mb-3">What are lab-grown diamonds?</h2>
+        <p class="text-greige-chiaro mb-3">
+          Lab-grown diamonds are created in a controlled environment that reproduces the pressure and temperature needed for carbon to crystallize.
+        </p>
+        <p class="text-greige-chiaro mb-3">
+          They share the same chemical composition, physical structure and optical behaviour as mined diamonds, but their origin is traceable and can reduce environmental impact.
+        </p>
+        <p class="text-greige-chiaro">
+          For PORRATI, the lab-grown diamond is a design choice: a conscious material aligned with the brand’s focus on form and responsibility towards the future.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-bodoni text-2xl text-bianco-sporco mb-3">How do I choose an engagement ring?</h2>
+        <p class="text-greige-chiaro mb-3">
+          Choosing an engagement ring starts from the person who will wear it every day: hand proportions, lifestyle and aesthetic sensibility.
+        </p>
+        <p class="text-greige-chiaro mb-3">
+          The cut of the diamond, the silhouette of the setting and the dialogue between center stone and pavé define the personality of the piece, from minimal to more sculptural.
+        </p>
+        <p class="text-greige-chiaro">
+          In the showroom, you can compare different proportions in real life and receive a dedicated consultation to find the ideal balance between volume, light and long-term comfort.
+        </p>
+      </section>
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,173 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PresentationWgpuHero from '../../components/PresentationWgpuHero.astro'; // <-- NUOVO IMPORT
+import StoryBlock from '../../components/StoryBlock.astro';
+import GalleryBlock from '../../components/GalleryBlock.astro'; // <-- NUOVO IMPORT
+
+// Definiamo la lista delle immagini da passare alla galleria
+const galleryImages = [
+    '/images2/PORRATIPROP.png',
+    '/images2/PORRATIPROP2.png',
+    '/images2/PORRATIPROP3.png',
+    '/images2/PORRATIPROP4.png',
+    '/images2/PORRATIPROP5.png',
+    '/images2/PORRATIPROP6.png',
+    '/images2/PORRATIPROP7.png',
+    '/images2/PORRATIPROP8.png',
+    '/images2/PORRATIPROP9.png'
+];
+---
+<Layout title="PORRATIPROP | Presentazione Commerciale" lang="it">
+
+    <!-- SOSTITUITO IL VECCHIO STORYBLOCK CON IL NUOVO HERO -->
+    <PresentationWgpuHero />
+
+    <!-- NUOVO: Video Section -->
+    <section id="video" class="story-block w-screen flex items-center justify-center py-10 md:py-16">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="w-full max-w-md mx-auto aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl relative">
+                <video 
+                    src="/videos/202510091426.mp4" 
+                    class="w-full h-full object-cover"
+                    loop
+                    playsinline
+                    autoplay
+                />
+                <!-- Audio toggle button -->
+                <button id="audio-toggle" class="absolute bottom-4 right-4 bg-nero-assoluto/70 text-bianco-sporco rounded-full p-2 hover:bg-nero-assoluto transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M4.828 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.828l3.555-3.793a1 1 0 011.617.793v12a1 1 0 01-1.617.793L4.828 13zm7.586-6.5a1 1 0 00-1.414 0L9 8.586 7.414 7.5a1 1 0 10-1.414 1.414L7.586 10l-1.586 1.586a1 1 0 001.414 1.414L9 11.414l1.586 1.586a1 1 0 001.414-1.414L10.414 10l1.586-1.586a1 1 0 000-1.414z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 2: Manifesto del Brand -->
+    <StoryBlock
+        id="manifesto"
+        layout="text-left"
+        title="Il Silenzio della Forma."
+        prose={[
+            "PORRATI non si evolve. Torna all'essenza. Nato a Valenza, dove l'oro impara il rigore e rispetta il silenzio delle mani che lo lavorano, il brand si dedica a principi immutabili: la purezza della linea, l'autorità del volume, l'intelligenza della sintesi.",
+            "I nostri non sono ornamenti. Sono oggetti di sintesi che sigillano un'identità. Non adornano il corpo: lo completano."
+        ]}
+        image="/images/Generated Image October 06, 2025 - 12_22PM.jpg"
+        alt="Anello Porrati, espressione di rigore e design."
+    />
+
+    <!-- Slide 3: La Scelta Sostenibile (dal testo 'IO SÍ') -->
+    <StoryBlock
+        id="sustainability"
+        layout="text-left"
+        title="La Purezza è una Scelta."
+        prose={[
+            "Un design architettonico esige una materia altrettanto consapevole. Per questo, i nostri diamanti non vengono estratti dalla terra, ma creati in laboratorio: una decisione che unisce l'avanguardia tecnologica alla responsabilità etica.",
+            "Un diamante PORRATI possiede lo stesso fuoco e la stessa anima di un diamante naturale. La sua origine, però, non lascia cicatrici sul pianeta. È luce pura, generata dal rispetto. Una scelta, non un compromesso."
+        ]}
+        image="/images/Generated Image October 06, 2025 - 12_31PM.jpg"
+        alt="Pendente Porrati con diamante lab-grown."
+    />
+
+    <!-- SOSTITUIAMO LA VECCHIA SLIDE IMMAGINE CON LA NUOVA GALLERIA -->
+    <GalleryBlock
+        id="style"
+        images={galleryImages}
+    />
+
+    <!-- Slide 5: Chiusura -->
+     <StoryBlock 
+        layout="text-only"
+        title="Contatti"
+        prose={[
+            "Scopri le opportunità esclusive per rivenditori e collaborazioni con il brand.",
+            "sales@gemmaeuropa.com"
+        ]}
+    />
+
+</Layout>
+
+<!-- Stili specifici per la presentazione -->
+<style>
+    /* Inizialmente nascondiamo tutti gli elementi animabili */
+    .anim-el {
+        opacity: 0;
+    }
+</style>
+
+<script>
+    import '../../scripts/animations.js';
+    
+    // Autoplay video on first scroll with passive listener for better performance
+    let videoPlayed = false;
+    const handleScroll = () => {
+        if (!videoPlayed) {
+            const video = document.querySelector('#video video');
+            if (video) {
+                // Add a small delay to ensure the video is ready
+                setTimeout(() => {
+                    video.play().catch(e => console.log("Autoplay prevented:", e));
+                }, 100);
+                videoPlayed = true;
+            }
+            window.removeEventListener('scroll', handleScroll, { passive: true });
+        }
+    };
+    
+    // Add passive listener for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Also play when the video section enters the viewport
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !videoPlayed) {
+                const video = document.querySelector('#video video');
+                if (video) {
+                    video.play().catch(e => console.log("Autoplay prevented:", e));
+                    videoPlayed = true;
+                }
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    // Start observing the video section
+    const videoSection = document.querySelector('#video');
+    if (videoSection) {
+        observer.observe(videoSection);
+    }
+    
+    // Audio toggle functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const video = document.querySelector('#video video');
+        const audioToggle = document.querySelector('#audio-toggle');
+        
+        if (video && audioToggle) {
+            // Set initial state to unmuted (audio always on by default)
+            video.muted = false;
+            
+            // Update button icon based on mute state
+            const updateButtonIcon = () => {
+                const icon = audioToggle.querySelector('svg');
+                if (icon) {
+                    if (video.muted) {
+                        // Muted icon (speaker with line through it)
+                        icon.innerHTML = '<path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.793L4.828 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.828l3.555-3.793A1 1 0 019.383 3.076zM12 8a1 1 0 011.414 0L15 9.586l1.586-1.586A1 1 0 0118 9.414L16.414 11 18 12.586A1 1 0 0116.586 14L15 12.414 13.414 14A1 1 0 0112 12.586L13.586 11 12 9.414A1 1 0 0112 8z" clip-rule="evenodd" />';
+                    } else {
+                        // Unmuted icon (speaker)
+                        icon.innerHTML = '<path d="M4.828 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.828l3.555-3.793a1 1 0 011.617.793v12a1 1 0 01-1.617.793L4.828 13zm7.586-6.5a1 1 0 00-1.414 0L9 8.586 7.414 7.5a1 1 0 10-1.414 1.414L7.586 10l-1.586 1.586a1 1 0 001.414 1.414L9 11.414l1.586 1.586a1 1 0 001.414-1.414L10.414 10l1.586-1.586a1 1 0 000-1.414z" />';
+                    }
+                }
+            };
+            
+            // Toggle audio when button is clicked
+            audioToggle.addEventListener('click', () => {
+                video.muted = !video.muted;
+                updateButtonIcon();
+            });
+            
+            // Update icon on initial load
+            updateButtonIcon();
+        }
+    });
+</script>

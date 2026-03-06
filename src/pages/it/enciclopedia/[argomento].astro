@@ -1,0 +1,112 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import SeoSchema from '../../../components/SeoSchema.astro';
+import fs from 'fs';
+import path from 'path';
+
+export function getStaticPaths() {
+  const knowledgeGraphPath = path.join(process.cwd(), 'src', 'data', 'knowledgeGraph.json');
+  const knowledgeGraphData = JSON.parse(fs.readFileSync(knowledgeGraphPath, 'utf-8'));
+
+  return knowledgeGraphData.map(topic => ({
+    params: { argomento: topic.id }, // <-- MODIFICA 1: 'argomento' invece di 'topic'
+    props: { topicData: topic }
+  }));
+}
+
+const { topicData } = Astro.props;
+
+if (!topicData) {
+  return new Response(null, { status: 404, statusText: 'Not Found' });
+}
+
+// Per ora i meta dati usano i testi in inglese del JSON
+const metaTitle = `${topicData.title} | Enciclopedia PORRATI`;
+const metaDescription = topicData.definition.substring(0, 160) + (topicData.definition.length > 160 ? '...' : '');
+const knowledgeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "DefinedTerm",
+      "name": topicData.title,
+      "description": topicData.definition,
+      "inDefinedTermSet": "https://www.porratigioielli.it/it/enciclopedia",
+      "url": Astro.url.href
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.porratigioielli.it/it"},
+        {"@type": "ListItem", "position": 2, "name": "Enciclopedia", "item": "https://www.porratigioielli.it/it/enciclopedia"},
+        {"@type": "ListItem", "position": 3, "name": topicData.title, "item": Astro.url.href}
+      ]
+    }
+  ]
+};
+---
+
+<Layout 
+  title={`PORRATI | ${topicData.title}`} 
+  metaTitle={metaTitle}
+  metaDescription={metaDescription}
+  lang="it"  // <-- MODIFICA 2: lang="it"
+>
+  <Fragment slot="head">
+    <SeoSchema schema={knowledgeSchema} />
+  </Fragment>
+  <section class="knowledge-detail py-24 md:py-32 bg-nero-assoluto relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <h1 class="font-serif text-4xl md:text-5xl font-bold text-bianco-sporco mb-6">
+          {topicData.title}
+        </h1>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2">
+          <div class="prose prose-invert max-w-none">
+            <p class="text-lg text-greige-chiaro leading-relaxed mb-8">
+              {topicData.definition}
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-12">
+          <div>
+            <h2 class="font-serif text-2xl font-bold text-bianco-sporco mb-6">Concetti Correlati</h2>
+            <ul class="space-y-3">
+              {topicData.relatedConcepts.map(concept => (
+                <li>
+                  <a href="#" class="text-greige-chiaro hover:text-bianco-sporco transition-colors duration-300 flex items-start group">
+                    <span class="inline-block w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-3 group-hover:bg-purple-400 transition-colors"></span>
+                    <span>{concept}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="font-serif text-2xl font-bold text-bianco-sporco mb-6">Prodotti Correlati</h2>
+            <p class="text-greige-chiaro mb-4">Scopri la nostra collezione ispirata a questo concetto:</p>
+            <div class="space-y-3">
+              {topicData.relatedProducts.map(productId => (
+                <div class="p-4 bg-grigio-blu-notte/30 rounded-lg border border-grigio-antracite hover:border-blue-400/30 transition-colors duration-300">
+                  <p class="text-bianco-sporco font-medium">Prodotto #{productId}</p>
+                  <a href="#" class="text-sm text-blue-300 hover:text-blue-100 transition-colors duration-300 inline-block mt-2">
+                    Vedi Dettagli →
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Stili ... */
+</style>

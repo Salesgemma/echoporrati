@@ -1,0 +1,244 @@
+---
+import Header from '../components/Header.astro';
+import VortexSection from '../components/VortexSection.tsx';
+import SeoSchema from '../components/SeoSchema.astro';
+
+interface Props {
+	title: string;
+	lang?: string;
+	metaTitle?: string;
+	metaDescription?: string;
+	canonicalUrl?: string;
+	metaRobots?: string;
+	ogImage?: string;
+	hideHeader?: boolean;
+	hideFooter?: boolean;
+}
+
+const { title, lang = 'en', metaTitle, metaDescription, canonicalUrl, metaRobots, ogImage, hideHeader = false, hideFooter = false } = Astro.props;
+const siteUrl = 'https://www.porratigioielli.it';
+const currentPath = Astro.url.pathname;
+const canonical = canonicalUrl || `${siteUrl}${currentPath}`;
+const defaultDescription = 'PORRATI | The Architecture of the Self. Fine jewelry with architectural rigor and lab-grown diamonds.';
+const resolvedDescription = metaDescription || defaultDescription;
+const ogLocale = lang === 'it' ? 'it_IT' : 'en_US';
+const resolvedOgTitle = metaTitle || title;
+const resolvedOgImage = ogImage || '/images/pendente.png';
+const ogImageUrl = resolvedOgImage.startsWith('http') ? resolvedOgImage : `${siteUrl}${resolvedOgImage}`;
+
+const seoSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "PORRATI",
+      "url": "https://www.porratigioielli.it",
+      "logo": "https://www.porratigioielli.it/favicon.svg",
+      "sameAs": [
+        "https://www.instagram.com/porratigioielli/",
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "PORRATI",
+      "url": "https://www.porratigioielli.it",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": "https://www.porratigioielli.it/en/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        {
+          "@type": "SearchAction",
+          "target": "https://www.porratigioielli.it/it/ricerca?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      ]
+    },
+    {
+      "@type": "JewelryStore",
+      "@id": "https://www.porratigioielli.it/#showroom",
+      "name": "Borgonuovo-10 Jewel Showroom",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "PORRATI"
+      },
+      "url": "https://www.porratigioielli.it/it/showroom-milano",
+      "image": [
+        "https://www.porratigioielli.it/images/showroom.jpg"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Borgonuovo, 10",
+        "addressLocality": "Milano",
+        "postalCode": "20121",
+        "addressRegion": "MI",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.465468,
+        "longitude": 9.192242
+      },
+      "telephone": "+390223185211",
+      "priceRange": "€€€€",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "10:00",
+          "closes": "19:00"
+        }
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Via+Borgonuovo,+10,+20121+Milano+MI,+Italy"
+    }
+  ]
+};
+
+// Generate hreflang URLs
+const mapToIt: Record<string, string> = { pendants: 'pendenti', rings: 'anelli', bracelets: 'bracciali', earrings: 'orecchini' };
+const mapToEn: Record<string, string> = { pendenti: 'pendants', anelli: 'rings', bracciali: 'bracelets', orecchini: 'earrings' };
+
+function mapCollectionSlug(slug: string, to: 'it' | 'en') {
+  return to === 'it' ? (mapToIt[slug] || slug) : (mapToEn[slug] || slug);
+}
+
+function getAlternatePaths(pathname: string): { en: string; it: string } | null {
+  if (pathname === '/en' || pathname === '/it') {
+    return { en: '/en', it: '/it' };
+  }
+  if (pathname.startsWith('/en/')) {
+    const parts = pathname.split('/');
+    const seg1 = parts[2];
+    switch (seg1) {
+      case 'products':
+        if (parts.length === 3 || parts[3] === '') {
+          return { en: pathname, it: `/it/prodotti` };
+        }
+        return { en: pathname, it: `/it/prodotti/${parts.slice(3).join('/')}` };
+      case 'collections': {
+        const slug = parts[3] || '';
+        if (!slug) {
+          return { en: pathname, it: `/it/collezioni` };
+        }
+        return { en: pathname, it: `/it/collezioni/${mapCollectionSlug(slug, 'it')}` };
+      }
+      case 'knowledge':
+        return { en: pathname, it: `/it/enciclopedia/${parts.slice(3).join('/')}` };
+      default:
+        return { en: pathname, it: `/it${pathname.slice(3)}` };
+    }
+  }
+  if (pathname.startsWith('/it/')) {
+    const parts = pathname.split('/');
+    const seg1 = parts[2];
+    switch (seg1) {
+      case 'prodotti':
+        if (parts.length === 3 || parts[3] === '') {
+          return { en: `/en/products`, it: pathname };
+        }
+        return { en: `/en/products/${parts.slice(3).join('/')}`, it: pathname };
+      case 'collezioni': {
+        const slug = parts[3] || '';
+        if (!slug) {
+          return { en: `/en/collections`, it: pathname };
+        }
+        return { en: `/en/collections/${mapCollectionSlug(slug, 'en')}`, it: pathname };
+      }
+      case 'enciclopedia':
+        return { en: `/en/knowledge/${parts.slice(3).join('/')}`, it: pathname };
+      default:
+        return { en: `/en${pathname.slice(3)}`, it: pathname };
+    }
+  }
+  // Not a localized route; do not emit hreflang
+  return null;
+}
+
+const alternates = getAlternatePaths(currentPath);
+---
+
+<!DOCTYPE html>
+<html lang={lang} class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="canonical" href={canonical} />
+		<meta name="robots" content={metaRobots || 'index,follow'} />
+		<meta property="og:site_name" content="PORRATI" />
+		<meta property="og:locale" content={ogLocale} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:title" content={resolvedOgTitle} />
+		{resolvedDescription && <meta property="og:description" content={resolvedDescription} />}
+		<meta property="og:image" content={ogImageUrl} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={resolvedOgTitle} />
+		{resolvedDescription && <meta name="twitter:description" content={resolvedDescription} />}
+		<meta name="twitter:image" content={ogImageUrl} />
+		
+		<!-- Google Fonts (single consolidated request) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;700&family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+        
+		<title>{metaTitle || title}</title>
+		{resolvedDescription && <meta name="description" content={resolvedDescription} />}
+		
+		<!-- hreflang tags for multilingual SEO -->
+		{alternates && (
+			<Fragment>
+				<link rel="alternate" hreflang="en" href={`${siteUrl}${alternates.en}`} />
+				<link rel="alternate" hreflang="it" href={`${siteUrl}${alternates.it}`} />
+				<link rel="alternate" hreflang="x-default" href={`${siteUrl}${alternates.en}`} />
+			</Fragment>
+		)}
+		
+		<!-- SEO Schema -->
+		<SeoSchema schema={seoSchema} />
+		<slot name="head" />
+	</head>
+	<body>
+		{!hideHeader && <Header />}
+		<main>
+			<slot />
+		</main>
+		{!hideFooter && <VortexSection lang={lang} client:visible />}
+		<!-- Scroll to top button -->
+		<button id="scroll-top-btn" type="button" aria-label="Scroll to top"
+			class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-nero-assoluto/80 border border-grigio-antracite/50 text-bianco-sporco shadow-lg backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-grigio-blu-notte hover:border-bianco-sporco/30">
+			<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" /></svg>
+		</button>
+		<script>
+			const scrollTopBtn = document.getElementById('scroll-top-btn');
+			if (scrollTopBtn) {
+				window.addEventListener('scroll', () => {
+					if (window.scrollY > 600) {
+						scrollTopBtn.style.opacity = '1';
+						scrollTopBtn.style.pointerEvents = 'auto';
+					} else {
+						scrollTopBtn.style.opacity = '0';
+						scrollTopBtn.style.pointerEvents = 'none';
+					}
+				}, { passive: true });
+				scrollTopBtn.addEventListener('click', () => {
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+				});
+			}
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	/* Import our global stylesheet */
+	@import '../styles/global.css';
+</style>

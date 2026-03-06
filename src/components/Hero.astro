@@ -1,0 +1,64 @@
+---
+// src/components/Hero.astro
+interface Props {
+    title: string;
+    subtitle: string;
+}
+const { title, subtitle } = Astro.props;
+---
+<header class="h-screen w-full relative isolate flex items-end justify-center overflow-hidden pb-24 md:pb-32">
+    
+    <!-- 1. Contenitore Video (livello più basso) -->
+    <div class="absolute inset-0 z-[-1]">
+        <video 
+            id="hero-video"
+            class="w-full h-full object-cover"
+            src="/videos/hero-brand.mp4" 
+            autoplay 
+            loop 
+            muted 
+            playsinline
+            preload="metadata"
+            poster="/images2/PORRATIPROP9.png"
+        >
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- 2. Overlay scuro per contrasto (copre tutto il video) -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Sfumatura molto più bassa e morbida -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_top,theme(colors.blu-inchiostro)_3%,transparent_29%)]"></div>
+
+
+    <!-- 4. Contenuto Testuale (livello più alto) -->
+    <div class="relative z-10 text-center px-4">
+        <h1 class="hero-title font-serif text-5xl md:text-7xl font-bold uppercase tracking-widest text-bianco-sporco" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+            {title}
+        </h1>
+        <p class="hero-subtitle mt-4 text-xl md:text-2xl font-light italic text-greige-chiaro">
+            {subtitle}
+        </p>
+    </div>
+</header>
+<script>
+    document.addEventListener('astro:page-load', () => {
+        const video = document.getElementById('hero-video') as HTMLVideoElement | null;
+        if (!video) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!video) return;
+                if (entry.isIntersecting) {
+                    const p = video.play();
+                    if (p && typeof p.then === 'function') p.catch(() => {});
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.25 });
+
+        observer.observe(video);
+    });
+</script>

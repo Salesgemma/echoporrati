@@ -1,0 +1,24 @@
+/* Include Tailwind's base, components, and utilities layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define custom base styles */
+@layer base {
+  body {
+    @apply bg-blu-inchiostro text-bianco-sporco font-sans antialiased;
+  }
+}
+
+/* Appended from new instructions */
+:root {
+  --background: oklch(0.08 0.01 250); /* Dark blue, similar to our blu-inchiostro */
+  --foreground: oklch(0.95 0.01 250); /* Off-white, similar to our bianco-sporco */
+  
+  --border: oklch(0.8 0.01 250 / 0.2);
+  --ring: oklch(0.8 0.01 250 / 0.3);
+
+  --radius: 0.5rem;
+}
+
+/* We can add a .dark class to the body in Layout.astro if we want to support themes */

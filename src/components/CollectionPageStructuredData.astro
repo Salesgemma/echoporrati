@@ -1,0 +1,59 @@
+---
+// src/components/CollectionPageStructuredData.astro
+interface Product {
+	name: string;
+	description: string;
+	price?: number;
+	image?: string;
+	category: string;
+	sku?: string;
+}
+
+interface Props {
+	collectionName: string;
+	collectionDescription: string;
+	products: Product[];
+}
+
+const { collectionName, collectionDescription, products } = Astro.props;
+
+// Define collection page structured data
+const collectionData = {
+	"@context": "https://schema.org/",
+	"@type": "CollectionPage",
+	"name": collectionName,
+	"description": collectionDescription,
+	"mainEntity": {
+		"@type": "ItemList",
+		"itemListElement": products.map((product, index) => ({
+			"@type": "Product",
+			"position": index + 1,
+			"name": product.name,
+			"description": product.description,
+			"offers": product.price ? {
+				"@type": "Offer",
+				"price": product.price,
+				"priceCurrency": "EUR",
+				"availability": "https://schema.org/InStock"
+			} : undefined,
+			"image": product.image ? [product.image] : undefined,
+			"category": product.category,
+			"sku": product.sku,
+			"brand": {
+				"@type": "Brand",
+				"name": "PORRATI"
+			}
+		}))
+	}
+};
+
+// Clean up undefined properties
+const cleanCollectionData = JSON.parse(JSON.stringify(collectionData, (key, value) => {
+	if (value === null || value === undefined) return undefined;
+	return value;
+}));
+---
+
+<script type="application/ld+json">
+	{JSON.stringify(cleanCollectionData)}
+</script>

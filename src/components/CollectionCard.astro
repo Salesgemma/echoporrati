@@ -1,0 +1,53 @@
+---
+// src/components/CollectionCard.astro
+interface Props {
+    title: string;
+    description: string;
+    features: string[];
+    cta: string;
+    badge: string;
+    image: string;
+    imagePosition: 'left' | 'right';
+}
+const { title, description, features, cta, badge, image, imagePosition } = Astro.props;
+
+// Determina l'ordine delle colonne in base a imagePosition
+const gridOrder = imagePosition === 'right' ? 'md:grid-cols-[1.2fr,1fr]' : 'md:grid-cols-[1fr,1.2fr]';
+const imageOrder = imagePosition === 'right' ? 'md:order-last' : '';
+---
+
+<div class={`collection-card grid ${gridOrder} gap-12 items-center`}>
+    <!-- Colonna Immagine -->
+    <div class={`image-container group relative overflow-hidden rounded-2xl ${imageOrder}`}>
+        <img loading="lazy" decoding="async" src={image} alt={`Collection ${title}`} class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+        <!-- Sottile bordo luminoso che appare all'hover -->
+        <div class="absolute inset-0 rounded-2xl ring-1 ring-greige-chiaro/20 group-hover:ring-greige-chiaro/50 transition-all duration-500"></div>
+    </div>
+
+    <!-- Colonna Testo -->
+    <div class="text-container">
+        <span class="inline-block bg-grigio-antracite text-greige-chiaro text-xs font-medium px-3 py-1 rounded-full mb-4">{badge}</span>
+        <h3 class="font-serif text-4xl font-bold text-bianco-sporco">{title}</h3>
+        <p class="mt-4 text-greige-chiaro leading-relaxed">{description}</p>
+        <ul class="mt-6 space-y-2">
+            {features.map(feature => (
+                <li class="flex items-center text-greige-chiaro">
+                    <svg class="w-4 h-4 mr-3 text-greige-chiaro/50 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span>{feature}</span>
+                </li>
+            ))}
+        </ul>
+        <a href="#" class="inline-flex items-center text-bianco-sporco font-medium mt-8 group">
+            <span>{cta}</span>
+            <svg class="ml-2 w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+    </div>
+</div>
+
+<style>
+    /* Animazione d'ingresso per le card */
+    .collection-card {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+</style>

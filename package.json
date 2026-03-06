@@ -1,0 +1,30 @@
+{
+  "name": "porrati-website",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.3.1",
+    "@astrojs/sitemap": "^3.6.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@paper-design/shaders-react": "^0.0.53",
+    "@react-three/drei": "^10.7.6",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "astro": "^4.5.12",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.22",
+    "gsap": "^3.12.5",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "simplex-noise": "^4.0.3",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^3.4.3"
+  }
+}

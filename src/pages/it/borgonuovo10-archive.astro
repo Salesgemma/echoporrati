@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Borgonuovo10ArchiveForm from '../../components/react/Borgonuovo10ArchiveForm';
+---
+
+<Layout
+  title="BORGONUOVO10 ARCHIVE"
+  lang="it"
+  metaTitle="Borgonuovo10 Archive | Accesso Riservato"
+  metaDescription="Accesso riservato all'Archivio Borgonuovo10 per eventi privati. Questionario di identificazione per invitati selezionati."
+  metaRobots="noindex, nofollow"
+  hideHeader={false}
+  hideFooter={true}
+>
+  <Borgonuovo10ArchiveForm client:load />
+</Layout>
