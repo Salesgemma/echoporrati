@@ -4,14 +4,7 @@ import Hero from '../../components/Hero.astro';
 import Manifesto from '../../components/Manifesto.astro';
 import JewelryShowcase from '../../components/JewelryShowcase.astro';
 import ShaderBackground from '../../components/ShaderBackground.astro';
-import JewelryCollections from '../../components/JewelryCollections.astro';
 import ImageGrid from '../../components/ImageGrid.astro';
-
-const collectionsData = [
-    { title: "Rigor", description: "Precision in every line. Architectural purity meets meticulous craftsmanship.", features: ["Lab-grown diamonds", "Gold", "Architectural design"], cta: "Explore Rigor", badge: "New Collection", image: '/images/anello.png', isVideo: false, link: '/en/collections/rings' },
-    { title: "Intellect", description: "Conceptual jewelry for the thinking individual. Each piece embodies depth.", features: ["Conceptual design", "Precious materials", "Unique pieces"], cta: "Explore Intellect", badge: "Signature", image: '/images/pendente.png', isVideo: false, link: '/en/collections/pendants' },
-    { title: "Permanence", description: "Timeless pieces that transcend trends. Architecture in jewelry form.", features: ["Pure architectural forms", "Sustainable materials", "Design philosophy"], cta: "Explore Permanence", badge: "Heritage Collection", image: '/images/bracciale.png', isVideo: false, link: '/en/collections/bracelets' }
-];
 ---
 <Layout title="PORRATI | The Form of Thought" lang="en">
 	
@@ -44,12 +37,6 @@ const collectionsData = [
         subtitle="Where code meets craftsmanship."
     />
 
-    <JewelryCollections 
-        title="The Collections"
-        subtitle="Curated expressions of intellectual luxury. Each collection embodies a different facet of 'The Architecture of the Self'."
-        collections={collectionsData}
-    />
-    
     <ImageGrid 
         title="Anatomy of an Idea"
         subtitle="Immutable principles of rigor, intellect, and permanence that challenge time."

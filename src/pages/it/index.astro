@@ -4,15 +4,7 @@ import Hero from '../../components/Hero.astro';
 import Manifesto from '../../components/Manifesto.astro';
 import JewelryShowcase from '../../components/JewelryShowcase.astro';
 import ShaderBackground from '../../components/ShaderBackground.astro';
-import JewelryCollections from '../../components/JewelryCollections.astro';
 import ImageGrid from '../../components/ImageGrid.astro';
-
-// Dati corretti per le 3 collezioni, usando solo la chiave 'image'
-const collectionsData = [
-    { title: "Rigore", description: "Precisione in ogni linea. La purezza architettonica incontra l'artigianato meticoloso.", features: ["Diamanti lab-grown", "Oro", "Design architettonico"], cta: "Esplora Rigore", badge: "Nuova Collezione", image: '/images/anello.png', isVideo: false, link: '/it/collezioni/anelli' },
-    { title: "Intelletto", description: "Gioielli concettuali per l'individuo pensante. Ogni pezzo incarna profondità.", features: ["Design concettuale", "Materiali preziosi", "Pezzi unici"], cta: "Esplora Intelletto", badge: "Firma", image: '/images/pendente.png', isVideo: false, link: '/it/collezioni/pendenti' },
-    { title: "Permanente", description: "Pezzi senza tempo che trascendono le mode. Architettura in forma di gioiello.", features: ["Forme architettoniche pure", "Materiali sostenibili", "Filosofia del design"], cta: "Esplora Permanente", badge: "Collezione Patrimonio", image: '/images/bracciale.png', isVideo: false, link: '/it/collezioni/bracciali' }
-];
 ---
 <Layout title="PORRATI | La Forma del Pensiero" lang="it">
 	
@@ -46,12 +38,6 @@ const collectionsData = [
         subtitle="Dove il codice incontra l'artigianato."
     />
 
-    <JewelryCollections 
-        title="Le Collezioni"
-        subtitle="Espressioni curate di lusso intellettuale. Ogni collezione incarna una diversa sfaccettatura de 'L'Architettura del Sé'."
-        collections={collectionsData}
-    />
-    
     <ImageGrid 
         title="Anatomia di un'Idea"
         subtitle="Principi immutabili di rigore, intelletto e permanenza che sfidano il tempo."

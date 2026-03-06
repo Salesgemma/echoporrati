@@ -8,21 +8,13 @@ const { title, subtitle } = Astro.props;
 ---
 <header class="h-screen w-full relative isolate flex items-end justify-center overflow-hidden pb-24 md:pb-32">
     
-    <!-- 1. Contenitore Video (livello più basso) -->
+    <!-- 1. Background Image -->
     <div class="absolute inset-0 z-[-1]">
-        <video 
-            id="hero-video"
+        <img 
+            src="/images2/PORRATIPROP9.png" 
+            alt="PORRATI"
             class="w-full h-full object-cover"
-            src="/videos/hero-brand.mp4" 
-            autoplay 
-            loop 
-            muted 
-            playsinline
-            preload="metadata"
-            poster="/images2/PORRATIPROP9.png"
-        >
-            Your browser does not support the video tag.
-        </video>
+        />
     </div>
 
     <!-- 2. Overlay scuro per contrasto (copre tutto il video) -->
