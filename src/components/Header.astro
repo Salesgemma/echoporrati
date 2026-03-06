@@ -2,6 +2,48 @@
 // src/components/Header.astro
 const currentPath = Astro.url.pathname;
 const isItalian = currentPath.startsWith('/it');
+
+// Smart language switch: compute equivalent URL in the other language
+const mapToIt: Record<string, string> = { pendants: 'pendenti', rings: 'anelli', bracelets: 'bracciali', earrings: 'orecchini' };
+const mapToEn: Record<string, string> = { pendenti: 'pendants', anelli: 'rings', bracciali: 'bracelets', orecchini: 'earrings' };
+
+function getLanguagePath(targetLang: 'it' | 'en'): string {
+    const p = currentPath;
+    if (p === '/en' || p === '/it' || p === '/') return `/${targetLang}`;
+    
+    if (targetLang === 'it' && p.startsWith('/en/')) {
+        const rest = p.slice(3); // remove /en
+        const parts = rest.split('/').filter(Boolean);
+        if (parts[0] === 'products') return `/it/prodotti/${parts.slice(1).join('/')}`;
+        if (parts[0] === 'collections') {
+            const slug = parts[1] || '';
+            return slug ? `/it/collezioni/${mapToIt[slug] || slug}` : '/it/collezioni';
+        }
+        if (parts[0] === 'jewel-code') return '/it/codice-gioiello';
+        if (parts[0] === 'showroom-milan') return '/it/showroom-milano';
+        if (parts[0] === 'knowledge') return `/it/enciclopedia/${parts.slice(1).join('/')}`;
+        return `/it${rest}`;
+    }
+    
+    if (targetLang === 'en' && p.startsWith('/it/')) {
+        const rest = p.slice(3); // remove /it
+        const parts = rest.split('/').filter(Boolean);
+        if (parts[0] === 'prodotti') return `/en/products/${parts.slice(1).join('/')}`;
+        if (parts[0] === 'collezioni') {
+            const slug = parts[1] || '';
+            return slug ? `/en/collections/${mapToEn[slug] || slug}` : '/en/collections';
+        }
+        if (parts[0] === 'codice-gioiello') return '/en/jewel-code';
+        if (parts[0] === 'showroom-milano') return '/en/showroom-milan';
+        if (parts[0] === 'enciclopedia') return `/en/knowledge/${parts.slice(1).join('/')}`;
+        return `/en${rest}`;
+    }
+    
+    return `/${targetLang}`;
+}
+
+const itPath = getLanguagePath('it');
+const enPath = getLanguagePath('en');
 ---
 <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out">
     <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex justify-between items-center">
@@ -32,12 +74,12 @@ const isItalian = currentPath.startsWith('/it');
                 <div class="w-px h-3 bg-white/20"></div>
             </div>
             <div class="flex items-center gap-4">
-                <a href="/it" class:list={[
+                <a href={itPath} class:list={[
                     "hover:text-bianco-sporco transition-colors duration-300",
                     { "text-bianco-sporco": isItalian, "text-greige-chiaro": !isItalian }
                 ]}>IT</a>
                 <span class="text-grigio-antracite">/</span>
-                <a href="/en" class:list={[
+                <a href={enPath} class:list={[
                     "hover:text-bianco-sporco transition-colors duration-300",
                     { "text-bianco-sporco": !isItalian, "text-greige-chiaro": isItalian }
                 ]}>EN</a>
@@ -73,12 +115,12 @@ const isItalian = currentPath.startsWith('/it');
             <a href={isItalian ? '/it/faq' : '/en/faq'} class="mobile-nav-link">FAQ</a>
         </nav>
         <div class="px-6 mt-10 flex items-center gap-6 text-sm">
-            <a href="/it" class:list={[
+            <a href={itPath} class:list={[
                 "uppercase tracking-wider transition-colors duration-300",
                 { "text-bianco-sporco font-bold": isItalian, "text-greige-chiaro/60": !isItalian }
             ]}>IT</a>
             <span class="text-grigio-antracite">/</span>
-            <a href="/en" class:list={[
+            <a href={enPath} class:list={[
                 "uppercase tracking-wider transition-colors duration-300",
                 { "text-bianco-sporco font-bold": !isItalian, "text-greige-chiaro/60": isItalian }
             ]}>EN</a>

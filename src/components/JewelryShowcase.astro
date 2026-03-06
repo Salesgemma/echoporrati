@@ -48,43 +48,50 @@ const getCategoryPath = (categoryName: string, currentPath: string) => {
 };
 
 const categories = [
-    { name: cat1Name, video: '/videos-optimized/pendants/axioma.mp4', poster: '/photos/pendants/axioma.jpg', alt: `${cat1Name}` },
-    { name: cat2Name, video: '/videos-optimized/rings/solitario-essenziale.mp4', poster: '/photos/rings/solitario-essenziale.jpg', alt: `${cat2Name}` },
-    { name: cat3Name, video: '/videos-optimized/bracelets/linea-pura-01.mp4', poster: '/photos/bracelets/linea-pura-01.jpg', alt: `${cat3Name}` },
-    { name: cat4Name, video: '/videos-optimized/earrings/sequenza-geometrica-06.mp4', poster: '/photos/earrings/sequenza-geometrica-06.jpg', alt: `${cat4Name}` }
+    { name: cat1Name, video: '/videos-optimized/pendants/axioma.mp4', poster: '/photos/pendants/axioma.jpg', alt: `${cat1Name}`, glowColor: 'blue' },
+    { name: cat2Name, video: '/videos-optimized/rings/solitario-essenziale.mp4', poster: '/photos/rings/solitario-essenziale.jpg', alt: `${cat2Name}`, glowColor: 'purple' },
+    { name: cat3Name, video: '/videos-optimized/bracelets/linea-pura-01.mp4', poster: '/photos/bracelets/linea-pura-01.jpg', alt: `${cat3Name}`, glowColor: 'cyan' },
+    { name: cat4Name, video: '/videos-optimized/earrings/sequenza-geometrica-06.mp4', poster: '/photos/earrings/sequenza-geometrica-06.jpg', alt: `${cat4Name}`, glowColor: 'blue' }
 ];
 ---
-<section class="py-24 md:py-32 bg-nero-assoluto">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="font-serif text-4xl md:text-5xl font-bold text-bianco-sporco mb-4">
+<section class="jewelry-showcase-container py-24 md:py-32 bg-nero-assoluto relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-radial from-blu-inchiostro/20 via-transparent to-transparent"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-20">
+            <h2 class="showcase-title font-serif text-5xl md:text-6xl font-bold text-bianco-sporco mb-6">
                 {title}
             </h2>
-            <p class="text-lg text-greige-chiaro max-w-2xl mx-auto leading-relaxed">
+            <p class="showcase-subtitle text-xl text-greige-chiaro max-w-3xl mx-auto leading-relaxed">
                 <Fragment set:html={subtitle} />
             </p>
         </div>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {categories.map(category => (
-                <a href={getCategoryPath(category.name, Astro.url.pathname)} class="showcase-card group block">
-                    <div class="aspect-square bg-nero-assoluto rounded-xl overflow-hidden">
-                        <video 
-                            src={category.video}
-                            poster={category.poster}
-                            aria-label={category.alt}
-                            class="showcase-video w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-110"
-                            loop
-                            muted
-                            playsinline
-                            preload="none"
-                        ></video>
-                    </div>
-                    <div class="mt-4 text-center">
-                        <h3 class="font-serif text-lg md:text-xl text-bianco-sporco mb-2">{category.name}</h3>
-                        <span class="text-greige-chiaro/60 text-xs uppercase tracking-widest group-hover:text-bianco-sporco transition-colors duration-300">
-                            {buttonText} →
-                        </span>
+                <a href={getCategoryPath(category.name, Astro.url.pathname)} class="jewelry-item group relative block">
+                    <div class="jewelry-glow-container h-full relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-grigio-blu-notte to-nero-assoluto p-8">
+                        <div class={`absolute inset-0 bg-gradient-radial from-${category.glowColor}-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+                        
+                        <div class="relative z-10 jewelry-image-container flex-grow flex items-center justify-center">
+                            <video 
+                                src={category.video}
+                                poster={category.poster}
+                                aria-label={category.alt}
+                                class="jewelry-video w-full h-full object-contain aspect-square transition-all duration-700 ease-out transform group-hover:scale-105"
+                                loop
+                                muted
+                                playsinline
+                                preload="none"
+                            ></video>
+                        </div>
+                        
+                        <div class="mt-6 text-center relative z-10 flex-shrink-0">
+                            <h3 class="font-serif text-xl font-bold text-bianco-sporco mb-4">{category.name}</h3>
+                            <div class="jewelry-glow-button inline-block px-6 py-2 border border-greige-chiaro/30 rounded-full text-bianco-sporco text-sm hover:border-blue-400/50 hover:text-blue-100 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-500">
+                                {buttonText}
+                            </div>
+                        </div>
                     </div>
                 </a>
             ))}
@@ -92,8 +99,26 @@ const categories = [
     </div>
 </section>
 
+<style>
+.jewelry-glow-container::before {
+    content: ''; position: absolute; inset: -2px; padding: 2px;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #3b82f6);
+    border-radius: inherit; opacity: 0; transition: opacity 0.7s ease; z-index: -1;
+}
+.jewelry-item:hover .jewelry-glow-container::before { opacity: 0.3; }
+.bg-gradient-radial { background-image: radial-gradient(circle, var(--tw-gradient-stops)); }
+@keyframes jewelry-pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.8; } }
+.jewelry-item:hover .jewelry-glow-container { animation: jewelry-pulse 2s ease-in-out infinite; }
+</style>
+
+<style is:global>
+    .jewelry-item:hover .jewelry-video {
+        filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.4));
+    }
+</style>
+
 <script>
-    const showcaseVideos = document.querySelectorAll('.showcase-video');
+    const showcaseVideos = document.querySelectorAll('.jewelry-video');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const video = entry.target as HTMLVideoElement;
