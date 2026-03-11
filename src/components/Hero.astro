@@ -8,13 +8,18 @@ const { title, subtitle } = Astro.props;
 ---
 <header class="h-screen w-full relative isolate flex items-end justify-center overflow-hidden pb-24 md:pb-32">
     
-    <!-- 1. Background Image -->
+    <!-- 1. Background Video -->
     <div class="absolute inset-0 z-[-1]">
-        <img 
-            src="/images2/PORRATIPROP9.png" 
-            alt="PORRATI"
+        <video 
+            id="hero-video"
+            autoplay 
+            muted 
+            loop 
+            playsinline
             class="w-full h-full object-cover"
-        />
+        >
+            <source src="/hero-brand-optimized.mp4" type="video/mp4">
+        </video>
     </div>
 
     <!-- 2. Overlay scuro per contrasto (copre tutto il video) -->
