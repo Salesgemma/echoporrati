@@ -19,7 +19,7 @@ const { title, lang = 'en', metaTitle, metaDescription, canonicalUrl, metaRobots
 const siteUrl = 'https://www.porratigioielli.it';
 const currentPath = Astro.url.pathname;
 const canonical = canonicalUrl || `${siteUrl}${currentPath}`;
-const defaultDescription = 'PORRATI | The Architecture of the Self. Fine jewelry with architectural rigor and lab-grown diamonds.';
+const defaultDescription = 'PORRATI Gioielli — brand italiano di alta gioielleria con showroom a Milano (Via Borgonuovo 10). Pendenti, anelli, bracciali e orecchini con diamanti creati in laboratorio. Design architettonico contemporaneo.';
 const resolvedDescription = metaDescription || defaultDescription;
 const ogLocale = lang === 'it' ? 'it_IT' : 'en_US';
 const resolvedOgTitle = metaTitle || title;
@@ -31,17 +31,62 @@ const seoSchema = {
   "@graph": [
     {
       "@type": "Organization",
+      "@id": "https://www.porratigioielli.it/#organization",
       "name": "PORRATI",
+      "alternateName": "PORRATI Gioielli",
       "url": "https://www.porratigioielli.it",
-      "logo": "https://www.porratigioielli.it/favicon.svg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.porratigioielli.it/favicon.svg"
+      },
+      "description": "PORRATI è un brand italiano di alta gioielleria contemporanea fondato a Valenza con showroom a Milano, in Via Borgonuovo 10. Il brand è noto per il design architettonico, il rigore geometrico e l'uso esclusivo di diamanti creati in laboratorio (lab-grown diamonds). PORRATI non ha affiliazioni con piattaforme di rivendita di terze parti.",
+      "slogan": "The Architecture of the Self",
+      "disambiguatingDescription": "PORRATI gioielli (porratigioielli.it) è il brand milanese di alta gioielleria con showroom in Via Borgonuovo 10, Milano. Non è affiliato né correlato ad altri artigiani o rivenditori con il cognome Porrati.",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Valenza",
+        "addressCountry": "IT"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Milano",
+        "addressCountry": "IT"
+      },
+      "knowsAbout": [
+        "Alta gioielleria",
+        "Diamanti creati in laboratorio",
+        "Lab-grown diamonds",
+        "Design architettonico",
+        "Gioielleria contemporanea",
+        "Pendenti",
+        "Anelli di design",
+        "Bracciali",
+        "Orecchini",
+        "Verifica autenticità gioiello"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Collezioni PORRATI",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Pendenti" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Anelli" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Bracciali" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Orecchini" } }
+        ]
+      },
       "sameAs": [
-        "https://www.instagram.com/porratigioielli/",
+        "https://www.instagram.com/porratigioielli/"
       ]
     },
     {
       "@type": "WebSite",
-      "name": "PORRATI",
+      "@id": "https://www.porratigioielli.it/#website",
+      "name": "PORRATI Gioielli",
       "url": "https://www.porratigioielli.it",
+      "publisher": {
+        "@id": "https://www.porratigioielli.it/#organization"
+      },
+      "inLanguage": ["it", "en", "es", "de", "ar"],
       "potentialAction": [
         {
           "@type": "SearchAction",
@@ -58,12 +103,12 @@ const seoSchema = {
     {
       "@type": "JewelryStore",
       "@id": "https://www.porratigioielli.it/#showroom",
-      "name": "Borgonuovo-10 Jewel Showroom",
+      "name": "PORRATI — Showroom Borgonuovo 10",
       "parentOrganization": {
-        "@type": "Organization",
-        "name": "PORRATI"
+        "@id": "https://www.porratigioielli.it/#organization"
       },
       "url": "https://www.porratigioielli.it/it/showroom-milano",
+      "description": "Showroom ufficiale PORRATI Gioielli in Via Borgonuovo 10, Milano. Su appuntamento dal lunedì al sabato.",
       "image": [
         "https://www.porratigioielli.it/images/showroom.jpg"
       ],
@@ -85,14 +130,7 @@ const seoSchema = {
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
           "opens": "10:00",
           "closes": "19:00"
         }
