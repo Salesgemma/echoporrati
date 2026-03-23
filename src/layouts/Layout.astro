@@ -13,9 +13,10 @@ interface Props {
 	ogImage?: string;
 	hideHeader?: boolean;
 	hideFooter?: boolean;
+	googleVerification?: string;
 }
 
-const { title, lang = 'en', metaTitle, metaDescription, canonicalUrl, metaRobots, ogImage, hideHeader = false, hideFooter = false } = Astro.props;
+const { title, lang = 'en', metaTitle, metaDescription, canonicalUrl, metaRobots, ogImage, hideHeader = false, hideFooter = false, googleVerification } = Astro.props;
 const siteUrl = 'https://www.porratigioielli.it';
 const currentPath = Astro.url.pathname;
 const canonical = canonicalUrl || `${siteUrl}${currentPath}`;
@@ -243,6 +244,7 @@ const isRTL = lang === 'ar';
 		
 		<!-- SEO Schema -->
 		<SeoSchema schema={seoSchema} />
+		{googleVerification && <meta name="google-site-verification" content={googleVerification} />}
 		<slot name="head" />
 	</head>
 	<body>

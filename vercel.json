@@ -2,8 +2,8 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/en",
-      "permanent": false
+      "destination": "/it",
+      "statusCode": 301
     }
   ],
   "headers": [
