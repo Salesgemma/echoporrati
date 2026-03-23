@@ -42,7 +42,23 @@ const seoSchema = {
       },
       "description": "PORRATI è un brand italiano di alta gioielleria contemporanea fondato a Valenza con showroom a Milano, in Via Borgonuovo 10. Il brand è noto per il design architettonico, il rigore geometrico e l'uso esclusivo di diamanti creati in laboratorio (lab-grown diamonds). PORRATI non ha affiliazioni con piattaforme di rivendita di terze parti.",
       "slogan": "The Architecture of the Self",
-      "disambiguatingDescription": "PORRATI gioielli (porratigioielli.it) è il brand milanese di alta gioielleria con showroom in Via Borgonuovo 10, Milano. Non è affiliato né correlato ad altri artigiani o rivenditori con il cognome Porrati.",
+      "disambiguatingDescription": "PORRATI gioielli (porratigioielli.it) è il brand di alta gioielleria fondato da Ruggero Paolillo, di proprietà di Gemma Europa B.V. (Anversa, Belgio, KBO BE 0656.953.680). Il brand non è affiliato né correlato a Roberta Porrati S.r.l. o ad altri artigiani o rivenditori con il cognome Porrati.",
+      "founder": {
+        "@type": "Person",
+        "name": "Ruggero Paolillo"
+      },
+      "legalName": "Gemma Europa B.V.",
+      "taxID": "BE 0656.953.680",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Gemma Europa B.V.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Schupstraat 18-20",
+          "addressLocality": "Anversa",
+          "addressCountry": "BE"
+        }
+      },
       "foundingLocation": {
         "@type": "Place",
         "name": "Valenza",
@@ -87,19 +103,7 @@ const seoSchema = {
       "publisher": {
         "@id": "https://www.porratigioielli.it/#organization"
       },
-      "inLanguage": ["it", "en", "es", "de", "ar"],
-      "potentialAction": [
-        {
-          "@type": "SearchAction",
-          "target": "https://www.porratigioielli.it/en/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        },
-        {
-          "@type": "SearchAction",
-          "target": "https://www.porratigioielli.it/it/ricerca?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      ]
+      "inLanguage": ["it", "en", "es", "de", "ar"]
     },
     {
       "@type": "JewelryStore",
