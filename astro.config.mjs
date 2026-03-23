@@ -11,7 +11,12 @@ export default defineConfig({
     tailwind(),
     react(),
     sitemap({
-      exclude: ['/404', '/test-vortex', '/en/search', '/it/ricerca', '/it/borgonuovo10-archive', '/en/borgonuovo10-archive', '/it/commercial', '/en/commercial']
+      filter: (page) => ![
+        '/404', '/test-vortex',
+        '/en/search', '/it/ricerca',
+        '/it/borgonuovo10-archive', '/en/borgonuovo10-archive',
+        '/it/commercial', '/en/commercial'
+      ].some(excluded => page.endsWith(excluded) || page.endsWith(excluded + '/'))
     })
   ]
 });
